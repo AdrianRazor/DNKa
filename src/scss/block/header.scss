@@ -1,6 +1,43 @@
 .header {
-  height: 95px;
-  background-color: var(--purple);
+  padding: 31px 0;
+  background-color: var(--pink);
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  &__navigation {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
+
+  &__link {
+    font-size: 16px;
+    text-transform: uppercase;
+
+    & a {
+      color: var(--black);
+    }
+  }
+
+  &__submenu {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  }
+
+  &__item {
+  }
 }
 
 @media (max-width: 767px) {

@@ -1,4 +1,8 @@
 .logo {
+  max-width: 131px;
+  width: 100%;
+  height: 32px;
+  flex-shrink: 0;
 }
 
 @media (max-width: 767px) {
