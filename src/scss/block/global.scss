@@ -1,0 +1,31 @@
+:root {
+  --black: #292929;
+  --grey: #888888;
+  --light: #d9d9d9;
+  --white: #f9f5f0;
+  --accent: #a464c6;
+  --purple: #cb90ea;
+  --pink: #e0cae3;
+  --light-pink: #f4eced;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html.block {
+  overflow: hidden;
+}
+
+body {
+  font-family: "Mont", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  color: var(--black);
+  background-color: var(--light-pink);
+}
+
+.hidden {
+  display: none !important;
+}

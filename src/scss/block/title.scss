@@ -1,0 +1,14 @@
+.title {
+  font-family: "Cormorant", serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 60px;
+  line-height: 100%;
+  color: var(--black);
+}
+
+@media (max-width: 767px) {
+  .title {
+    font-size: 32px;
+  }
+}

@@ -1,0 +1,9 @@
+.header {
+  height: 95px;
+  background-color: var(--purple);
+}
+
+@media (max-width: 767px) {
+  .header {
+  }
+}
