@@ -43,6 +43,7 @@
   },
   "dependencies": {
     "-": "^0.0.1",
+    "gsap": "^3.11.4",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-cssimport": "^7.0.0"
