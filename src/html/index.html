@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <!-- <link rel="stylesheet" href="css/swiper-bundle.min.css" /> -->
     <link rel="stylesheet" href="css/main.min.css" />
-    <title>Document</title>
+    <title>DNKa</title>
   </head>
 
   <body>
@@ -17,55 +17,105 @@
             <img src="img/logo.svg" alt="DNKa logo" />
           </a>
 
-          <ul class="header__navigation">
-            <li class="header__link header__submenu">
-              Каталог
-              <svg width="17" height="17">
-                <use xlink:href="img/sprite.svg#arrowDown"></use>
-              </svg>
-            </li>
-            <li class="header__link">
-              <a href="#">Наша продукція</a>
-            </li>
-            <li class="header__link">
-              <a href="#">новинки</a>
-            </li>
-            <li class="header__link">
-              <a href="#">Про нас</a>
-            </li>
-            <li class="header__link">
-              <a href="#">Контакти</a>
-            </li>
-          </ul>
+          <nav class="nav header__nav">
+            <ul class="nav__list">
+              <li class="nav__link nav__submenu">
+                Каталог
+                <svg width="17" height="17">
+                  <use xlink:href="img/sprite.svg#arrowDown"></use>
+                </svg>
+              </li>
+              <li class="nav__link">
+                <a href="#">Наша продукція</a>
+              </li>
+              <li class="nav__link">
+                <a href="#">новинки</a>
+              </li>
+              <li class="nav__link">
+                <a href="#">Про нас</a>
+              </li>
+              <li class="nav__link">
+                <a href="#">Контакти</a>
+              </li>
+            </ul>
+          </nav>
 
-          <ul class="header__list">
-            <li class="header__item">
+          <nav class="menu menu--header header__menu">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <svg width="30" height="30">
+                  <use xlink:href="img/sprite.svg#search"></use>
+                </svg>
+              </li>
+              <li class="menu__item menu__item--profile">
+                <svg width="30" height="30">
+                  <use xlink:href="img/sprite.svg#user"></use>
+                </svg>
+              </li>
+              <li class="menu__item menu__item--heart">
+                <svg width="30" height="30">
+                  <use xlink:href="img/sprite.svg#heart"></use>
+                </svg>
+              </li>
+              <li class="menu__item">
+                <img src="img/flag-ua.svg" alt="flag" />
+              </li>
+              <li class="menu__item">ГРН</li>
+              <li class="cart-icon menu__item">
+                <a href="#">
+                  <svg width="30" height="30">
+                    <use xlink:href="img/sprite.svg#basket"></use>
+                  </svg>
+                  <div class="cart-icon__num">
+                    <span>2</span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <nav class="menu menu--bottom header__menu">
+        <div class="container menu__container">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a href="#">
+                <svg width="30" height="30">
+                  <use xlink:href="img/sprite.svg#catalog"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="menu__item">
               <svg width="30" height="30">
                 <use xlink:href="img/sprite.svg#search"></use>
               </svg>
             </li>
-            <li class="header__item">
-              <svg width="30" height="30">
-                <use xlink:href="img/sprite.svg#user"></use>
-              </svg>
+            <li class="cart-icon menu__item">
+              <a href="#">
+                <svg width="30" height="30">
+                  <use xlink:href="img/sprite.svg#basket"></use>
+                </svg>
+                <div class="cart-icon__num">
+                  <span>2</span>
+                </div>
+              </a>
             </li>
-            <li class="header__item">
-              <svg width="30" height="30">
-                <use xlink:href="img/sprite.svg#heart"></use>
-              </svg>
+            <li class="menu__item menu__item--heart">
+              <a href="#">
+                <svg width="30" height="30">
+                  <use xlink:href="img/sprite.svg#heart"></use>
+                </svg>
+              </a>
             </li>
-            <li class="header__item">
-              <img src="img/flag-ua.svg" alt="flag" />
-            </li>
-            <li class="header__item">ГРН</li>
-            <li class="header__item">
+            <li class="menu__item">
               <svg width="30" height="30">
-                <use xlink:href="img/sprite.svg#basket"></use>
+                <use xlink:href="img/sprite.svg#burger"></use>
               </svg>
             </li>
           </ul>
         </div>
-      </div>
+      </nav>
     </header>
 
     <main class="main">
@@ -163,7 +213,7 @@
       <div class="container"></div>
     </footer>
 
-    <script src="js/swiper-bundle.min.js"></script>
+    <!-- <script src="js/swiper-bundle.min.js"></script> -->
     <script src="js/main.js"></script>
   </body>
 </html>

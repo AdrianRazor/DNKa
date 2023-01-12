@@ -2,24 +2,21 @@
   max-width: 1920px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 100px;
+  padding-left: 100px;
+  padding-right: 100px;
   overflow: hidden;
 }
 
 @media (max-width: 1439px) {
   .container {
-    padding: 0 60px;
-  }
-}
-
-@media (max-width: 1023px) {
-  .container {
-    padding: 0 40px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
 
 @media (max-width: 767px) {
   .container {
-    padding: 0 20px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }

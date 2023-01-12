@@ -1,0 +1,25 @@
+.cart-icon {
+  position: relative;
+
+  &__num {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: var(--accent);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  & span {
+    font-size: 10px;
+    line-height: 120%;
+    color: var(--white);
+  }
+}

@@ -1,0 +1,42 @@
+.nav {
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
+
+  &__link {
+    font-size: 16px;
+    text-transform: uppercase;
+
+    & a {
+      color: var(--black);
+    }
+  }
+
+  &__submenu {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+}
+
+@media (max-width: 1599px) {
+  .nav {
+    &__list {
+      gap: 30px;
+    }
+  }
+}
+
+@media (max-width: 1279px) {
+  .nav {
+    &__list {
+      gap: 15px;
+    }
+
+    &__link {
+      font-size: 14px;
+    }
+  }
+}

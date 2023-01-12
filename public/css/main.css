@@ -117,7 +117,8 @@ body {
   max-width: 1920px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 100px;
+  padding-left: 100px;
+  padding-right: 100px;
   overflow: hidden;
 }
 
@@ -192,7 +193,15 @@ body {
   gap: 20px;
 }
 
-.header__navigation {
+.logo {
+  max-width: 131px;
+  width: 100%;
+  height: 32px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.nav__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -202,16 +211,16 @@ body {
   gap: 50px;
 }
 
-.header__link {
+.nav__link {
   font-size: 16px;
   text-transform: uppercase;
 }
 
-.header__link a {
+.nav__link a {
   color: var(--black);
 }
 
-.header__submenu {
+.nav__submenu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -221,7 +230,7 @@ body {
   gap: 6px;
 }
 
-.header__list {
+.menu__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -231,12 +240,80 @@ body {
   gap: 28px;
 }
 
-.logo {
-  max-width: 131px;
-  width: 100%;
-  height: 32px;
+.menu__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -ms-flex-negative: 0;
   flex-shrink: 0;
+  gap: 28px;
+  cursor: pointer;
+}
+
+.menu__item:first-child::after,
+.menu__item:nth-child(3)::after,
+.menu__item:nth-child(5)::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 20px;
+  background-color: var(--grey);
+}
+
+.menu__item svg {
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.menu__item:hover svg {
+  fill: var(--accent);
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.menu__item--heart svg {
+  fill: var(--grey);
+}
+
+.menu--bottom {
+  display: none;
+}
+
+.cart-icon {
+  position: relative;
+}
+
+.cart-icon__num {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: var(--accent);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.cart-icon span {
+  font-size: 10px;
+  line-height: 120%;
+  color: var(--white);
 }
 
 .start {
@@ -430,7 +507,23 @@ body {
   gap: 40px 30px;
 }
 
+.inst__photo {
+  overflow: hidden;
+}
+
 @media (max-width: 1599px) {
+  .nav__list {
+    gap: 30px;
+  }
+
+  .menu__list {
+    gap: 20px;
+  }
+
+  .menu__item {
+    gap: 20px;
+  }
+
   .start__text {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -452,7 +545,8 @@ body {
 
 @media (max-width: 1439px) {
   .container {
-    padding: 0 60px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 
   .inst__grid {
@@ -465,6 +559,22 @@ body {
 }
 
 @media (max-width: 1279px) {
+  .nav__list {
+    gap: 15px;
+  }
+
+  .nav__link {
+    font-size: 14px;
+  }
+
+  .menu__list {
+    gap: 12px;
+  }
+
+  .menu__item {
+    gap: 12px;
+  }
+
   .start__wrapper::before {
     right: -100px;
   }
@@ -521,10 +631,51 @@ body {
 }
 
 @media (max-width: 1023px) {
-  .container {
-    padding: 0 40px;
+  .header {
+    padding: 20px 0;
   }
 
+  .header__nav {
+    display: none;
+  }
+
+  .menu__container {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: var(--white);
+  }
+
+  .menu__list {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .menu__item:first-child::after,
+  .menu__item:nth-child(3)::after,
+  .menu__item:nth-child(5)::after {
+    content: none;
+  }
+
+  .menu--header .menu__item {
+    display: none;
+  }
+
+  .menu--header .menu__item--profile {
+    display: block;
+  }
+
+  .menu--bottom {
+    width: 100%;
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+  }
+}
+
+@media (max-width: 899px) {
   .start__wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -550,7 +701,8 @@ body {
 
 @media (max-width: 767px) {
   .container {
-    padding: 0 20px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .title {
