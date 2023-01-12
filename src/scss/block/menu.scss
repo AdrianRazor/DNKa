@@ -10,6 +10,7 @@
     align-items: center;
     flex-shrink: 0;
     gap: 28px;
+    font-weight: 600;
     cursor: pointer;
 
     &:first-child,
@@ -76,7 +77,7 @@
     &__container {
       padding-top: 10px;
       padding-bottom: 10px;
-      background-color: var(--white);
+      background-color: #fff;
     }
 
     &__list {
@@ -111,6 +112,18 @@
       bottom: 0;
       left: 0;
       z-index: 100;
+
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0);
+      transition: 0.3s ease;
+
+      &.hide {
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(100%);
+        transition: 0.3s ease;
+      }
     }
   }
 }

@@ -19,11 +19,36 @@
 
           <nav class="nav header__nav">
             <ul class="nav__list">
-              <li class="nav__link nav__submenu">
+              <li class="nav__link submenu nav__submenu">
                 Каталог
                 <svg width="17" height="17">
                   <use xlink:href="img/sprite.svg#arrowDown"></use>
                 </svg>
+                <div class="submenu__container">
+                  <ul class="submenu__list">
+                    <li class="submenu__item">
+                      <a href="#">Всі</a>
+                    </li>
+                    <li class="submenu__item">
+                      <a href="#">Новинки</a>
+                    </li>
+                    <li class="submenu__item">
+                      <a href="#">Cover Base</a>
+                    </li>
+                    <li class="submenu__item">
+                      <a href="#">Base and Tops</a>
+                    </li>
+                    <li class="submenu__item">
+                      <a href="#">Pro Gel</a>
+                    </li>
+                    <li class="submenu__item">
+                      <a href="#">Gel varnish</a>
+                    </li>
+                    <li class="submenu__item">
+                      <a href="#">Gel</a>
+                    </li>
+                  </ul>
+                </div>
               </li>
               <li class="nav__link">
                 <a href="#">Наша продукція</a>
@@ -57,10 +82,61 @@
                   <use xlink:href="img/sprite.svg#heart"></use>
                 </svg>
               </li>
-              <li class="menu__item">
-                <img src="img/flag-ua.svg" alt="flag" />
+              <li class="menu__item submenu submenu--lang">
+                <button class="submenu__lang">
+                  <img src="img/flag-ua.svg" alt="flag" />
+                </button>
+                <div class="submenu__container">
+                  <ul class="submenu__list">
+                    <li class="submenu__item">
+                      <div class="submenu__flag">
+                        <img src="img/flag-ua.svg" alt="flag" />
+                      </div>
+                      <p class="submenu__text">ukr</p>
+                    </li>
+                    <li class="submenu__item">
+                      <div class="submenu__flag">
+                        <img src="img/flag-pl.svg" alt="flag" />
+                      </div>
+                      <p class="submenu__text">pln</p>
+                    </li>
+                    <li class="submenu__item">
+                      <div class="submenu__flag">
+                        <img src="img/flag-us.svg" alt="flag" />
+                      </div>
+                      <p class="submenu__text">usd</p>
+                    </li>
+                    <li class="submenu__item">
+                      <div class="submenu__flag">
+                        <img src="img/flag-fr.svg" alt="flag" />
+                      </div>
+                      <p class="submenu__text">fra</p>
+                    </li>
+                    <li class="submenu__item">
+                      <div class="submenu__flag">
+                        <img src="img/flag-es.svg" alt="flag" />
+                      </div>
+                      <p class="submenu__text">esp</p>
+                    </li>
+                    <li class="submenu__item">
+                      <div class="submenu__flag">
+                        <img src="img/flag-it.svg" alt="flag" />
+                      </div>
+                      <p class="submenu__text">ita</p>
+                    </li>
+                  </ul>
+                </div>
               </li>
-              <li class="menu__item">ГРН</li>
+              <li class="menu__item submenu submenu--currency">
+                ГРН
+                <div class="submenu__container">
+                  <ul class="submenu__list">
+                    <li class="submenu__item">грн</li>
+                    <li class="submenu__item">usd</li>
+                    <li class="submenu__item">euro</li>
+                  </ul>
+                </div>
+              </li>
               <li class="cart-icon menu__item">
                 <a href="#">
                   <svg width="30" height="30">
@@ -108,7 +184,7 @@
                 </svg>
               </a>
             </li>
-            <li class="menu__item">
+            <li class="menu__item menu__item--burger">
               <svg width="30" height="30">
                 <use xlink:href="img/sprite.svg#burger"></use>
               </svg>
@@ -116,6 +192,54 @@
           </ul>
         </div>
       </nav>
+
+      <aside class="aside header__aside">
+        <div class="aside__wrapper">
+          <a href="index.html" class="logo aside__logo">
+            <img src="img/logo.svg" alt="DNKa logo" />
+          </a>
+          <nav class="nav aside__nav">
+            <ul class="nav__list">
+              <li class="nav__link nav__submenu">
+                Каталог
+                <svg width="17" height="17">
+                  <use xlink:href="img/sprite.svg#arrowDown"></use>
+                </svg>
+              </li>
+              <li class="nav__link">
+                <a href="#">Наша продукція</a>
+              </li>
+              <li class="nav__link">
+                <a href="#">новинки</a>
+              </li>
+              <li class="nav__link">
+                <a href="#">Про нас</a>
+              </li>
+              <li class="nav__link">
+                <a href="#">Контакти</a>
+              </li>
+              <li class="nav__link">
+                <a href="#">
+                  Порівняння
+                  <span>(3)</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="aside__bottom">
+            <button class="aside__btn">
+              <p class="aside__name">Мова:</p>
+              <div class="aside__lang">
+                <img src="img/flag-ua.svg" alt="flag" />
+              </div>
+            </button>
+            <button class="aside__btn">
+              <p class="aside__name">Валюта:</p>
+              <p class="aside__currency">грн</p>
+            </button>
+          </div>
+        </div>
+      </aside>
     </header>
 
     <main class="main">
