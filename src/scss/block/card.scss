@@ -1,0 +1,53 @@
+.card {
+  width: 100%;
+  padding: 15px;
+  background-color: transparent;
+  border: 1px solid transparent;
+
+  &__photo {
+    position: relative;
+    height: 525px;
+    margin-bottom: 20px;
+  }
+
+  &__box {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 10;
+
+    background-color: #fff;
+    border-radius: 2px;
+  }
+
+  &__btn {
+    display: block;
+    padding: 5px;
+
+    & svg {
+      fill: var(--grey);
+      transition: 0.3s ease;
+    }
+
+    &:hover {
+      & svg {
+        fill: var(--accent);
+        transition: 0.3s ease;
+      }
+    }
+  }
+
+  &__name {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  &__price {
+    font-weight: 600;
+    font-size: 20px;
+  }
+
+  &__buy {
+    margin-top: 20px;
+  }
+}

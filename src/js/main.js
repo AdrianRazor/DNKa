@@ -6,7 +6,6 @@ gsap.registerPlugin(ScrollTrigger);
 document.addEventListener("DOMContentLoaded", function (event) {
   // Header submenus
   const submenu = document.querySelectorAll(".submenu");
-  console.log(submenu);
 
   if (submenu) {
     submenu.forEach((item) => {
@@ -55,6 +54,30 @@ document.addEventListener("DOMContentLoaded", function (event) {
       }
     });
   }
+
+  // Slider on main page
+  const swiperMain = new Swiper(".swiperMain", {
+    slidesPerView: 4,
+    slidesPerGroup: 4,
+    loop: true,
+    autoplay: {
+      delay: 8000,
+    },
+
+    // pagination: {
+    //   el: ".latest__pagination",
+    //   bulletClass: "pagination__bullet",
+    //   bulletActiveClass: "pagination__bullet--active",
+    //   clickable: true,
+    //   // dynamicBullets: true,
+    //   // dynamicMainBullets: 3,
+    // },
+
+    navigation: {
+      nextEl: ".latest__btn-next",
+      prevEl: ".latest__btn-prev",
+    },
+  });
 
   // Instagram section -> photos appearing animation
   gsap.fromTo(

@@ -72,7 +72,7 @@ body {
   font-weight: 400;
   line-height: 140%;
   color: var(--black);
-  background-color: var(--light-pink);
+  background-color: var(--white);
 }
 
 .hidden {
@@ -175,6 +175,114 @@ body {
   transition: background-color 0.3s ease, width 0.3s ease, height 0.3s ease;
 }
 
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.logo {
+  display: block;
+  max-width: 131px;
+  width: 100%;
+  height: 32px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.card {
+  width: 100%;
+  padding: 15px;
+  background-color: transparent;
+  border: 1px solid transparent;
+}
+
+.card__photo {
+  position: relative;
+  height: 525px;
+  margin-bottom: 20px;
+}
+
+.card__box {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  z-index: 10;
+  background-color: #fff;
+  border-radius: 2px;
+}
+
+.card__btn {
+  display: block;
+  padding: 5px;
+}
+
+.card__btn svg {
+  fill: var(--grey);
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.card__btn:hover svg {
+  fill: var(--accent);
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.card__name {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.card__price {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.card__buy {
+  margin-top: 20px;
+}
+
+.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.pagination__bullet {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.pagination__bullet--active {
+  padding: 5px 10px;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  background-color: var(--light-pink);
+}
+
+.pagination__bullet--active .pagination__circle {
+  background-color: var(--accent);
+}
+
+.pagination__circle {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--pink);
+}
+
 .header {
   padding: 31px 0;
   background-color: var(--pink);
@@ -191,15 +299,6 @@ body {
   -ms-flex-pack: justify;
   justify-content: space-between;
   gap: 20px;
-}
-
-.logo {
-  display: block;
-  max-width: 131px;
-  width: 100%;
-  height: 32px;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
 }
 
 .nav__list {
@@ -674,6 +773,98 @@ body {
 
 .start__btn {
   margin-left: 20%;
+}
+
+.latest {
+  margin-top: 200px;
+  margin-bottom: 200px;
+}
+
+.latest__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 75px;
+}
+
+.latest__link {
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--grey);
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.latest__link:hover {
+  color: var(--accent);
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.latest__control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 70px;
+}
+
+.latest__btn-prev,
+.latest__btn-next {
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+
+.latest__btn-prev::before,
+.latest__btn-prev::after,
+.latest__btn-next::before,
+.latest__btn-next::after {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 2px;
+  border-radius: 0 1px 1px 0;
+  background-color: var(--grey);
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+  -ms-transform: translate(-50%, -50%) rotate(-45deg);
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.latest__btn-prev::after,
+.latest__btn-next::after {
+  top: 14px;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+  -ms-transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.latest__btn-next {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.latest__pagination {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
 }
 
 .inst {
