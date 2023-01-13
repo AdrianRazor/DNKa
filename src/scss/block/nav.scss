@@ -15,12 +15,6 @@
       color: var(--black);
     }
   }
-
-  &__submenu {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
 }
 
 @media (max-width: 1599px) {
@@ -79,12 +73,6 @@
           left: 0;
         }
       }
-    }
-
-    &__submenu {
-      display: flex;
-      align-items: center;
-      gap: 6px;
     }
   }
 }

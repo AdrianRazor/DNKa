@@ -6,13 +6,16 @@ gsap.registerPlugin(ScrollTrigger);
 document.addEventListener("DOMContentLoaded", function (event) {
   // Header submenus
   const submenu = document.querySelectorAll(".submenu");
+  console.log(submenu);
 
   if (submenu) {
     submenu.forEach((item) => {
       item.addEventListener("click", () => {
-        submenu.forEach((el) => {
-          el.classList.remove("open");
-        });
+        if (!item.classList.contains("open")) {
+          submenu.forEach((el) => {
+            el.classList.remove("open");
+          });
+        }
 
         item.classList.toggle("open");
       });

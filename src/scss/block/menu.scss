@@ -117,6 +117,7 @@
       opacity: 1;
       transform: translateY(0);
       transition: 0.3s ease;
+      transition-delay: 0.2s;
 
       &.hide {
         visibility: hidden;
