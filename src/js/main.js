@@ -57,11 +57,28 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
   // Slider on main page
   const swiperMain = new Swiper(".swiperMain", {
-    slidesPerView: 4,
-    slidesPerGroup: 4,
+    slidesPerView: 1,
+    slidesPerGroup: 1,
     loop: true,
-    autoplay: {
-      delay: 8000,
+    // autoplay: {
+    //   delay: 8000,
+    // },
+
+    breakpoints: {
+      375: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        spaceBetween: 15,
+      },
+      1023: {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+        spaceBetween: 0,
+      },
+      1700: {
+        slidesPerView: 4,
+        slidesPerGroup: 4,
+      },
     },
 
     // pagination: {
