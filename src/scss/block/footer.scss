@@ -1,4 +1,74 @@
 .footer {
+  padding: 70px 0;
+  background-color: var(--purple);
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  &__logo {
+    max-width: 129px;
+    height: 90px;
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    &--contacts {
+      gap: 20px;
+    }
+  }
+
+  &__item {
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: var(--black);
+
+    & a {
+      position: relative;
+      display: block;
+      width: fit-content;
+      font-weight: 700;
+      font-size: 16px;
+      text-transform: uppercase;
+      color: var(--black);
+    }
+
+    &--inst a {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      & svg {
+        &:first-of-type {
+          margin-bottom: 6px;
+        }
+      }
+    }
+  }
+
+  &__nav {
+  }
+
+  &__list {
+  }
+
+  &__block {
+  }
+
+  &__subscribe {
+  }
+
+  &__field {
+  }
+
+  &__desc {
+  }
 }
 
 @media (max-width: 767px) {

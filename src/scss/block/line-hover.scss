@@ -1,0 +1,29 @@
+.line-hover {
+  width: fit-content;
+
+  & a {
+    position: relative;
+
+    &::after {
+      content: "";
+      width: 0%;
+      height: 2px;
+      background-color: var(--black);
+      transition: 0.8s cubic-bezier(0.2, 0.2, 0.1, 1);
+
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+
+  &.active {
+    & a {
+      &::after {
+        width: 100%;
+        transition: 0.8s cubic-bezier(0.2, 0.2, 0.1, 1);
+        left: 0;
+      }
+    }
+  }
+}

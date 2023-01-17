@@ -55,6 +55,20 @@ document.addEventListener("DOMContentLoaded", function (event) {
     });
   }
 
+  // Link's hover
+  const link = document.querySelectorAll(".line-hover");
+
+  if (link) {
+    link.forEach((el) => {
+      el.addEventListener("mouseenter", () => {
+        el.classList.add("active");
+      });
+      el.addEventListener("mouseleave", () => {
+        el.classList.remove("active");
+      });
+    });
+  }
+
   // Slider on main page
   const swiperMain = new Swiper(".swiperMain", {
     slidesPerView: 1,

@@ -20,7 +20,7 @@
 
           <nav class="nav header__nav">
             <ul class="nav__list">
-              <li class="nav__link submenu submenu--catalog">
+              <li class="nav__link submenu submenu--catalog line-hover">
                 <div class="submenu__box">
                   Каталог
                   <svg width="17" height="17">
@@ -53,16 +53,16 @@
                   </ul>
                 </div>
               </li>
-              <li class="nav__link">
+              <li class="nav__link line-hover">
                 <a href="#">Наша продукція</a>
               </li>
-              <li class="nav__link">
+              <li class="nav__link line-hover">
                 <a href="#">новинки</a>
               </li>
-              <li class="nav__link">
+              <li class="nav__link line-hover">
                 <a href="#">Про нас</a>
               </li>
-              <li class="nav__link">
+              <li class="nav__link line-hover">
                 <a href="#">Контакти</a>
               </li>
             </ul>
@@ -745,7 +745,83 @@
     </main>
 
     <footer class="footer">
-      <div class="container"></div>
+      <div class="container">
+        <div class="footer__wrapper">
+          <div class="footer__contacts">
+            <a href="index.html" class="logo footer__logo">
+              <img src="img/logo-vertical.svg" alt="DNKa logo" />
+            </a>
+            <ul class="footer__list footer__list--contacts">
+              <li class="footer__item">Ми зі львова</li>
+              <li class="footer__item line-hover">
+                <a href="tel:+38 (063) 63-87-130">+38 (063) 63-87-130</a>
+              </li>
+              <li class="footer__item line-hover">
+                <a href="mailto:dnka@mail.com">dnka@mail.com</a>
+              </li>
+              <li class="footer__item footer__item--inst">
+                <a href="https://www.instagram.com/dnka_ua/">
+                  <svg width="23" height="23">
+                    <use xlink:href="img/sprite.svg#instagram-thin"></use>
+                  </svg>
+                  <svg width="78" height="22">
+                    <use xlink:href="img/sprite.svg#instagram-word"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <ul class="footer__list">
+            <li class="footer__item line-hover">
+              <a href="#">Base and Tops</a>
+            </li>
+            <li class="footer__item line-hover">
+              <a href="#">Cover Base</a>
+            </li>
+            <li class="footer__item line-hover">
+              <a href="#">Pro gel</a>
+            </li>
+            <li class="footer__item line-hover">
+              <a href="#">gel varnish</a>
+            </li>
+            <li class="footer__item line-hover">
+              <a href="#">gel</a>
+            </li>
+          </ul>
+          <nav class="footer__nav">
+            <ul class="footer__list">
+              <li class="footer__item line-hover">
+                <a href="#">Про компанію</a>
+              </li>
+              <li class="footer__item line-hover">
+                <a href="#">Доставка та оплата</a>
+              </li>
+              <li class="footer__item line-hover">
+                <a href="#">Партнери/Клієнти</a>
+              </li>
+              <li class="footer__item line-hover">
+                <a href="#">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="footer__block">
+            <div class="footer__subscribe">
+              <div class="footer__field">
+                <input type="email" name="email" id="email" />
+                <span>Твій Email</span>
+                <svg width="13" height="22">
+                  <use xlink:href="img/sprite.svg#arrowRight"></use>
+                </svg>
+              </div>
+              <div class="footer__desc">
+                Підпишись і будь в курсі усіх новинок і акцій
+              </div>
+            </div>
+            <a href="#">Privacy policies</a>
+            <p>&copy; Copyritight 2022 All right reservid</p>
+          </div>
+        </div>
+      </div>
     </footer>
 
     <script src="js/swiper-bundle.min.js"></script>
