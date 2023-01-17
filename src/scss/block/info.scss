@@ -1,0 +1,173 @@
+.info {
+  margin-bottom: 200px;
+
+  &__head {
+    display: flex;
+    margin-bottom: 60px;
+  }
+
+  &__title {
+    white-space: nowrap;
+  }
+
+  &__block {
+    display: flex;
+    gap: 60px;
+    margin-left: 14%;
+  }
+
+  &__text {
+    max-width: 460px;
+    width: 100%;
+    font-size: 18px;
+    line-height: 140%;
+  }
+
+  &__box {
+    max-width: 460px;
+    width: 100%;
+  }
+
+  &__link {
+    display: block;
+    margin-top: 25px;
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--grey);
+    transition: 0.3s ease;
+
+    &:hover {
+      color: var(--accent);
+      transition: 0.3s ease;
+    }
+  }
+
+  &__image {
+    position: relative;
+    height: 770px;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(203, 144, 234, 0.3);
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+  }
+
+  &__btn {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background-color: var(--white);
+    border: 2px solid var(--accent);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    transform: translate(-50%, -50%) scale(1);
+    transition: 0.3s ease;
+
+    & svg {
+      width: 50px;
+      height: 64px;
+      fill: var(--black);
+      margin-left: 10px;
+      transform: translateX(0);
+      transition: 0.3s ease;
+    }
+
+    &:hover {
+      transform: translate(-50%, -50%) scale(1.1);
+      transition: 0.3s ease;
+
+      & svg {
+        fill: var(--accent);
+        transition: 0.3s ease;
+      }
+    }
+  }
+}
+
+@media (max-width: 1599px) {
+  .info {
+    &__head {
+      justify-content: space-between;
+      gap: 80px;
+    }
+
+    &__block {
+      gap: 30px;
+      margin-left: initial;
+    }
+  }
+}
+
+@media (max-width: 1279px) {
+  .info {
+    &__head {
+      flex-direction: column;
+      gap: 60px;
+    }
+
+    &__block {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    &__text {
+      max-width: 820px;
+    }
+
+    &__box {
+      max-width: 820px;
+    }
+
+    &__link {
+      margin-top: 40px;
+    }
+
+    &__image {
+      height: 500px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .info {
+    margin-bottom: 100px;
+
+    &__text {
+      font-size: 16px;
+    }
+
+    &__video {
+      margin: 0 -20px;
+    }
+
+    &__image {
+      height: 366px;
+    }
+
+    &__btn {
+      width: 77px;
+      height: 77px;
+
+      & svg {
+        width: 20px;
+        height: 27px;
+        margin-left: 5px;
+      }
+    }
+  }
+}
