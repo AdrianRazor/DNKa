@@ -52,6 +52,7 @@ svg {
   --grey: #888888;
   --light: #d9d9d9;
   --white: #f9f5f0;
+  --red: #ff1c1c;
   --accent: #a464c6;
   --purple: #cb90ea;
   --pink: #e0cae3;
@@ -353,9 +354,9 @@ body {
   width: 0%;
   height: 2px;
   background-color: var(--black);
-  -webkit-transition: 0.8s cubic-bezier(0.2, 0.2, 0.1, 1);
-  -o-transition: 0.8s cubic-bezier(0.2, 0.2, 0.1, 1);
-  transition: 0.8s cubic-bezier(0.2, 0.2, 0.1, 1);
+  -webkit-transition: 0.9s cubic-bezier(0.2, 0.2, 0.1, 1);
+  -o-transition: 0.9s cubic-bezier(0.2, 0.2, 0.1, 1);
+  transition: 0.9s cubic-bezier(0.2, 0.2, 0.1, 1);
   position: absolute;
   bottom: 0;
   right: 0;
@@ -363,9 +364,9 @@ body {
 
 .line-hover.active a::after {
   width: 100%;
-  -webkit-transition: 0.8s cubic-bezier(0.2, 0.2, 0.1, 1);
-  -o-transition: 0.8s cubic-bezier(0.2, 0.2, 0.1, 1);
-  transition: 0.8s cubic-bezier(0.2, 0.2, 0.1, 1);
+  -webkit-transition: 0.9s cubic-bezier(0.2, 0.2, 0.1, 1);
+  -o-transition: 0.9s cubic-bezier(0.2, 0.2, 0.1, 1);
+  transition: 0.9s cubic-bezier(0.2, 0.2, 0.1, 1);
   left: 0;
 }
 
@@ -1344,7 +1345,8 @@ body {
 
 .footer__wrapper {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr 1fr 1fr 407px;
+  gap: 30px;
 }
 
 .footer__logo {
@@ -1384,6 +1386,7 @@ body {
   font-weight: 700;
   font-size: 16px;
   text-transform: uppercase;
+  white-space: nowrap;
   color: var(--black);
 }
 
@@ -1399,6 +1402,170 @@ body {
 
 .footer__item--inst a svg:first-of-type {
   margin-bottom: 6px;
+}
+
+.footer__block {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.footer__block a {
+  margin-top: auto;
+  font-size: 14px;
+  color: var(--black);
+  text-align: right;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.footer__block a:hover {
+  color: var(--accent);
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.footer__block p {
+  font-size: 14px;
+  text-align: right;
+}
+
+.footer__subscribe {
+  width: 100%;
+  padding: 25px 16px;
+  border: 1px solid var(--black);
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.footer__subscribe:hover {
+  border-color: var(--accent);
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.footer__subscribe:hover input {
+  border-color: var(--accent);
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.footer__subscribe:has(input:invalid) .footer__desc {
+  color: var(--red);
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.footer__field {
+  position: relative;
+}
+
+.footer__field input {
+  width: 100%;
+  padding: 5px 30px 5px 0;
+  background-color: transparent;
+  border-bottom: 1px solid var(--black);
+  font-size: 18px;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.footer__field input:not(:-moz-placeholder-shown) {
+  border-color: var(--accent);
+}
+
+.footer__field input:not(:-ms-input-placeholder) {
+  border-color: var(--accent);
+}
+
+.footer__field input:focus,
+.footer__field input:not(:placeholder-shown) {
+  border-color: var(--accent);
+}
+
+.footer__field input:not(:-moz-placeholder-shown) + span {
+  display: none;
+}
+
+.footer__field input:not(:-ms-input-placeholder) + span {
+  display: none;
+}
+
+.footer__field input:focus + span,
+.footer__field input:not(:placeholder-shown) + span {
+  display: none;
+}
+
+.footer__field input:invalid {
+  color: var(--red);
+  border-color: var(--red);
+}
+
+.footer__field span {
+  display: block;
+  font-size: 18px;
+  color: var(--black);
+  opacity: 0.5;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.footer__field-btn {
+  padding: 7px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.footer__field-btn svg {
+  fill: var(--black);
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.footer__field-btn:hover svg {
+  fill: var(--accent);
+  -webkit-transform: translateX(7px);
+  -ms-transform: translateX(7px);
+  transform: translateX(7px);
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.footer__desc {
+  margin-top: 10px;
+  font-size: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 @media (max-width: 1599px) {
@@ -1574,6 +1741,27 @@ body {
     grid-column-end: 3;
     grid-template-rows: 250px 250px;
     gap: 20px;
+  }
+
+  .footer__wrapper {
+    grid-template-columns: 360px 1fr 1fr;
+    justify-items: center;
+  }
+
+  .footer__contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 45px;
+  }
+
+  .footer__block a {
+    margin-top: 60px;
+    text-align: left;
+  }
+
+  .footer__block p {
+    text-align: left;
   }
 }
 
@@ -1820,6 +2008,34 @@ body {
   }
 }
 
+@media (max-width: 853px) {
+  .footer {
+    padding: 60px 0;
+  }
+
+  .footer__wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer__contacts {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    width: 100%;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--black);
+  }
+
+  .footer__block {
+    max-width: 520px;
+    margin-top: 30px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+
 @media (max-width: 767px) {
   .container {
     padding-left: 20px;
@@ -1975,6 +2191,20 @@ body {
   }
 }
 
+@media (max-width: 575px) {
+  .footer__wrapper {
+    justify-items: initial;
+  }
+
+  .footer__item {
+    font-size: 14px;
+  }
+
+  .footer__item a {
+    font-size: 14px;
+  }
+}
+
 @media (max-width: 479px) {
   .card__photo {
     height: 210px;
@@ -2000,6 +2230,23 @@ body {
 
   .start__text p {
     margin-top: 15px;
+    font-size: 13px;
+  }
+
+  .footer__wrapper {
+    gap: 30px 10px;
+  }
+
+  .footer__logo {
+    max-width: 111px;
+    height: 78px;
+  }
+
+  .footer__item {
+    font-size: 13px;
+  }
+
+  .footer__item a {
     font-size: 13px;
   }
 }
