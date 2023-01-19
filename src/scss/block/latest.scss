@@ -1,5 +1,5 @@
 .latest {
-  margin-top: 200px;
+  margin-top: 300px;
   margin-bottom: 200px;
 
   &__head {
@@ -32,32 +32,23 @@
   &__btn {
     &-prev,
     &-next {
-      position: relative;
-      width: 20px;
-      height: 20px;
+      padding: 0px 5px;
+      cursor: pointer;
 
-      &::before,
-      &::after {
-        content: "";
-        display: block;
-        width: 14px;
-        height: 2px;
-        border-radius: 0 1px 1px 0;
-        background-color: var(--grey);
-
-        position: absolute;
-        top: 5px;
-        left: 50%;
-        transform: translate(-50%, -50%) rotate(-45deg);
+      & svg {
+        fill: var(--black);
+        transition: 0.3s ease;
       }
 
-      &::after {
-        top: 14px;
-        transform: translate(-50%, -50%) rotate(45deg);
+      &:hover {
+        & svg {
+          fill: var(--accent);
+          transition: 0.3s ease;
+        }
       }
     }
 
-    &-next {
+    &-prev {
       transform: rotate(180deg);
     }
   }

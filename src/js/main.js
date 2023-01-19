@@ -69,14 +69,77 @@ document.addEventListener("DOMContentLoaded", function (event) {
     });
   }
 
+  // Start section animation
+  const startAnimation = gsap.timeline();
+  startAnimation
+    .from(".start__img", {
+      duration: 1.5,
+      ease: "power3.out",
+      scale: 0,
+    })
+    .from(
+      ".start__img",
+      {
+        duration: 2.5,
+        ease: "elastic.out(1, 0.2)",
+        rotation: 20,
+      },
+      "-=1.5"
+    )
+    .from(
+      ".start__text h1 span",
+      {
+        duration: 2.5,
+        ease: "power3.out",
+        xPercent: -140,
+        opacity: 0,
+        stagger: 0.3,
+      },
+      "-=1.8"
+    )
+    .from(
+      ".start__text p",
+      {
+        duration: 1.5,
+        ease: "power3.out",
+        xPercent: -100,
+        opacity: 0,
+      },
+      "-=1"
+    )
+    .from(
+      ".start__btn",
+      {
+        duration: 1.2,
+        ease: "elastic.out(1, 0.4)",
+        scale: 0,
+      },
+      "-=2"
+    );
+
+  // Ticker animation
+  gsap.to(".stripe-to-left", {
+    xPercent: -100,
+    repeat: -1,
+    duration: 25,
+    ease: "linear",
+  });
+  gsap.from(".stripe-to-right", {
+    xPercent: -100,
+    repeat: -1,
+    duration: 25,
+    ease: "linear",
+  });
+
   // Slider on main page
   const swiperMain = new Swiper(".swiperMain", {
     slidesPerView: 1,
     slidesPerGroup: 1,
     loop: true,
-    // autoplay: {
-    //   delay: 8000,
-    // },
+    speed: 1000,
+    autoplay: {
+      delay: 8000,
+    },
 
     breakpoints: {
       375: {
@@ -95,14 +158,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
       },
     },
 
-    // pagination: {
-    //   el: ".latest__pagination",
-    //   bulletClass: "pagination__bullet",
-    //   bulletActiveClass: "pagination__bullet--active",
-    //   clickable: true,
-    //   // dynamicBullets: true,
-    //   // dynamicMainBullets: 3,
-    // },
+    pagination: {
+      el: ".latest__pagination",
+      bulletClass: "pagination__bullet",
+      bulletActiveClass: "pagination__bullet--active",
+      clickable: true,
+    },
 
     navigation: {
       nextEl: ".latest__btn-next",
