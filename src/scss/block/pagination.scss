@@ -1,7 +1,9 @@
 .pagination {
   display: flex;
   align-items: center;
-  gap: 20px;
+  justify-content: center;
+  gap: 60px;
+  flex-shrink: 0;
 
   width: initial !important;
 
@@ -16,6 +18,47 @@
     &--active {
       background-color: var(--accent);
       transition: 0.3s ease;
+    }
+  }
+
+  &__btn {
+    &-prev,
+    &-next {
+      padding: 0px 5px;
+      cursor: pointer;
+
+      & svg {
+        fill: var(--black);
+        transition: 0.3s ease;
+      }
+
+      &:hover {
+        & svg {
+          fill: var(--accent);
+          transition: 0.3s ease;
+        }
+      }
+    }
+
+    &-prev {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__item {
+    padding: 0px 5px;
+    font-size: 20px;
+    color: var(--grey);
+
+    &.active {
+      font-weight: 600;
+      color: var(--black);
     }
   }
 }

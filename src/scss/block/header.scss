@@ -1,12 +1,15 @@
 .header {
   padding: 31px 0;
-  background-color: var(--pink);
 
   &__wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
+  }
+
+  &--main {
+    background-color: var(--pink);
   }
 }
 

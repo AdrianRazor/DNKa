@@ -11,7 +11,7 @@
 }
 
 * {
-  scrollbar-color: var(--accent) var(--pink);
+  scrollbar-color: var(--purple) var(--pink);
   scrollbar-width: thin;
 
   &::-webkit-scrollbar {
@@ -22,13 +22,11 @@
     background: var(--pink);
     border-radius: 4px;
     overflow: hidden;
-    border: 1px solid var(--light);
   }
 
   &::-webkit-scrollbar-thumb {
-    background: var(--accent);
+    background: var(--purple);
     border-radius: 4px;
-    border: 1px solid var(--accent);
   }
 }
 
@@ -48,6 +46,10 @@ body {
   color: var(--black);
   background-color: var(--white);
   overflow-x: hidden;
+}
+
+p {
+  line-height: 140%;
 }
 
 .hidden {

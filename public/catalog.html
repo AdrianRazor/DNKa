@@ -11,7 +11,7 @@
   </head>
 
   <body>
-    <header class="header header--main">
+    <header class="header">
       <div class="container">
         <div class="header__wrapper">
           <a href="index.html" class="logo header__logo">
@@ -324,83 +324,227 @@
     </header>
 
     <main class="main">
-      <section class="start">
+      <section class="catalog">
         <div class="container">
-          <div class="start__wrapper">
-            <div class="start__info">
-              <div class="start__img">
-                <img src="img/start.png" alt="nail polish" />
+          <div class="catalog__wrapper">
+            <ul class="breadcrumbs catalog__breadcrumbs">
+              <li class="breadcrumbs__item">
+                <a href="#">Головна</a>
+              </li>
+              <li class="breadcrumbs__item">
+                <a href="#">Каталог</a>
+              </li>
+            </ul>
+
+            <div class="catalog__head">
+              <h1 class="title">Каталог</h1>
+              <ul class="tabs__head catalog__kinds">
+                <li class="tabs__item active">
+                  <p>Всі</p>
+                </li>
+                <li class="tabs__item">
+                  <p>Новинки</p>
+                </li>
+                <li class="tabs__item">
+                  <p>Cover Base</p>
+                </li>
+                <li class="tabs__item">
+                  <p>Base and Tops</p>
+                </li>
+                <li class="tabs__item">
+                  <p>Pro Gel</p>
+                </li>
+                <li class="tabs__item">
+                  <p>Gel varnish</p>
+                </li>
+                <li class="tabs__item">
+                  <p>Gel</p>
+                </li>
+              </ul>
+            </div>
+
+            <div class="catalog__filters">
+              <div class="filter catalog__filter">
+                <div class="filter__head">
+                  <p class="filter__name">Об’єм:</p>
+                  <button class="filter__btn">
+                    <p class="filter__current">всi</p>
+                    <svg width="17" height="17">
+                      <use xlink:href="img/sprite.svg#arrowDown"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="filter__body">
+                  <ul class="filter__list">
+                    <li class="filter__item">
+                      <p>7,2 мл</p>
+                    </li>
+                    <li class="filter__item">
+                      <p>12 мл</p>
+                    </li>
+                    <li class="filter__item">
+                      <p>15 мл</p>
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <div class="start__text">
-                <h1>
-                  <span>код</span>
-                  <span>твоєї</span>
-                  <span>краси</span>
-                </h1>
-                <p>Матеріали для манікюру преміум якості</p>
+
+              <div class="filter catalog__filter">
+                <div class="filter__head">
+                  <p class="filter__name">Колір:</p>
+                  <button class="filter__btn">
+                    <p class="filter__current">всi</p>
+                    <svg width="17" height="17">
+                      <use xlink:href="img/sprite.svg#arrowDown"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="filter__body">
+                  <ul class="filter__list">
+                    <li class="checkbox checkbox--color filter__item">
+                      <input type="checkbox" name="color" id="white" />
+                      <label for="white" class="checkbox__label">
+                        <div
+                          class="checkbox__color"
+                          style="
+                            background-color: #fff;
+                            border: 1px solid rgba(0, 0, 0, 0.1);
+                          "
+                        ></div>
+                        <p>білi</p>
+                      </label>
+                    </li>
+                    <li class="checkbox checkbox--color filter__item">
+                      <input type="checkbox" name="color" id="biege" />
+                      <label for="biege" class="checkbox__label">
+                        <div
+                          class="checkbox__color"
+                          style="background-color: #e4cfb6"
+                        ></div>
+                        <p>бежевi</p>
+                      </label>
+                    </li>
+                    <li class="checkbox checkbox--color filter__item">
+                      <input type="checkbox" name="color" id="yellow" />
+                      <label for="yellow" class="checkbox__label">
+                        <div
+                          class="checkbox__color"
+                          style="background-color: #fcd90a"
+                        ></div>
+                        <p>жовті</p>
+                      </label>
+                    </li>
+                    <li class="checkbox checkbox--color filter__item">
+                      <input type="checkbox" name="color" id="gold" />
+                      <label for="gold" class="checkbox__label">
+                        <div
+                          class="checkbox__color"
+                          style="background-color: #d08b4e"
+                        ></div>
+                        <p>золото</p>
+                      </label>
+                    </li>
+                    <li class="checkbox checkbox--color filter__item">
+                      <input type="checkbox" name="color" id="orange" />
+                      <label for="orange" class="checkbox__label">
+                        <div
+                          class="checkbox__color"
+                          style="background-color: #ffac1c"
+                        ></div>
+                        <p>помаранчевi</p>
+                      </label>
+                    </li>
+                    <li class="checkbox checkbox--color filter__item">
+                      <input type="checkbox" name="color" id="red" />
+                      <label for="red" class="checkbox__label">
+                        <div
+                          class="checkbox__color"
+                          style="background-color: #f03438"
+                        ></div>
+                        <p>червоні</p>
+                      </label>
+                    </li>
+                    <li class="checkbox checkbox--color filter__item">
+                      <input type="checkbox" name="color" id="purple" />
+                      <label for="purple" class="checkbox__label">
+                        <div
+                          class="checkbox__color"
+                          style="background-color: #be32f4"
+                        ></div>
+                        <p>фіолетовi</p>
+                      </label>
+                    </li>
+                    <li class="checkbox checkbox--color filter__item">
+                      <input type="checkbox" name="color" id="pink" />
+                      <label for="pink" class="checkbox__label">
+                        <div
+                          class="checkbox__color"
+                          style="background-color: #d16fd6"
+                        ></div>
+                        <p>рожевi</p>
+                      </label>
+                    </li>
+                    <li class="checkbox checkbox--color filter__item">
+                      <input type="checkbox" name="color" id="green" />
+                      <label for="green" class="checkbox__label">
+                        <div
+                          class="checkbox__color"
+                          style="background-color: #3f822b"
+                        ></div>
+                        <p>зеленi</p>
+                      </label>
+                    </li>
+                    <li class="checkbox checkbox--color filter__item">
+                      <input type="checkbox" name="color" id="blue" />
+                      <label for="blue" class="checkbox__label">
+                        <div
+                          class="checkbox__color"
+                          style="background-color: #4b52cc"
+                        ></div>
+                        <p>синi</p>
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="filter filter--sort catalog__filter">
+                <div class="filter__head">
+                  <p class="filter__name">Сортування:</p>
+                  <button class="filter__btn">
+                    <p class="filter__current">по популярності</p>
+                    <svg width="17" height="17">
+                      <use xlink:href="img/sprite.svg#arrowDown"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="filter__body">
+                  <ul class="filter__list">
+                    <li class="filter__item">
+                      <p>За замовчуванням</p>
+                    </li>
+                    <li class="filter__item">
+                      <p>Від дорогих до дешевих</p>
+                    </li>
+                    <li class="filter__item">
+                      <p>Від дешевих до дорогих</p>
+                    </li>
+                    <li class="filter__item">
+                      <p>Новинки</p>
+                    </li>
+                    <li class="filter__item">
+                      <p>По популярності</p>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
-            <div class="start__box">
-              <button class="btn btn--circle start__btn">В каталог</button>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <section class="stripe stripe--top">
-        <ul class="stripe__list stripe-to-left">
-          <li class="stripe__item">Відтепер, доставка по Європі</li>
-          <li class="stripe__item">Відтепер, доставка по Європі</li>
-          <li class="stripe__item">Відтепер, доставка по Європі</li>
-          <li class="stripe__item">Відтепер, доставка по Європі</li>
-          <li class="stripe__item">Відтепер, доставка по Європі</li>
-          <li class="stripe__item">Відтепер, доставка по Європі</li>
-          <li class="stripe__item">Відтепер, доставка по Європі</li>
-        </ul>
-        <ul class="stripe__list stripe-to-left">
-          <li class="stripe__item">Відтепер, доставка по Європі</li>
-          <li class="stripe__item">Відтепер, доставка по Європі</li>
-          <li class="stripe__item">Відтепер, доставка по Європі</li>
-          <li class="stripe__item">Відтепер, доставка по Європі</li>
-          <li class="stripe__item">Відтепер, доставка по Європі</li>
-          <li class="stripe__item">Відтепер, доставка по Європі</li>
-          <li class="stripe__item">Відтепер, доставка по Європі</li>
-        </ul>
-      </section>
-
-      <section class="stripe stripe--bottom">
-        <ul class="stripe__list stripe-to-right">
-          <li class="stripe__item">Відтепер, доставка по Європі</li>
-          <li class="stripe__item">Відтепер, доставка по Європі</li>
-          <li class="stripe__item">Відтепер, доставка по Європі</li>
-          <li class="stripe__item">Відтепер, доставка по Європі</li>
-          <li class="stripe__item">Відтепер, доставка по Європі</li>
-          <li class="stripe__item">Відтепер, доставка по Європі</li>
-          <li class="stripe__item">Відтепер, доставка по Європі</li>
-        </ul>
-        <ul class="stripe__list stripe-to-right">
-          <li class="stripe__item">Відтепер, доставка по Європі</li>
-          <li class="stripe__item">Відтепер, доставка по Європі</li>
-          <li class="stripe__item">Відтепер, доставка по Європі</li>
-          <li class="stripe__item">Відтепер, доставка по Європі</li>
-          <li class="stripe__item">Відтепер, доставка по Європі</li>
-          <li class="stripe__item">Відтепер, доставка по Європі</li>
-          <li class="stripe__item">Відтепер, доставка по Європі</li>
-        </ul>
-      </section>
-
-      <section class="latest">
-        <div class="container">
-          <div class="latest__head">
-            <h2 class="title">Новинки</h2>
-            <a href="#" class="latest__link">В каталог</a>
-          </div>
-          <div class="swiper swiperMain">
-            <div class="swiper-wrapper latest__wrapper">
-              <div class="card swiper-slide latest__slide">
+            <ul class="catalog__grid">
+              <li class="card catalog__card">
                 <div class="card__wrapper">
                   <div class="card__photo">
-                    <img src="img/nail-polish-5.jpg" alt="nail polish" />
+                    <img src="img/nail-polish-6.jpg" alt="nail polish" />
                     <img src="img/nail-polish-9.jpg" alt="nail polish" />
                     <div class="card__box">
                       <button class="card__btn">
@@ -419,11 +563,11 @@
                   <p class="card__price">150 грн</p>
                   <button class="btn card__buy">Купити</button>
                 </div>
-              </div>
-              <div class="card swiper-slide latest__slide">
+              </li>
+              <li class="card catalog__card">
                 <div class="card__wrapper">
                   <div class="card__photo">
-                    <img src="img/nail-polish-6.jpg" alt="nail polish" />
+                    <img src="img/nail-polish-8.jpg" alt="nail polish" />
                     <img src="img/nail-polish-9.jpg" alt="nail polish" />
                     <div class="card__box">
                       <button class="card__btn">
@@ -438,12 +582,58 @@
                       </button>
                     </div>
                   </div>
-                  <p class="card__name">Cover Base Magical, 12 мл</p>
+                  <p class="card__name">Cover Base, 12 мл</p>
                   <p class="card__price">150 грн</p>
                   <button class="btn card__buy">Купити</button>
                 </div>
-              </div>
-              <div class="card swiper-slide latest__slide">
+              </li>
+              <li class="card catalog__card">
+                <div class="card__wrapper">
+                  <div class="card__photo">
+                    <img src="img/nail-polish-11.jpg" alt="nail polish" />
+                    <img src="img/nail-polish-9.jpg" alt="nail polish" />
+                    <div class="card__box">
+                      <button class="card__btn">
+                        <svg>
+                          <use xlink:href="img/sprite.svg#heart"></use>
+                        </svg>
+                      </button>
+                      <button class="card__btn">
+                        <svg>
+                          <use xlink:href="img/sprite.svg#sort"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <p class="card__name">Cover Base, 12 мл</p>
+                  <p class="card__price">150 грн</p>
+                  <button class="btn card__buy">Купити</button>
+                </div>
+              </li>
+              <li class="card catalog__card">
+                <div class="card__wrapper">
+                  <div class="card__photo">
+                    <img src="img/nail-polish-10.jpg" alt="nail polish" />
+                    <img src="img/nail-polish-9.jpg" alt="nail polish" />
+                    <div class="card__box">
+                      <button class="card__btn">
+                        <svg>
+                          <use xlink:href="img/sprite.svg#heart"></use>
+                        </svg>
+                      </button>
+                      <button class="card__btn">
+                        <svg>
+                          <use xlink:href="img/sprite.svg#sort"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <p class="card__name">Cover Base, 12 мл</p>
+                  <p class="card__price">150 грн</p>
+                  <button class="btn card__buy">Купити</button>
+                </div>
+              </li>
+              <li class="card catalog__card">
                 <div class="card__wrapper">
                   <div class="card__photo">
                     <img src="img/nail-polish-7.jpg" alt="nail polish" />
@@ -465,8 +655,31 @@
                   <p class="card__price">150 грн</p>
                   <button class="btn card__buy">Купити</button>
                 </div>
-              </div>
-              <div class="card swiper-slide latest__slide">
+              </li>
+              <li class="card catalog__card">
+                <div class="card__wrapper">
+                  <div class="card__photo">
+                    <img src="img/nail-polish-10.jpg" alt="nail polish" />
+                    <img src="img/nail-polish-9.jpg" alt="nail polish" />
+                    <div class="card__box">
+                      <button class="card__btn">
+                        <svg>
+                          <use xlink:href="img/sprite.svg#heart"></use>
+                        </svg>
+                      </button>
+                      <button class="card__btn">
+                        <svg>
+                          <use xlink:href="img/sprite.svg#sort"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <p class="card__name">Cover Base, 12 мл</p>
+                  <p class="card__price">150 грн</p>
+                  <button class="btn card__buy">Купити</button>
+                </div>
+              </li>
+              <li class="card catalog__card">
                 <div class="card__wrapper">
                   <div class="card__photo">
                     <img src="img/nail-polish-5.jpg" alt="nail polish" />
@@ -484,15 +697,15 @@
                       </button>
                     </div>
                   </div>
-                  <p class="card__name">Cover Base Magical, 12 мл</p>
+                  <p class="card__name">Cover Base, 12 мл</p>
                   <p class="card__price">150 грн</p>
                   <button class="btn card__buy">Купити</button>
                 </div>
-              </div>
-              <div class="card swiper-slide latest__slide">
+              </li>
+              <li class="card catalog__card">
                 <div class="card__wrapper">
                   <div class="card__photo">
-                    <img src="img/nail-polish-1.jpg" alt="nail polish" />
+                    <img src="img/nail-polish-8.jpg" alt="nail polish" />
                     <img src="img/nail-polish-9.jpg" alt="nail polish" />
                     <div class="card__box">
                       <button class="card__btn">
@@ -511,34 +724,11 @@
                   <p class="card__price">150 грн</p>
                   <button class="btn card__buy">Купити</button>
                 </div>
-              </div>
-              <div class="card swiper-slide latest__slide">
+              </li>
+              <li class="card catalog__card">
                 <div class="card__wrapper">
                   <div class="card__photo">
-                    <img src="img/nail-polish-2.jpg" alt="nail polish" />
-                    <img src="img/nail-polish-9.jpg" alt="nail polish" />
-                    <div class="card__box">
-                      <button class="card__btn">
-                        <svg>
-                          <use xlink:href="img/sprite.svg#heart"></use>
-                        </svg>
-                      </button>
-                      <button class="card__btn">
-                        <svg>
-                          <use xlink:href="img/sprite.svg#sort"></use>
-                        </svg>
-                      </button>
-                    </div>
-                  </div>
-                  <p class="card__name">Cover Base Magical, 12 мл</p>
-                  <p class="card__price">150 грн</p>
-                  <button class="btn card__buy">Купити</button>
-                </div>
-              </div>
-              <div class="card swiper-slide latest__slide">
-                <div class="card__wrapper">
-                  <div class="card__photo">
-                    <img src="img/nail-polish-3.jpg" alt="nail polish" />
+                    <img src="img/nail-polish-6.jpg" alt="nail polish" />
                     <img src="img/nail-polish-9.jpg" alt="nail polish" />
                     <div class="card__box">
                       <button class="card__btn">
@@ -557,11 +747,11 @@
                   <p class="card__price">150 грн</p>
                   <button class="btn card__buy">Купити</button>
                 </div>
-              </div>
-              <div class="card swiper-slide latest__slide">
+              </li>
+              <li class="card catalog__card">
                 <div class="card__wrapper">
                   <div class="card__photo">
-                    <img src="img/nail-polish-4.jpg" alt="nail polish" />
+                    <img src="img/nail-polish-8.jpg" alt="nail polish" />
                     <img src="img/nail-polish-9.jpg" alt="nail polish" />
                     <div class="card__box">
                       <button class="card__btn">
@@ -576,200 +766,170 @@
                       </button>
                     </div>
                   </div>
-                  <p class="card__name">Cover Base Magical, 12 мл</p>
+                  <p class="card__name">Cover Base, 12 мл</p>
                   <p class="card__price">150 грн</p>
                   <button class="btn card__buy">Купити</button>
                 </div>
-              </div>
-            </div>
-            <div class="latest__control">
-              <button class="latest__btn-prev">
-                <svg width="12" height="21">
-                  <use xlink:href="img/sprite.svg#arrowRight"></use>
-                </svg>
-              </button>
-              <div class="pagination latest__pagination"></div>
-              <button class="latest__btn-next">
-                <svg width="12" height="21">
-                  <use xlink:href="img/sprite.svg#arrowRight"></use>
-                </svg>
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
+              </li>
+              <li class="card catalog__card">
+                <div class="card__wrapper">
+                  <div class="card__photo">
+                    <img src="img/nail-polish-11.jpg" alt="nail polish" />
+                    <img src="img/nail-polish-9.jpg" alt="nail polish" />
+                    <div class="card__box">
+                      <button class="card__btn">
+                        <svg>
+                          <use xlink:href="img/sprite.svg#heart"></use>
+                        </svg>
+                      </button>
+                      <button class="card__btn">
+                        <svg>
+                          <use xlink:href="img/sprite.svg#sort"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <p class="card__name">Cover Base, 12 мл</p>
+                  <p class="card__price">150 грн</p>
+                  <button class="btn card__buy">Купити</button>
+                </div>
+              </li>
+              <li class="card catalog__card">
+                <div class="card__wrapper">
+                  <div class="card__photo">
+                    <img src="img/nail-polish-10.jpg" alt="nail polish" />
+                    <img src="img/nail-polish-9.jpg" alt="nail polish" />
+                    <div class="card__box">
+                      <button class="card__btn">
+                        <svg>
+                          <use xlink:href="img/sprite.svg#heart"></use>
+                        </svg>
+                      </button>
+                      <button class="card__btn">
+                        <svg>
+                          <use xlink:href="img/sprite.svg#sort"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <p class="card__name">Cover Base, 12 мл</p>
+                  <p class="card__price">150 грн</p>
+                  <button class="btn card__buy">Купити</button>
+                </div>
+              </li>
+              <li class="card catalog__card">
+                <div class="card__wrapper">
+                  <div class="card__photo">
+                    <img src="img/nail-polish-7.jpg" alt="nail polish" />
+                    <img src="img/nail-polish-9.jpg" alt="nail polish" />
+                    <div class="card__box">
+                      <button class="card__btn">
+                        <svg>
+                          <use xlink:href="img/sprite.svg#heart"></use>
+                        </svg>
+                      </button>
+                      <button class="card__btn">
+                        <svg>
+                          <use xlink:href="img/sprite.svg#sort"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <p class="card__name">Cover Base, 12 мл</p>
+                  <p class="card__price">150 грн</p>
+                  <button class="btn card__buy">Купити</button>
+                </div>
+              </li>
+              <li class="card catalog__card">
+                <div class="card__wrapper">
+                  <div class="card__photo">
+                    <img src="img/nail-polish-10.jpg" alt="nail polish" />
+                    <img src="img/nail-polish-9.jpg" alt="nail polish" />
+                    <div class="card__box">
+                      <button class="card__btn">
+                        <svg>
+                          <use xlink:href="img/sprite.svg#heart"></use>
+                        </svg>
+                      </button>
+                      <button class="card__btn">
+                        <svg>
+                          <use xlink:href="img/sprite.svg#sort"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <p class="card__name">Cover Base, 12 мл</p>
+                  <p class="card__price">150 грн</p>
+                  <button class="btn card__buy">Купити</button>
+                </div>
+              </li>
+              <li class="card catalog__card">
+                <div class="card__wrapper">
+                  <div class="card__photo">
+                    <img src="img/nail-polish-5.jpg" alt="nail polish" />
+                    <img src="img/nail-polish-9.jpg" alt="nail polish" />
+                    <div class="card__box">
+                      <button class="card__btn">
+                        <svg>
+                          <use xlink:href="img/sprite.svg#heart"></use>
+                        </svg>
+                      </button>
+                      <button class="card__btn">
+                        <svg>
+                          <use xlink:href="img/sprite.svg#sort"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <p class="card__name">Cover Base, 12 мл</p>
+                  <p class="card__price">150 грн</p>
+                  <button class="btn card__buy">Купити</button>
+                </div>
+              </li>
+              <li class="card catalog__card">
+                <div class="card__wrapper">
+                  <div class="card__photo">
+                    <img src="img/nail-polish-8.jpg" alt="nail polish" />
+                    <img src="img/nail-polish-9.jpg" alt="nail polish" />
+                    <div class="card__box">
+                      <button class="card__btn">
+                        <svg>
+                          <use xlink:href="img/sprite.svg#heart"></use>
+                        </svg>
+                      </button>
+                      <button class="card__btn">
+                        <svg>
+                          <use xlink:href="img/sprite.svg#sort"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <p class="card__name">Cover Base, 12 мл</p>
+                  <p class="card__price">150 грн</p>
+                  <button class="btn card__buy">Купити</button>
+                </div>
+              </li>
+            </ul>
 
-      <section class="prod">
-        <div class="container">
-          <div class="prod__wrapper">
-            <div class="prod__info">
-              <h2 class="title prod__title">Продукція DNKa’</h2>
-              <ul class="prod__list">
-                <li class="prod__item">
-                  <a href="#" class="prod__link">
-                    <p>Base and Tops</p>
-                    <span>8 tipe</span>
-                  </a>
-                  <div class="prod__left">
-                    <img src="img/nails-3.jpg" alt="nails" />
-                  </div>
-                  <div class="prod__right">
-                    <img src="img/nails-4.jpg" alt="nails" />
-                  </div>
-                </li>
-                <li class="prod__item">
-                  <a href="#" class="prod__link"
-                    ><p>Cover Base</p>
-                    <span>8 tipe</span></a
-                  >
-                  <div class="prod__left">
-                    <img src="img/nails-1.jpg" alt="nails" />
-                  </div>
-                  <div class="prod__right">
-                    <img src="img/nails-2.jpg" alt="nails" />
-                  </div>
-                </li>
-                <li class="prod__item">
-                  <a href="#" class="prod__link"
-                    ><p>Pro Gel</p>
-                    <span>8 colors</span></a
-                  >
-                  <div class="prod__left">
-                    <img src="img/nail-polish-1.jpg" alt="nails" />
-                  </div>
-                  <div class="prod__right">
-                    <img src="img/nail-polish-2.jpg" alt="nails" />
-                  </div>
-                </li>
-                <li class="prod__item">
-                  <a href="#" class="prod__link"
-                    ><p>gel varnish</p>
-                    <span>8 colors</span></a
-                  >
-                  <div class="prod__left">
-                    <img src="img/nail-polish-3.jpg" alt="nails" />
-                  </div>
-                  <div class="prod__right">
-                    <img src="img/nail-polish-4.jpg" alt="nails" />
-                  </div>
-                </li>
-                <li class="prod__item">
-                  <a href="#" class="prod__link"
-                    ><p>gel</p>
-                    <span>8 colors</span></a
-                  >
-                  <div class="prod__left">
-                    <img src="img/nail-polish-9.jpg" alt="nails" />
-                  </div>
-                  <div class="prod__right">
-                    <img src="img/nails-2.jpg" alt="nails" />
-                  </div>
-                </li>
+            <div class="pagination catalog__pagination">
+              <button class="pagination__btn-prev">
+                <svg width="12" height="21">
+                  <use xlink:href="img/sprite.svg#arrowRight"></use>
+                </svg>
+              </button>
+              <ul class="pagination__list">
+                <li class="pagination__item active">1</li>
+                <li class="pagination__item">2</li>
+                <li class="pagination__item">3</li>
+                <li class="pagination__item">4</li>
+                <li class="pagination__item">5</li>
               </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="info">
-        <div class="container">
-          <div class="info__wrapper">
-            <div class="info__head">
-              <h2 class="title info__title">Про компанію</h2>
-              <div class="info__block">
-                <p class="info__text">
-                  Дизайн продукту, якість матеріалів, корейська сировина преміум
-                  якості за доступною ціною (найнижча серед конкурентів з
-                  подібною тарою та продукцією), зручність матеріалів в роботі,
-                  тільки трендові відтінки, постійні новинки.
-                </p>
-                <div class="info__box">
-                  <p class="info__text">
-                    Дизайн продукту, якість матеріалів, корейська сировина
-                    преміум якості за доступною ціною. зручність матеріалів в
-                    роботі.
-                  </p>
-                  <a href="#" class="info__link">Про нас</a>
-                </div>
-              </div>
-            </div>
-            <div class="info__video">
-              <div class="info__frame"></div>
-              <div class="info__image">
-                <img src="img/video.jpg" alt="video preview" />
-                <button class="info__btn">
-                  <svg>
-                    <use xlink:href="img/sprite.svg#play"></use>
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="inst">
-        <div class="container">
-          <div class="inst__wrapper">
-            <div class="inst__head">
-              <h2 class="title">Наш Інстаграм</h2>
-              <a
-                href="https://www.instagram.com/dnka_ua/"
-                class="inst__subscribe"
-              >
-                <svg width="25" height="25">
-                  <use xlink:href="img/sprite.svg#instagram"></use>
+              <button class="pagination__btn-next">
+                <svg width="12" height="21">
+                  <use xlink:href="img/sprite.svg#arrowRight"></use>
                 </svg>
-                <span>Підписатися</span>
-              </a>
+              </button>
             </div>
-            <div class="inst__grid">
-              <div class="inst__photo">
-                <img class="inst__img" src="img/nails-1.jpg" alt="nails" />
-              </div>
-              <div class="inst__photo inst__photo--mobile">
-                <img class="inst__img" src="img/nails-2.jpg" alt="nails" />
-              </div>
-              <div class="inst__subgrid">
-                <div class="inst__photo">
-                  <img
-                    class="inst__img"
-                    src="img/nail-polish-1.jpg"
-                    alt="nail polish"
-                  />
-                </div>
-                <div class="inst__photo">
-                  <img
-                    class="inst__img"
-                    src="img/nail-polish-2.jpg"
-                    alt="nail polish"
-                  />
-                </div>
-                <div class="inst__photo">
-                  <img
-                    class="inst__img"
-                    src="img/nail-polish-3.jpg"
-                    alt="nail polish"
-                  />
-                </div>
-                <div class="inst__photo">
-                  <img
-                    class="inst__img"
-                    src="img/nail-polish-4.jpg"
-                    alt="nail polish"
-                  />
-                </div>
-              </div>
-            </div>
-            <a
-              href="https://www.instagram.com/dnka_ua/"
-              class="inst__subscribe inst__subscribe--mobile"
-            >
-              <svg width="25" height="25">
-                <use xlink:href="img/sprite.svg#instagram"></use>
-              </svg>
-              <span>Підписатися</span>
-            </a>
           </div>
         </div>
       </section>

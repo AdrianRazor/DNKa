@@ -9,6 +9,10 @@
 @import "block/card.scss";
 @import "block/pagination.scss";
 @import "block/line-hover.scss";
+@import "block/breadcrumbs.scss";
+@import "block/tabs.scss";
+@import "block/filter.scss";
+@import "block/checkbox.scss";
 
 @import "block/header.scss";
 @import "block/nav.scss";
@@ -24,5 +28,7 @@
 @import "block/prod.scss";
 @import "block/info.scss";
 @import "block/inst.scss";
+
+@import "block/catalog.scss";
 
 @import "block/footer.scss";

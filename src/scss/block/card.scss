@@ -7,6 +7,7 @@
     padding: 15px;
     background-color: transparent;
     border: 1px solid transparent;
+    transition: 0.5s ease;
   }
 
   &__photo {
@@ -15,21 +16,27 @@
     background-color: #fff;
     padding: 40px;
     margin-bottom: 30px;
+    transition: 0.5s ease;
 
     & img {
       &:first-of-type {
         object-fit: contain;
       }
       &:last-of-type {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+
         object-fit: cover;
-        display: none;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.5s ease;
       }
     }
   }
 
   &__box {
-    display: none;
-
     position: absolute;
     top: 5px;
     right: 5px;
@@ -37,6 +44,10 @@
 
     background-color: #fff;
     border-radius: 2px;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s ease;
   }
 
   &__btn {
@@ -70,8 +81,6 @@
 
   &__buy {
     display: none;
-    visibility: hidden;
-    opacity: 0;
     margin-top: 20px;
   }
 
@@ -85,29 +94,35 @@
 
         background-color: #fff;
         border-color: var(--light);
+        transition: 0.5s ease;
       }
 
       &__photo {
         padding: 0;
+        transition: 0.5s ease;
 
         & img {
           &:first-of-type {
-            display: none;
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.5s ease;
           }
           &:last-of-type {
-            display: block;
+            visibility: visible;
+            opacity: 1;
+            transition: 0.5s ease;
           }
         }
       }
 
       &__box {
-        display: block;
+        visibility: visible;
+        opacity: 1;
+        transition: 0.5s ease;
       }
 
       &__buy {
         display: block;
-        visibility: visible;
-        opacity: 1;
       }
     }
   }
@@ -170,6 +185,7 @@
     }
 
     &__buy {
+      display: block;
       height: 40px;
       background-color: transparent;
       border: 1px solid var(--accent);

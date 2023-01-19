@@ -1,0 +1,27 @@
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &:not(:first-child) {
+      &::before {
+        content: "";
+        display: block;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: var(--grey);
+      }
+    }
+
+    & a {
+      font-size: 18px;
+      color: var(--grey);
+    }
+  }
+}
