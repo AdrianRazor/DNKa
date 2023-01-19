@@ -160,7 +160,7 @@ p {
 .btn {
   width: 100%;
   height: 55px;
-  background-color: var(--accent);
+  background-color: var(--purple);
   -webkit-transition: background-color 0.3s ease, width 0.3s ease, height 0.3s ease;
   -o-transition: background-color 0.3s ease, width 0.3s ease, height 0.3s ease;
   transition: background-color 0.3s ease, width 0.3s ease, height 0.3s ease;
@@ -181,7 +181,7 @@ p {
 }
 
 .btn:hover {
-  background-color: var(--purple);
+  background-color: var(--accent);
   -webkit-transition: background-color 0.3s ease, width 0.3s ease, height 0.3s ease;
   -o-transition: background-color 0.3s ease, width 0.3s ease, height 0.3s ease;
   transition: background-color 0.3s ease, width 0.3s ease, height 0.3s ease;
@@ -196,7 +196,6 @@ p {
   width: 220px;
   height: 220px;
   border-radius: 50%;
-  background-color: var(--purple);
   font-family: "Cormorant", serif;
   font-size: 20px;
   text-transform: uppercase;
@@ -205,7 +204,6 @@ p {
 .btn--circle:hover {
   width: 200px;
   height: 200px;
-  background-color: var(--accent);
 }
 
 .logo {
@@ -1875,6 +1873,56 @@ p {
   margin-top: 70px;
 }
 
+.error {
+  margin-top: 120px;
+  margin-bottom: 220px;
+}
+
+.error__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.error__text {
+  font-size: 32px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.error__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 50px;
+}
+
+.error__title svg {
+  width: 208px;
+  height: 303px;
+  fill: var(--accent);
+}
+
+.error__img {
+  max-width: 215px;
+  width: 100%;
+}
+
+.error__btn {
+  max-width: 414px;
+}
+
 .footer {
   padding: 70px 0;
   background-color: var(--purple);
@@ -2769,6 +2817,29 @@ p {
     display: flex;
     margin-top: 40px;
   }
+
+  .error {
+    margin-top: 60px;
+    margin-bottom: 100px;
+  }
+
+  .error__text {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .error__title {
+    margin-bottom: 30px;
+  }
+
+  .error__title svg {
+    width: 100px;
+    height: 145px;
+  }
+
+  .error__img {
+    max-width: 110px;
+  }
 }
 
 @media (max-width: 575px) {
@@ -2811,6 +2882,19 @@ p {
   .start__text p {
     margin-top: 15px;
     font-size: 13px;
+  }
+
+  .error__text {
+    font-size: 16px;
+  }
+
+  .error__title svg {
+    width: 80px;
+    height: 120px;
+  }
+
+  .error__img {
+    max-width: 100px;
   }
 
   .footer__wrapper {
