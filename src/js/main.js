@@ -121,13 +121,13 @@ document.addEventListener("DOMContentLoaded", function (event) {
   gsap.to(".stripe-to-left", {
     xPercent: -100,
     repeat: -1,
-    duration: 25,
+    duration: 40,
     ease: "linear",
   });
   gsap.from(".stripe-to-right", {
     xPercent: -100,
     repeat: -1,
-    duration: 25,
+    duration: 40,
     ease: "linear",
   });
 

@@ -51,3 +51,32 @@
     transform: rotate(5.8deg) translateX(-30px);
   }
 }
+
+@media (max-width: 767px) {
+  .stripe {
+    width: 100%;
+    box-shadow: none;
+
+    &__list {
+      gap: 20px;
+    }
+
+    &__item {
+      font-size: 14px;
+      gap: 20px;
+
+      &:last-of-type {
+        margin-right: 20px;
+      }
+    }
+
+    &--top {
+      margin-top: initial;
+      transform: initial;
+    }
+
+    &--bottom {
+      display: none;
+    }
+  }
+}

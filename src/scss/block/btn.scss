@@ -14,21 +14,6 @@
   font-size: 18px;
   color: var(--white);
 
-  &--circle {
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
-
-    font-family: "Cormorant", serif;
-    font-size: 20px;
-    text-transform: uppercase;
-
-    &:hover {
-      width: 200px;
-      height: 200px;
-    }
-  }
-
   &:hover {
     background-color: var(--purple);
     transition: background-color 0.3s ease, width 0.3s ease, height 0.3s ease;
@@ -37,6 +22,23 @@
   &:disabled {
     opacity: 0.5;
     cursor: not-allowed;
+  }
+
+  &--circle {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background-color: var(--purple);
+
+    font-family: "Cormorant", serif;
+    font-size: 20px;
+    text-transform: uppercase;
+
+    &:hover {
+      width: 200px;
+      height: 200px;
+      background-color: var(--accent);
+    }
   }
 }
 

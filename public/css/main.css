@@ -178,20 +178,6 @@ body {
   color: var(--white);
 }
 
-.btn--circle {
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  font-family: "Cormorant", serif;
-  font-size: 20px;
-  text-transform: uppercase;
-}
-
-.btn--circle:hover {
-  width: 200px;
-  height: 200px;
-}
-
 .btn:hover {
   background-color: var(--purple);
   -webkit-transition: background-color 0.3s ease, width 0.3s ease, height 0.3s ease;
@@ -202,6 +188,22 @@ body {
 .btn:disabled {
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+.btn--circle {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background-color: var(--purple);
+  font-family: "Cormorant", serif;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.btn--circle:hover {
+  width: 200px;
+  height: 200px;
+  background-color: var(--accent);
 }
 
 .logo {
@@ -2188,6 +2190,36 @@ body {
   .start__box {
     min-height: 180px;
     margin-bottom: 50px;
+  }
+
+  .stripe {
+    width: 100%;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .stripe__list {
+    gap: 20px;
+  }
+
+  .stripe__item {
+    font-size: 14px;
+    gap: 20px;
+  }
+
+  .stripe__item:last-of-type {
+    margin-right: 20px;
+  }
+
+  .stripe--top {
+    margin-top: initial;
+    -webkit-transform: initial;
+    -ms-transform: initial;
+    transform: initial;
+  }
+
+  .stripe--bottom {
+    display: none;
   }
 
   .latest {
