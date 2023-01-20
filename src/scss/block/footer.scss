@@ -112,32 +112,20 @@
       font-size: 18px;
       transition: 0.3s ease;
 
+      &::placeholder {
+        color: var(--black);
+        opacity: 0.5;
+      }
+
       &:focus,
       &:not(:placeholder-shown) {
         border-color: var(--accent);
-
-        & + span {
-          display: none;
-        }
       }
 
       &:invalid {
         color: var(--red);
         border-color: var(--red);
       }
-    }
-
-    & span {
-      display: block;
-      font-size: 18px;
-      color: var(--black);
-      opacity: 0.5;
-
-      position: absolute;
-      top: 50%;
-      left: 0;
-      transform: translateY(-50%);
-      z-index: 10;
     }
 
     &-btn {

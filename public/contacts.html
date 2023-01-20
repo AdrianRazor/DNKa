@@ -62,7 +62,7 @@
                 <a href="#">Про нас</a>
               </li>
               <li class="nav__link line-hover">
-                <a href="#">Контакти</a>
+                <a href="contacts.html">Контакти</a>
               </li>
             </ul>
           </nav>
@@ -245,7 +245,7 @@
                 <a href="#">Про нас</a>
               </li>
               <li class="nav__link">
-                <a href="#">Контакти</a>
+                <a href="contacts.html">Контакти</a>
               </li>
               <li class="nav__link">
                 <a href="#">
@@ -376,6 +376,72 @@
           </div>
         </div>
       </section>
+
+      <section class="inst">
+        <div class="container">
+          <div class="inst__wrapper">
+            <div class="inst__head">
+              <h2 class="title">Наш Інстаграм</h2>
+              <a
+                href="https://www.instagram.com/dnka_ua/"
+                class="inst__subscribe"
+              >
+                <svg width="25" height="25">
+                  <use xlink:href="img/sprite.svg#instagram"></use>
+                </svg>
+                <span>Підписатися</span>
+              </a>
+            </div>
+            <div class="inst__grid">
+              <div class="inst__photo">
+                <img class="inst__img" src="img/nails-1.jpg" alt="nails" />
+              </div>
+              <div class="inst__photo inst__photo--mobile">
+                <img class="inst__img" src="img/nails-2.jpg" alt="nails" />
+              </div>
+              <div class="inst__subgrid">
+                <div class="inst__photo">
+                  <img
+                    class="inst__img"
+                    src="img/nail-polish-1.jpg"
+                    alt="nail polish"
+                  />
+                </div>
+                <div class="inst__photo">
+                  <img
+                    class="inst__img"
+                    src="img/nail-polish-2.jpg"
+                    alt="nail polish"
+                  />
+                </div>
+                <div class="inst__photo">
+                  <img
+                    class="inst__img"
+                    src="img/nail-polish-3.jpg"
+                    alt="nail polish"
+                  />
+                </div>
+                <div class="inst__photo">
+                  <img
+                    class="inst__img"
+                    src="img/nail-polish-4.jpg"
+                    alt="nail polish"
+                  />
+                </div>
+              </div>
+            </div>
+            <a
+              href="https://www.instagram.com/dnka_ua/"
+              class="inst__subscribe inst__subscribe--mobile"
+            >
+              <svg width="25" height="25">
+                <use xlink:href="img/sprite.svg#instagram"></use>
+              </svg>
+              <span>Підписатися</span>
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">
@@ -434,7 +500,7 @@
                 <a href="#">Партнери/Клієнти</a>
               </li>
               <li class="footer__item line-hover">
-                <a href="#">Контакти</a>
+                <a href="contacts.html">Контакти</a>
               </li>
             </ul>
           </nav>
@@ -445,10 +511,9 @@
                   type="email"
                   name="email"
                   id="email"
-                  placeholder=" "
+                  placeholder="Твій Email"
                   autocomplete="off"
                 />
-                <span>Твій Email</span>
                 <button class="footer__field-btn">
                   <svg width="12" height="21">
                     <use xlink:href="img/sprite.svg#arrowRight"></use>
@@ -465,6 +530,55 @@
         </div>
       </div>
     </footer>
+
+    <div class="popup popup--contacts open">
+      <div class="popup__window">
+        <h2 class="popup__title">Напишіть нам</h2>
+
+        <form class="form">
+          <div class="form__row form__row--double">
+            <div class="form__field">
+              <p>Ім'я</p>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Введіть ваше ім’я"
+                autocomplete="off"
+              />
+            </div>
+            <div class="form__field">
+              <p>Адреса електронної пошти</p>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Введіть вашу пошту"
+                autocomplete="off"
+              />
+            </div>
+          </div>
+          <div class="form__row">
+            <div class="form__field">
+              <p>Повідомлення</p>
+              <textarea
+                type="text"
+                name="comment"
+                id="comment"
+                placeholder="Введіть повідомлення"
+              ></textarea>
+            </div>
+          </div>
+          <button class="btn form__btn">Написати</button>
+        </form>
+
+        <button class="popup__close">
+          <svg width="20" height="20">
+            <use xlink:href="img/sprite.svg#close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
 
     <script src="js/main.js"></script>
   </body>
