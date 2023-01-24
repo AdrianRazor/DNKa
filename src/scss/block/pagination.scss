@@ -38,6 +38,14 @@
           transition: 0.3s ease;
         }
       }
+
+      &:disabled {
+        cursor: not-allowed;
+
+        & svg {
+          fill: var(--grey);
+        }
+      }
     }
 
     &-prev {
