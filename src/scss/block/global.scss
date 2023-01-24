@@ -6,28 +6,9 @@
   --red: #ff1c1c;
   --accent: #a464c6;
   --purple: #cb90ea;
+  --light-purple: #fad8ff;
   --pink: #e0cae3;
   --light-pink: #f4eced;
-}
-
-* {
-  scrollbar-color: var(--purple) var(--pink);
-  scrollbar-width: thin;
-
-  &::-webkit-scrollbar {
-    width: 4px;
-  }
-
-  &::-webkit-scrollbar-track {
-    background: var(--pink);
-    border-radius: 4px;
-    overflow: hidden;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background: var(--purple);
-    border-radius: 4px;
-  }
 }
 
 html {
@@ -46,6 +27,24 @@ body {
   color: var(--black);
   background-color: var(--white);
   overflow-x: hidden;
+
+  scrollbar-color: var(--purple) var(--pink);
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: var(--pink);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--purple);
+    border-radius: 4px;
+  }
 }
 
 h1,

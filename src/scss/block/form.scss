@@ -1,5 +1,4 @@
 .form {
-  height: 100%;
   display: flex;
   flex-direction: column;
 
@@ -45,5 +44,30 @@
 
   &__btn {
     margin-top: auto;
+    flex-shrink: 0;
+  }
+
+  &--contacts {
+    height: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .form {
+    &__row {
+      &--double {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    &--contacts {
+      height: initial;
+
+      & .form {
+        &__btn {
+          margin-top: 50px;
+        }
+      }
+    }
   }
 }

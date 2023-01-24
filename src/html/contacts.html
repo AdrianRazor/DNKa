@@ -367,7 +367,9 @@
                   </li>
                 </ul>
                 <h3 class="contacts__headline">залишились питання</h3>
-                <button class="btn contacts__btn">Напишіть нам</button>
+                <button id="btn-contacts" class="btn contacts__btn">
+                  Напишіть нам
+                </button>
               </div>
               <div class="contacts__img">
                 <img src="img/nail-polish-12.jpg" alt="nail polish" />
@@ -531,11 +533,11 @@
       </div>
     </footer>
 
-    <div class="popup popup--contacts open">
+    <div class="popup popup--contacts">
       <div class="popup__window">
         <h2 class="popup__title">Напишіть нам</h2>
 
-        <form class="form">
+        <form class="form form--contacts">
           <div class="form__row form__row--double">
             <div class="form__field">
               <p>Ім'я</p>
@@ -569,11 +571,11 @@
               ></textarea>
             </div>
           </div>
-          <button class="btn form__btn">Написати</button>
+          <button class="btn form__btn" disabled>Написати</button>
         </form>
 
         <button class="popup__close">
-          <svg width="20" height="20">
+          <svg>
             <use xlink:href="img/sprite.svg#close"></use>
           </svg>
         </button>

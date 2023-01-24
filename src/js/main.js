@@ -4,6 +4,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger.js";
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener("DOMContentLoaded", function (event) {
+  const rootElement = document.documentElement;
+
   // Header submenus
   const submenu = document.querySelectorAll(".submenu");
 
@@ -38,8 +40,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
   const menuBottom = document.querySelector(".menu--bottom");
 
   if (burger && asideMenu && menuBottom) {
-    const rootElement = document.documentElement;
-
     burger.addEventListener("click", () => {
       asideMenu.classList.add("open");
       menuBottom.classList.add("hide");
@@ -249,6 +249,47 @@ document.addEventListener("DOMContentLoaded", function (event) {
   }
 
   // Tabs
+
+  // Contacts
+  const btnContacts = document.querySelector("#btn-contacts");
+  const popupContacts = document.querySelector(".popup--contacts");
+
+  if (btnContacts && popupContacts) {
+    btnContacts.addEventListener("click", () => {
+      openPopup();
+    });
+
+    const btnClose = popupContacts.querySelector(".popup__close");
+    const popupTitle = popupContacts.querySelector(".popup__title");
+
+    if (btnClose) {
+      btnClose.addEventListener("click", () => {
+        closePopup();
+      });
+    }
+
+    if (popupTitle) {
+      popupTitle.addEventListener("click", () => {
+        closePopup();
+      });
+    }
+
+    window.addEventListener("click", (e) => {
+      if (e.target.classList.contains("popup--contacts")) {
+        closePopup();
+      }
+    });
+
+    function openPopup() {
+      popupContacts.classList.add("open");
+      rootElement.classList.add("block");
+    }
+
+    function closePopup() {
+      popupContacts.classList.remove("open");
+      rootElement.classList.remove("block");
+    }
+  }
 
   console.log("DOM fully loaded and parsed");
 });
