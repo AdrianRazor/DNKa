@@ -1,10 +1,12 @@
 .filter {
   position: relative;
+  width: fit-content;
 
   &__head {
     display: flex;
     align-items: center;
     gap: 10px;
+    cursor: pointer;
   }
 
   &__name {
@@ -39,9 +41,22 @@
   }
 
   &__current {
-    font-size: 18px;
-    user-select: none;
-    transition: 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    & div {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    & p {
+      font-size: 18px;
+      user-select: none;
+      transition: 0.3s ease;
+    }
   }
 
   &__body {
@@ -89,13 +104,25 @@
   }
 
   &__item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     cursor: pointer;
+
+    & div {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
 
     & p {
       font-size: 20px;
       line-height: 140%;
       color: var(--grey);
       white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
       user-select: none;
       transition: 0.3s ease;
     }
@@ -113,6 +140,15 @@
       &__body {
         left: initial;
         right: 0;
+      }
+    }
+  }
+
+  &--color {
+    & .filter {
+      &__body {
+        max-width: 580px;
+        left: 35px;
       }
     }
   }

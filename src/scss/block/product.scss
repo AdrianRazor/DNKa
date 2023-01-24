@@ -1,0 +1,128 @@
+.product {
+  margin-top: 60px;
+  margin-bottom: 200px;
+
+  &__breadcrumbs {
+    margin-bottom: 20px;
+  }
+
+  &__wrapper {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  &__slider {
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    & span {
+      display: block;
+      font-size: 20px;
+      line-height: 140%;
+      color: var(--grey);
+    }
+
+    & h2 {
+      font-family: "Cormorant";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 60px;
+      line-height: 100%;
+      color: var(--black);
+    }
+
+    & p {
+      font-size: 32px;
+      line-height: 140%;
+      color: var(--black);
+    }
+  }
+
+  &__volume {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+
+    & p {
+      font-size: 20px;
+      line-height: 140%;
+      color: var(--grey);
+    }
+
+    & ul {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      & li {
+        padding: 5px 10px;
+        border-radius: 4px;
+        background-color: #fff;
+        transition: 0.3s ease;
+        cursor: pointer;
+
+        font-size: 18px;
+        line-height: 140%;
+        color: var(--black);
+
+        &:hover {
+          background-color: var(--light-pink);
+          transition: 0.3s ease;
+        }
+
+        &.active {
+          background-color: var(--pink);
+          transition: 0.3s ease;
+        }
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  &__buy {
+    max-width: 407px;
+  }
+
+  &__accordion {
+    &:not(:first-of-type) {
+      margin-top: -1px;
+    }
+  }
+
+  &__box {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+  }
+
+  &__btn {
+    & svg {
+      width: 30px;
+      height: 30px;
+      fill: var(--grey);
+    }
+  }
+}

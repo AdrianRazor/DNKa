@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/main.min.css" />
+    <title>DNKa - Product</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__wrapper">
+          <a href="index.html" class="logo header__logo">
+            <img src="img/logo.svg" alt="DNKa logo" />
+          </a>
+
+          <nav class="nav header__nav">
+            <ul class="nav__list">
+              <li class="nav__link submenu submenu--catalog">
+                <div class="submenu__box">
+                  Каталог
+                  <svg width="17" height="17">
+                    <use xlink:href="img/sprite.svg#arrowDown"></use>
+                  </svg>
+                </div>
+                <div class="submenu__container">
+                  <ul class="submenu__list">
+                    <li class="submenu__item">
+                      <a href="catalog.html">Всі</a>
+                    </li>
+                    <li class="submenu__item">
+                      <a href="#">Новинки</a>
+                    </li>
+                    <li class="submenu__item">
+                      <a href="#">Cover Base</a>
+                    </li>
+                    <li class="submenu__item">
+                      <a href="#">Base and Tops</a>
+                    </li>
+                    <li class="submenu__item">
+                      <a href="#">Pro Gel</a>
+                    </li>
+                    <li class="submenu__item">
+                      <a href="#">Gel varnish</a>
+                    </li>
+                    <li class="submenu__item">
+                      <a href="#">Gel</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav__link line-hover">
+                <a href="#">Наша продукція</a>
+              </li>
+              <li class="nav__link line-hover">
+                <a href="#">новинки</a>
+              </li>
+              <li class="nav__link line-hover">
+                <a href="#">Про нас</a>
+              </li>
+              <li class="nav__link line-hover">
+                <a href="contacts.html">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+
+          <nav class="menu menu--header header__menu">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <svg width="30" height="30">
+                  <use xlink:href="img/sprite.svg#search"></use>
+                </svg>
+              </li>
+              <li class="menu__item menu__item--profile">
+                <svg width="30" height="30">
+                  <use xlink:href="img/sprite.svg#user"></use>
+                </svg>
+              </li>
+              <li class="menu__item menu__item--heart">
+                <svg width="30" height="30">
+                  <use xlink:href="img/sprite.svg#heart"></use>
+                </svg>
+              </li>
+              <li class="menu__item submenu submenu--lang">
+                <button class="submenu__lang">
+                  <img src="img/flag-ua.svg" alt="flag" />
+                </button>
+                <div class="submenu__container">
+                  <ul class="submenu__list">
+                    <li class="submenu__item">
+                      <div class="submenu__flag">
+                        <img src="img/flag-ua.svg" alt="flag" />
+                      </div>
+                      <p class="submenu__text">ukr</p>
+                    </li>
+                    <li class="submenu__item">
+                      <div class="submenu__flag">
+                        <img src="img/flag-pl.svg" alt="flag" />
+                      </div>
+                      <p class="submenu__text">pln</p>
+                    </li>
+                    <li class="submenu__item">
+                      <div class="submenu__flag">
+                        <img src="img/flag-us.svg" alt="flag" />
+                      </div>
+                      <p class="submenu__text">usd</p>
+                    </li>
+                    <li class="submenu__item">
+                      <div class="submenu__flag">
+                        <img src="img/flag-fr.svg" alt="flag" />
+                      </div>
+                      <p class="submenu__text">fra</p>
+                    </li>
+                    <li class="submenu__item">
+                      <div class="submenu__flag">
+                        <img src="img/flag-es.svg" alt="flag" />
+                      </div>
+                      <p class="submenu__text">esp</p>
+                    </li>
+                    <li class="submenu__item">
+                      <div class="submenu__flag">
+                        <img src="img/flag-it.svg" alt="flag" />
+                      </div>
+                      <p class="submenu__text">ita</p>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu__item submenu submenu--currency">
+                <p class="submenu__currency">грн</p>
+                <div class="submenu__container">
+                  <ul class="submenu__list">
+                    <li class="submenu__item">грн</li>
+                    <li class="submenu__item">usd</li>
+                    <li class="submenu__item">euro</li>
+                  </ul>
+                </div>
+              </li>
+              <li class="cart-icon menu__item">
+                <a href="#">
+                  <svg width="30" height="30">
+                    <use xlink:href="img/sprite.svg#basket"></use>
+                  </svg>
+                  <div class="cart-icon__num">
+                    <span>2</span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <nav class="menu menu--bottom header__menu">
+        <div class="container menu__container">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a href="#">
+                <svg width="30" height="30">
+                  <use xlink:href="img/sprite.svg#catalog"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="menu__item">
+              <svg width="30" height="30">
+                <use xlink:href="img/sprite.svg#search"></use>
+              </svg>
+            </li>
+            <li class="cart-icon menu__item">
+              <a href="#">
+                <svg width="30" height="30">
+                  <use xlink:href="img/sprite.svg#basket"></use>
+                </svg>
+                <div class="cart-icon__num">
+                  <span>2</span>
+                </div>
+              </a>
+            </li>
+            <li class="menu__item menu__item--heart">
+              <a href="#">
+                <svg width="30" height="30">
+                  <use xlink:href="img/sprite.svg#heart"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="menu__item menu__item--burger">
+              <svg width="30" height="30">
+                <use xlink:href="img/sprite.svg#burger"></use>
+              </svg>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <aside class="aside header__aside">
+        <div class="aside__wrapper">
+          <a href="index.html" class="logo aside__logo">
+            <img src="img/logo.svg" alt="DNKa logo" />
+          </a>
+          <nav class="nav aside__nav">
+            <ul class="nav__list">
+              <li class="nav__link submenu submenu--catalog">
+                <div class="submenu__box">
+                  Каталог
+                  <svg width="17" height="17">
+                    <use xlink:href="img/sprite.svg#arrowDown"></use>
+                  </svg>
+                </div>
+                <div class="submenu__container">
+                  <ul class="submenu__list">
+                    <li class="submenu__item">
+                      <a href="catalog.html">Всі</a>
+                    </li>
+                    <li class="submenu__item">
+                      <a href="#">Новинки</a>
+                    </li>
+                    <li class="submenu__item">
+                      <a href="#">Cover Base</a>
+                    </li>
+                    <li class="submenu__item">
+                      <a href="#">Base and Tops</a>
+                    </li>
+                    <li class="submenu__item">
+                      <a href="#">Pro Gel</a>
+                    </li>
+                    <li class="submenu__item">
+                      <a href="#">Gel varnish</a>
+                    </li>
+                    <li class="submenu__item">
+                      <a href="#">Gel</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav__link">
+                <a href="#">Наша продукція</a>
+              </li>
+              <li class="nav__link">
+                <a href="#">новинки</a>
+              </li>
+              <li class="nav__link">
+                <a href="#">Про нас</a>
+              </li>
+              <li class="nav__link">
+                <a href="contacts.html">Контакти</a>
+              </li>
+              <li class="nav__link">
+                <a href="#">
+                  Порівняння
+                  <span>(3)</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="aside__bottom">
+            <div class="submenu submenu--lang aside__btn">
+              <button class="submenu__btn">
+                <p class="submenu__name">Мова:</p>
+                <div class="submenu__lang">
+                  <img src="img/flag-ua.svg" alt="flag" />
+                </div>
+              </button>
+              <div class="submenu__container">
+                <ul class="submenu__list">
+                  <li class="submenu__item">
+                    <div class="submenu__flag">
+                      <img src="img/flag-ua.svg" alt="flag" />
+                    </div>
+                    <p class="submenu__text">ukr</p>
+                  </li>
+                  <li class="submenu__item">
+                    <div class="submenu__flag">
+                      <img src="img/flag-pl.svg" alt="flag" />
+                    </div>
+                    <p class="submenu__text">pln</p>
+                  </li>
+                  <li class="submenu__item">
+                    <div class="submenu__flag">
+                      <img src="img/flag-us.svg" alt="flag" />
+                    </div>
+                    <p class="submenu__text">usd</p>
+                  </li>
+                  <li class="submenu__item">
+                    <div class="submenu__flag">
+                      <img src="img/flag-fr.svg" alt="flag" />
+                    </div>
+                    <p class="submenu__text">fra</p>
+                  </li>
+                  <li class="submenu__item">
+                    <div class="submenu__flag">
+                      <img src="img/flag-es.svg" alt="flag" />
+                    </div>
+                    <p class="submenu__text">esp</p>
+                  </li>
+                  <li class="submenu__item">
+                    <div class="submenu__flag">
+                      <img src="img/flag-it.svg" alt="flag" />
+                    </div>
+                    <p class="submenu__text">ita</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="submenu submenu--currency aside__btn">
+              <button class="submenu__btn">
+                <p class="submenu__name">Валюта:</p>
+                <p class="submenu__currency">грн</p>
+              </button>
+              <div class="submenu__container">
+                <ul class="submenu__list">
+                  <li class="submenu__item">грн</li>
+                  <li class="submenu__item">usd</li>
+                  <li class="submenu__item">euro</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </header>
+
+    <main class="main">
+      <section class="product">
+        <div class="container">
+          <ul class="breadcrumbs product__breadcrumbs">
+            <li class="breadcrumbs__item">
+              <a href="#">Головна</a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a href="#">Каталог</a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a href="#">Cover Base Magical</a>
+            </li>
+          </ul>
+          <div class="product__wrapper">
+            <div class="product__slider"></div>
+            <div class="product__info">
+              <div class="product__title">
+                <span>#0053</span>
+                <h2>Cover Base Magical</h2>
+                <p>108 грн</p>
+              </div>
+              <div class="product__variant">
+                <div class="product__volume">
+                  <p>Об’єм:</p>
+                  <ul>
+                    <li class="active">12 мл</li>
+                    <li>15 мл</li>
+                    <li>20 мл</li>
+                  </ul>
+                </div>
+                <div class="filter filter--color">
+                  <div class="filter__head">
+                    <p class="filter__name">Колір:</p>
+                    <div class="filter__current">
+                      <div style="background-color: #e4cfb6"></div>
+                      <p>Блакитний з голограмним шимером</p>
+                      <svg width="17" height="17">
+                        <use xlink:href="img/sprite.svg#arrowDown"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="filter__body">
+                    <ul class="filter__list">
+                      <li class="filter__item">
+                        <div style="background-color: #e4cfb6"></div>
+                        <p>Світловідбиваючий ніжно-сірий із срібним шиммером</p>
+                      </li>
+                      <li class="filter__item">
+                        <div style="background-color: #fcd90a"></div>
+                        <p>
+                          Натуральний рожево бежевий з шматочками патріотичної
+                          поталлі
+                        </p>
+                      </li>
+                      <li class="filter__item">
+                        <div style="background-color: #d08b4e"></div>
+                        <p>Пастельний, ніжно-жовтий</p>
+                      </li>
+                      <li class="filter__item">
+                        <div style="background-color: #ffac1c"></div>
+                        <p>Блакитний з голограмним шимером</p>
+                      </li>
+                      <li class="filter__item">
+                        <div style="background-color: #f03438"></div>
+                        <p>Вогняно-червоний</p>
+                      </li>
+                      <li class="filter__item">
+                        <div style="background-color: #be32f4"></div>
+                        <p>Класичний яскраво-червоний</p>
+                      </li>
+                      <li class="filter__item">
+                        <div style="background-color: #d16fd6"></div>
+                        <p>Фіолетово-рожевий з голограмним шимером</p>
+                      </li>
+                      <li class="filter__item">
+                        <div style="background-color: #3f822b"></div>
+                        <p>
+                          Натуральний рожево бежевий з шматочками патріотичної
+                          поталлі
+                        </p>
+                      </li>
+                      <li class="filter__item">
+                        <div style="background-color: #4b52cc"></div>
+                        <p>Світловідбиваючий ніжно-сірий із срібним шиммером</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="product__buttons">
+                <div class="amount amount--product">
+                  <button class="amount__btn amount__btn--minus">-</button>
+                  <p class="amount__count">1</p>
+                  <button class="amount__btn amount__btn--plus">+</button>
+                </div>
+                <button class="btn product__buy">Купити</button>
+              </div>
+              <div class="product__about">
+                <div class="accordion product__accordion">
+                  <div class="accordion__head">
+                    <p>Характеристика і консистенція</p>
+                    <button>
+                      <svg width="17" height="17">
+                        <use xlink:href="img/sprite.svg#arrowDown"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="accordion__content">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Totam quae, corporis aliquam beatae dolorem quis sapiente
+                      in impedit cum dolores magnam magni dignissimos explicabo
+                      voluptas adipisci voluptatem voluptate excepturi ut. Lorem
+                      ipsum dolor sit amet consectetur adipisicing elit. Totam
+                      quae, corporis aliquam beatae dolorem quis sapiente in
+                      impedit cum dolores magnam magni dignissimos explicabo
+                      voluptas adipisci voluptatem voluptate excepturi ut.
+                    </p>
+                  </div>
+                </div>
+                <div class="accordion product__accordion">
+                  <div class="accordion__head">
+                    <p>Склад</p>
+                    <button>
+                      <svg width="17" height="17">
+                        <use xlink:href="img/sprite.svg#arrowDown"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="accordion__content">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Totam quae, corporis aliquam beatae dolorem quis sapiente
+                      in impedit cum dolores magnam magni dignissimos explicabo
+                      voluptas adipisci voluptatem voluptate excepturi ut.
+                    </p>
+                    <ul>
+                      <li>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Sequi officiis doloribus alias
+                      </li>
+                      <li>Lorem ipsum dolor sit, amet consectetur</li>
+                      <li>
+                        Lorem sectetur adipisicing elit. Sequi officiis
+                        doloribus alias
+                      </li>
+                      <li>Lorem ipsum dolor sit, amet con</li>
+                      <li>Lorem elit. Sequi officiis doloribus alias</li>
+                    </ul>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Totam quae, corporis aliquam beatae dolorem quis sapiente
+                      in impedit cum dolores magnam magni dignissimos explicabo
+                      voluptas adipisci voluptatem voluptate excepturi ut.
+                    </p>
+                  </div>
+                </div>
+                <div class="accordion product__accordion">
+                  <div class="accordion__head">
+                    <p>Технологія нанесення</p>
+                    <button>
+                      <svg width="17" height="17">
+                        <use xlink:href="img/sprite.svg#arrowDown"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="accordion__content">
+                    <ul>
+                      <li>
+                        1. Нанести DNKa’ code #0039 Sensual тонким вирівнюючим
+                        шаром
+                      </li>
+                      <li>
+                        2. Викласти поталь, покрити тонким шаром цієї ж бази,
+                        просушити
+                      </li>
+                      <li>3. Матовий топ, просушити</li>
+                      <li>4. Змішати білий гель-лак з акриловою пудрою</li>
+                      <li>
+                        5. Старим, пошарпаним пензликом, зробити мазки,
+                        просушити
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="product__box">
+              <button class="product__btn">
+                <svg>
+                  <use xlink:href="img/sprite.svg#heart"></use>
+                </svg>
+              </button>
+              <button class="product__btn">
+                <svg>
+                  <use xlink:href="img/sprite.svg#sort"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__wrapper">
+          <div class="footer__contacts">
+            <a href="index.html" class="logo footer__logo">
+              <img src="img/logo-vertical.svg" alt="DNKa logo" />
+            </a>
+            <ul class="footer__list footer__list--contacts">
+              <li class="footer__item">Ми зі львова</li>
+              <li class="footer__item line-hover">
+                <a href="tel:+38 (063) 63-87-130">+38 (063) 63-87-130</a>
+              </li>
+              <li class="footer__item line-hover">
+                <a href="mailto:dnka@mail.com">dnka@mail.com</a>
+              </li>
+              <li class="footer__item footer__item--inst">
+                <a href="https://www.instagram.com/dnka_ua/">
+                  <svg width="23" height="23">
+                    <use xlink:href="img/sprite.svg#instagram-thin"></use>
+                  </svg>
+                  <svg width="78" height="22">
+                    <use xlink:href="img/sprite.svg#instagram-word"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <ul class="footer__list">
+            <li class="footer__item line-hover">
+              <a href="#">Base and Tops</a>
+            </li>
+            <li class="footer__item line-hover">
+              <a href="#">Cover Base</a>
+            </li>
+            <li class="footer__item line-hover">
+              <a href="#">Pro gel</a>
+            </li>
+            <li class="footer__item line-hover">
+              <a href="#">gel varnish</a>
+            </li>
+            <li class="footer__item line-hover">
+              <a href="#">gel</a>
+            </li>
+          </ul>
+          <nav class="footer__nav">
+            <ul class="footer__list">
+              <li class="footer__item line-hover">
+                <a href="#">Про компанію</a>
+              </li>
+              <li class="footer__item line-hover">
+                <a href="#">Доставка та оплата</a>
+              </li>
+              <li class="footer__item line-hover">
+                <a href="#">Партнери/Клієнти</a>
+              </li>
+              <li class="footer__item line-hover">
+                <a href="contacts.html">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="footer__block">
+            <div class="footer__subscribe">
+              <div class="footer__field">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Твій Email"
+                  autocomplete="off"
+                />
+                <button class="footer__field-btn">
+                  <svg width="12" height="21">
+                    <use xlink:href="img/sprite.svg#arrowRight"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="footer__desc">
+                Підпишись і будь в курсі усіх новинок і акцій
+              </div>
+            </div>
+            <a href="#">Privacy policies</a>
+            <p>&copy; Copywriting 2022 All right reserved</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+.amount {
+  max-width: 175px;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid var(--light);
+
+  display: flex;
+  align-items: center;
+
+  &--product {
+    max-width: 220px;
+    & .amount {
+      &__btn {
+        width: 55px;
+        height: 55px;
+        background-color: var(--light-pink);
+        transition: 0.3s ease;
+
+        &:hover {
+          background-color: var(--pink);
+          transition: 0.3s ease;
+        }
+      }
+    }
+  }
+
+  &__btn {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    font-size: 30px;
+    color: var(--black);
+
+    &--minus {
+      border-right: 1px solid var(--light);
+    }
+
+    &--plus {
+      border-left: 1px solid var(--light);
+    }
+  }
+
+  &__count {
+    width: 100%;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 140%;
+    color: var(--black);
+    text-align: center;
+  }
+}

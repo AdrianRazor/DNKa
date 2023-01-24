@@ -224,10 +224,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
   // Filter
   const filter = document.querySelectorAll(".filter");
-  const filterButton = document.querySelectorAll(".filter__btn");
+  const filterHead = document.querySelectorAll(".filter__head");
 
-  if (filter?.length && filterButton?.length) {
-    filterButton.forEach((btn, index) => {
+  if (filter?.length && filterHead?.length) {
+    filterHead.forEach((btn, index) => {
       btn.addEventListener("click", () => {
         // if (!btn.classList.contains("open")) {
         //   submenu.forEach((el) => {
@@ -249,6 +249,17 @@ document.addEventListener("DOMContentLoaded", function (event) {
   }
 
   // Tabs
+
+  // Accordion
+  const accordion = document.querySelectorAll(".accordion");
+
+  if (accordion?.length) {
+    accordion.forEach((item) => {
+      item.addEventListener("click", () => {
+        item.classList.toggle("open");
+      });
+    });
+  }
 
   // Contacts
   const btnContacts = document.querySelector("#btn-contacts");
