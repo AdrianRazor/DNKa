@@ -1,9 +1,6 @@
 .testimonials {
   margin-bottom: 200px;
 
-  &__wrapper {
-  }
-
   &__head {
     display: flex;
     align-items: baseline;
@@ -25,8 +22,9 @@
     border-top: 1px solid var(--light);
     border-bottom: 1px solid var(--light);
 
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
 
     &:not(:first-of-type) {
       margin-top: -1px;
@@ -51,9 +49,6 @@
   }
 
   &__text {
-    max-width: 790px;
-    width: 100%;
-
     & p {
       font-size: 18px;
       line-height: 140%;
@@ -63,5 +58,49 @@
 
   &__pagination {
     margin-top: 40px;
+  }
+}
+
+@media (max-width: 1279px) {
+  .testimonials {
+    &__comment {
+      padding: 40px 20px;
+      grid-template-columns: 1fr 2fr;
+      gap: 60px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .testimonials {
+    margin-bottom: 100px;
+
+    &__head {
+      gap: 5px;
+    }
+
+    &__amount {
+      font-size: 14px;
+    }
+
+    &__list {
+      margin-top: 30px;
+    }
+
+    &__comment {
+      padding: 20px 0;
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+
+    &__text {
+      & p {
+        font-size: 16px;
+      }
+    }
+
+    &__pagination {
+      display: none;
+    }
   }
 }
