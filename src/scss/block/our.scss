@@ -1,0 +1,142 @@
+.our {
+  margin-top: 60px;
+  margin-bottom: 200px;
+
+  &__breadcrumbs {
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    margin-bottom: 75px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  &__link {
+    position: relative;
+    height: 530px;
+    overflow: hidden;
+    background-color: var(--white);
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    &:nth-of-type(4) {
+      height: initial;
+      grid-row-start: 1;
+      grid-row-end: 3;
+      grid-column-start: 2;
+      grid-column-end: 3;
+    }
+
+    &:hover {
+      & .our {
+        &__image {
+          transform: scale(1.1);
+          transition: 0.6s ease;
+        }
+
+        &__name {
+          & p {
+            color: var(--accent);
+            transform: skewX(-8deg);
+            transition: 0.6s ease;
+          }
+        }
+      }
+    }
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    transition: 0.6s ease;
+  }
+
+  &__name {
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    background-color: var(--white);
+
+    position: relative;
+    z-index: 10;
+
+    & p {
+      font-family: "Cormorant";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 60px;
+      line-height: 100%;
+      color: var(--black);
+      transition: 0.6s ease;
+    }
+  }
+}
+
+@media (max-width: 1279px) {
+  .our {
+    &__link {
+      height: 430px;
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .our {
+    &__grid {
+      display: flex;
+      flex-direction: column;
+      margin: 0 -40px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .our {
+    margin-top: 30px;
+    margin-bottom: 100px;
+
+    &__breadcrumbs {
+      margin-bottom: 10px;
+    }
+
+    &__title {
+      margin-bottom: 40px;
+    }
+
+    &__grid {
+      gap: 15px;
+      margin: 0 -20px;
+    }
+
+    &__link {
+      height: 350px !important;
+    }
+
+    &__name {
+      padding: 5px 10px;
+      margin-bottom: 0;
+
+      & p {
+        font-size: 32px;
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .our {
+    &__link {
+      height: 235px !important;
+    }
+  }
+}
