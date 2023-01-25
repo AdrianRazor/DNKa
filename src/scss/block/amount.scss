@@ -1,6 +1,5 @@
 .amount {
-  max-width: 175px;
-  width: 100%;
+  width: 175px;
   background-color: #fff;
   border: 1px solid var(--light);
 
@@ -9,6 +8,7 @@
 
   &--product {
     max-width: 220px;
+    width: 100%;
 
     & .amount {
       &__btn {
@@ -28,6 +28,8 @@
   &__btn {
     width: 40px;
     height: 40px;
+    background-color: #fff;
+    transition: 0.3s ease;
 
     display: flex;
     align-items: center;
@@ -44,6 +46,11 @@
     &--plus {
       border-left: 1px solid var(--light);
     }
+
+    &:hover {
+      background-color: var(--pink);
+      transition: 0.3s ease;
+    }
   }
 
   &__count {
@@ -58,6 +65,12 @@
 
 @media (max-width: 575px) {
   .amount {
+    width: 115px;
+
+    &__btn {
+      width: 35px;
+    }
+
     &--product {
       max-width: 100%;
 
