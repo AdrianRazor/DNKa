@@ -9,6 +9,7 @@
 
   &--product {
     max-width: 220px;
+
     & .amount {
       &__btn {
         width: 55px;
@@ -52,5 +53,19 @@
     line-height: 140%;
     color: var(--black);
     text-align: center;
+  }
+}
+
+@media (max-width: 575px) {
+  .amount {
+    &--product {
+      max-width: 100%;
+
+      & .amount {
+        &__btn {
+          width: 80px;
+        }
+      }
+    }
   }
 }

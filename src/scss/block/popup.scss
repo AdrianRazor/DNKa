@@ -51,7 +51,8 @@
     }
   }
 
-  &--contacts {
+  &--contacts,
+  &--comment {
     & .popup {
       &__window {
         padding: 100px 50px;
@@ -106,7 +107,8 @@
       }
     }
 
-    &--contacts {
+    &--contacts,
+    &--comment {
       & .popup {
         &__window {
           padding: 50px 20px;

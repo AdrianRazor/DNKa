@@ -50,6 +50,14 @@
   &--contacts {
     height: 100%;
   }
+
+  &--comment {
+    height: 100%;
+
+    & textarea {
+      height: 245px;
+    }
+  }
 }
 
 @media (max-width: 767px) {
@@ -60,7 +68,8 @@
       }
     }
 
-    &--contacts {
+    &--contacts,
+    &--comment {
       height: initial;
 
       & .form {

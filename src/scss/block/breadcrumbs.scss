@@ -1,7 +1,8 @@
 .breadcrumbs {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 5px 10px;
+  flex-wrap: wrap;
 
   &__item {
     display: flex;
@@ -22,6 +23,13 @@
     & a {
       font-size: 18px;
       color: var(--grey);
+      transition: 0.3s ease;
+      white-space: nowrap;
+
+      &:hover {
+        color: var(--accent);
+        transition: 0.3s ease;
+      }
     }
   }
 }

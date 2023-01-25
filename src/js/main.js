@@ -250,6 +250,34 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
   // Tabs
 
+  // Product thumbs slider
+  if (swiperExist?.length) {
+    const swiperThumbs = new Swiper(".swiperThumbs", {
+      slidesPerView: 5,
+      direction: "horizontal",
+      spaceBetween: 10,
+      grabCursor: true,
+
+      breakpoints: {
+        1600: {
+          slidesPerView: 6,
+          direction: "vertical",
+          spaceBetween: 20,
+        },
+      },
+    });
+
+    const swiperProduct = new Swiper(".swiperProduct", {
+      effect: "fade",
+      fadeEffect: {
+        crossFade: true,
+      },
+      thumbs: {
+        swiper: swiperThumbs,
+      },
+    });
+  }
+
   // Accordion
   const accordion = document.querySelectorAll(".accordion");
 
@@ -261,28 +289,57 @@ document.addEventListener("DOMContentLoaded", function (event) {
     });
   }
 
+  // Comments
+  const btnComment = document.querySelector(".testimonials__btn");
+  const popupComment = document.querySelector(".popup--comment");
+
+  if (btnComment && popupComment) {
+    btnComment.addEventListener("click", openPopup);
+
+    const btnClose = popupComment.querySelector(".popup__close");
+    const popupTitle = popupComment.querySelector(".popup__title");
+
+    if (btnClose) {
+      btnClose.addEventListener("click", closePopup);
+    }
+
+    if (popupTitle) {
+      popupTitle.addEventListener("click", closePopup);
+    }
+
+    window.addEventListener("click", (e) => {
+      if (e.target.classList.contains("popup--comment")) {
+        closePopup();
+      }
+    });
+
+    function openPopup() {
+      popupComment.classList.add("open");
+      rootElement.classList.add("block");
+    }
+
+    function closePopup() {
+      popupComment.classList.remove("open");
+      rootElement.classList.remove("block");
+    }
+  }
+
   // Contacts
   const btnContacts = document.querySelector("#btn-contacts");
   const popupContacts = document.querySelector(".popup--contacts");
 
   if (btnContacts && popupContacts) {
-    btnContacts.addEventListener("click", () => {
-      openPopup();
-    });
+    btnContacts.addEventListener("click", openPopup);
 
     const btnClose = popupContacts.querySelector(".popup__close");
     const popupTitle = popupContacts.querySelector(".popup__title");
 
     if (btnClose) {
-      btnClose.addEventListener("click", () => {
-        closePopup();
-      });
+      btnClose.addEventListener("click", closePopup);
     }
 
     if (popupTitle) {
-      popupTitle.addEventListener("click", () => {
-        closePopup();
-      });
+      popupTitle.addEventListener("click", closePopup);
     }
 
     window.addEventListener("click", (e) => {

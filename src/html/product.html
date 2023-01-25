@@ -338,7 +338,64 @@
             </li>
           </ul>
           <div class="product__wrapper">
-            <div class="product__slider"></div>
+            <div class="product__slider">
+              <div class="swiper swiperProduct product__slider-main">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="img/nail-polish-9.jpg" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="img/nail-polish-14.jpg" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="img/nail-polish-7.jpg" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="img/nail-polish-4.jpg" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="img/nail-polish-3.jpg" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="img/nail-polish-2.jpg" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="img/nail-polish-1.jpg" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="img/nail-polish-12.jpg" />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper swiperThumbs product__slider-thumbs">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="img/nail-polish-9.jpg" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="img/nail-polish-14.jpg" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="img/nail-polish-7.jpg" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="img/nail-polish-4.jpg" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="img/nail-polish-3.jpg" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="img/nail-polish-2.jpg" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="img/nail-polish-1.jpg" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="img/nail-polish-12.jpg" />
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="product__info">
               <div class="product__title">
                 <span>#0053</span>
@@ -528,14 +585,23 @@
         </div>
       </section>
 
-      <section class="testimonials">
+      <section class="testimonials testimonials--empty">
         <div class="container">
           <div class="testimonials__wrapper">
             <div class="testimonials__head">
-              <h2 class="title testimonials__title">Відгуки</h2>
-              <p class="testimonials__amount">(5)</p>
+              <div class="testimonials__title">
+                <h2 class="title">Відгуки</h2>
+                <p class="testimonials__amount">(5)</p>
+              </div>
+              <button class="testimonials__btn">Залишити відгук</button>
             </div>
-            <ul class="testimonials__list">
+            <div class="testimonials__empty">
+              <svg>
+                <use xlink:href="img/sprite.svg#edit"></use>
+              </svg>
+              <p>У цього товару поки немає відгуків. Ваш може стати першим!</p>
+            </div>
+            <!-- <ul class="testimonials__list">
               <li class="testimonials__comment">
                 <div class="testimonials__name">
                   <span>10.10.2022</span>
@@ -628,7 +694,7 @@
                   <use xlink:href="img/sprite.svg#arrowRight"></use>
                 </svg>
               </button>
-            </div>
+            </div> -->
           </div>
         </div>
       </section>
@@ -743,6 +809,33 @@
         </div>
       </div>
     </footer>
+
+    <div class="popup popup--comment">
+      <div class="popup__window">
+        <h2 class="popup__title">Залишити Відгук</h2>
+
+        <form class="form form--comment">
+          <div class="form__row">
+            <div class="form__field">
+              <p>Відгук</p>
+              <textarea
+                type="text"
+                name="comment"
+                id="comment"
+                placeholder="Напишіть ваш відгук"
+              ></textarea>
+            </div>
+          </div>
+          <button class="btn form__btn">Відправити</button>
+        </form>
+
+        <button class="popup__close">
+          <svg>
+            <use xlink:href="img/sprite.svg#close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
 
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
