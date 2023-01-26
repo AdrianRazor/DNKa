@@ -1,0 +1,137 @@
+.search {
+  position: relative;
+  width: 100%;
+
+  &__head {
+    position: relative;
+    border: 1px solid var(--grey);
+    border-radius: 4px;
+    overflow: hidden;
+
+    & input {
+      display: block;
+      width: 100%;
+      padding: 15px 55px 15px 20px;
+
+      font-size: 18px;
+      color: var(--black);
+
+      &::placeholder {
+        color: var(--light);
+      }
+    }
+
+    & svg {
+      fill: var(--black);
+
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 13px;
+      z-index: 10;
+    }
+  }
+
+  &__body {
+    display: none;
+    width: 100%;
+    max-height: 360px;
+    overflow-y: scroll;
+    padding: 12px 20px;
+
+    background-color: #fff;
+    border: 1px solid var(--grey);
+    border-radius: 0 0 4px 4px;
+    border-top-width: 0;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 20;
+
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+  }
+
+  &__matches {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    & li {
+      font-size: 18px;
+      line-height: 140%;
+      color: var(--grey);
+    }
+  }
+
+  &__list {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid var(--grey);
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  &__img {
+    width: 50px;
+    height: 70px;
+
+    & img {
+      object-fit: contain;
+    }
+  }
+
+  &__info {
+    width: 100%;
+
+    & > p {
+      font-size: 16px;
+      line-height: 140%;
+      color: var(--black);
+    }
+  }
+
+  &__row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 5px;
+
+    & span {
+      font-size: 14px;
+      line-height: 140%;
+      color: var(--grey);
+    }
+
+    & p {
+      font-size: 18px;
+      line-height: 140%;
+      color: var(--accent);
+    }
+  }
+
+  &.active {
+    & .search {
+      &__head {
+        border-bottom-width: 0;
+        border-radius: 4px 4px 0 0;
+      }
+
+      &__body {
+        display: block;
+      }
+    }
+  }
+}

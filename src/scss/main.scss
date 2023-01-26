@@ -6,10 +6,11 @@
 @import "block/title.scss";
 @import "block/btn.scss";
 @import "block/logo.scss";
+@import "block/breadcrumbs.scss";
+@import "block/search.scss";
 @import "block/card.scss";
 @import "block/pagination.scss";
 @import "block/line-hover.scss";
-@import "block/breadcrumbs.scss";
 @import "block/tabs.scss";
 @import "block/filter.scss";
 @import "block/checkbox.scss";
@@ -40,6 +41,9 @@
 @import "block/about.scss";
 @import "block/contacts.scss";
 @import "block/error.scss";
+
+@import "block/profile.scss";
+@import "block/my-orders.scss";
 
 @import "block/popup.scss";
 @import "block/cart-order.scss";

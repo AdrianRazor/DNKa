@@ -346,7 +346,142 @@
       <section class="profile">
         <div class="container">
           <div class="profile__wrapper">
-            <h1 class="title">Особистий кабінет</h1>
+            <h1 class="title profile__title">Особистий кабінет</h1>
+
+            <div class="tabs">
+              <ul class="tabs__head">
+                <li class="tabs__item active">
+                  <p>Мої замовлення</p>
+                </li>
+                <li class="tabs__item">
+                  <p>Список бажань</p>
+                </li>
+                <li class="tabs__item">
+                  <p>Мої дані</p>
+                </li>
+                <li class="tabs__item">
+                  <p>Дані доставки</p>
+                </li>
+              </ul>
+              <div class="tabs__content">
+                <div class="my-orders tabs__body">
+                  <div class="my-orders__head">
+                    <div class="search my-orders__search">
+                      <div class="search__head">
+                        <input
+                          type="search"
+                          name="search"
+                          id="search"
+                          placeholder="Пошук..."
+                        />
+                        <svg width="30" height="30">
+                          <use xlink:href="img/sprite.svg#search"></use>
+                        </svg>
+                      </div>
+                      <div class="search__body">
+                        <ul class="search__matches">
+                          <li>Cover Base</li>
+                          <li>Cover Base Magical</li>
+                          <li>Cover Base Magical code #0018</li>
+                        </ul>
+                        <ul class="search__list">
+                          <li class="search__item">
+                            <div class="search__img">
+                              <img
+                                src="img/nail-polish-6.jpg"
+                                alt="nail polish"
+                              />
+                            </div>
+                            <div class="search__info">
+                              <div class="search__row">
+                                <span>#0053</span>
+                                <p>150 грн</p>
+                              </div>
+                              <p>Cover Base Magical, 12 мл</p>
+                            </div>
+                          </li>
+                          <li class="search__item">
+                            <div class="search__img">
+                              <img
+                                src="img/nail-polish-5.jpg"
+                                alt="nail polish"
+                              />
+                            </div>
+                            <div class="search__info">
+                              <div class="search__row">
+                                <span>#0187</span>
+                                <p>250 грн</p>
+                              </div>
+                              <p>Cover Base Magical, 15 мл</p>
+                            </div>
+                          </li>
+                          <li class="search__item">
+                            <div class="search__img">
+                              <img
+                                src="img/nail-polish-6.jpg"
+                                alt="nail polish"
+                              />
+                            </div>
+                            <div class="search__info">
+                              <div class="search__row">
+                                <span>#0101</span>
+                                <p>90 грн</p>
+                              </div>
+                              <p>Cover Base Magical Base Magical, 15 мл</p>
+                            </div>
+                          </li>
+                          <li class="search__item">
+                            <div class="search__img">
+                              <img
+                                src="img/nail-polish-8.jpg"
+                                alt="nail polish"
+                              />
+                            </div>
+                            <div class="search__info">
+                              <div class="search__row">
+                                <span>#0959</span>
+                                <p>145 грн</p>
+                              </div>
+                              <p>Cover Base Magical, 15 мл</p>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="filter filter--sort my-orders__filter">
+                      <div class="filter__head">
+                        <p class="filter__name">Сортування:</p>
+                        <div class="filter__current">
+                          <p>спочатку нові</p>
+                          <svg width="17" height="17">
+                            <use xlink:href="img/sprite.svg#arrowDown"></use>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="filter__body">
+                        <ul class="filter__list">
+                          <li class="filter__item">
+                            <p>За замовчуванням</p>
+                          </li>
+                          <li class="filter__item">
+                            <p>Від дорогих до дешевих</p>
+                          </li>
+                          <li class="filter__item">
+                            <p>Від дешевих до дорогих</p>
+                          </li>
+                          <li class="filter__item">
+                            <p>Новинки</p>
+                          </li>
+                          <li class="filter__item">
+                            <p>По популярності</p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

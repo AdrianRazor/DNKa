@@ -15,6 +15,13 @@ textarea {
   outline: none;
 }
 
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+}
+
 button {
   background-color: transparent;
   cursor: pointer;
@@ -215,6 +222,225 @@ p {
   height: 32px;
   -ms-flex-negative: 0;
   flex-shrink: 0;
+}
+
+.breadcrumbs {
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+.breadcrumbs__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 5px 10px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.breadcrumbs__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.breadcrumbs__item:not(:first-child)::before {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--grey);
+}
+
+.breadcrumbs__item a {
+  font-size: 18px;
+  color: var(--grey);
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+  white-space: nowrap;
+}
+
+.breadcrumbs__item a:hover {
+  color: var(--accent);
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.search {
+  position: relative;
+  width: 100%;
+}
+
+.search__head {
+  position: relative;
+  border: 1px solid var(--grey);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.search__head input {
+  display: block;
+  width: 100%;
+  padding: 15px 55px 15px 20px;
+  font-size: 18px;
+  color: var(--black);
+}
+
+.search__head input::-webkit-input-placeholder {
+  color: var(--light);
+}
+
+.search__head input::-moz-placeholder {
+  color: var(--light);
+}
+
+.search__head input:-ms-input-placeholder {
+  color: var(--light);
+}
+
+.search__head input::-ms-input-placeholder {
+  color: var(--light);
+}
+
+.search__head input::placeholder {
+  color: var(--light);
+}
+
+.search__head svg {
+  fill: var(--black);
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 13px;
+  z-index: 10;
+}
+
+.search__body {
+  display: none;
+  width: 100%;
+  max-height: 360px;
+  overflow-y: scroll;
+  padding: 12px 20px;
+  background-color: #fff;
+  border: 1px solid var(--grey);
+  border-radius: 0 0 4px 4px;
+  border-top-width: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 20;
+  scrollbar-width: thin;
+}
+
+.search__body::-webkit-scrollbar {
+  width: 0;
+}
+
+.search__matches {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.search__matches li {
+  font-size: 18px;
+  line-height: 140%;
+  color: var(--grey);
+}
+
+.search__list {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid var(--grey);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.search__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.search__img {
+  width: 50px;
+  height: 70px;
+}
+
+.search__img img {
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.search__info {
+  width: 100%;
+}
+
+.search__info > p {
+  font-size: 16px;
+  line-height: 140%;
+  color: var(--black);
+}
+
+.search__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.search__row span {
+  font-size: 14px;
+  line-height: 140%;
+  color: var(--grey);
+}
+
+.search__row p {
+  font-size: 18px;
+  line-height: 140%;
+  color: var(--accent);
+}
+
+.search.active .search__head {
+  border-bottom-width: 0;
+  border-radius: 4px 4px 0 0;
+}
+
+.search.active .search__body {
+  display: block;
 }
 
 .card {
@@ -499,58 +725,6 @@ p {
   left: 0;
 }
 
-.breadcrumbs {
-  margin-top: 60px;
-  margin-bottom: 20px;
-}
-
-.breadcrumbs__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 5px 10px;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.breadcrumbs__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 10px;
-}
-
-.breadcrumbs__item:not(:first-child)::before {
-  content: "";
-  display: block;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background-color: var(--grey);
-}
-
-.breadcrumbs__item a {
-  font-size: 18px;
-  color: var(--grey);
-  -webkit-transition: 0.3s ease;
-  -o-transition: 0.3s ease;
-  transition: 0.3s ease;
-  white-space: nowrap;
-}
-
-.breadcrumbs__item a:hover {
-  color: var(--accent);
-  -webkit-transition: 0.3s ease;
-  -o-transition: 0.3s ease;
-  transition: 0.3s ease;
-}
-
 .tabs__head {
   position: relative;
   width: 100%;
@@ -635,6 +809,10 @@ p {
   -webkit-transition: 0.7s ease;
   -o-transition: 0.7s ease;
   transition: 0.7s ease;
+}
+
+.tabs__content {
+  margin-top: 30px;
 }
 
 .filter {
@@ -3110,6 +3288,30 @@ p {
   max-width: 414px;
 }
 
+.profile {
+  margin-bottom: 200px;
+}
+
+.profile__title {
+  margin-bottom: 70px;
+}
+
+.my-orders__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.my-orders__search {
+  max-width: 594px;
+}
+
 .popup {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.3);
@@ -4495,10 +4697,6 @@ p {
     height: 160px;
   }
 
-  .card__photo {
-    height: 310px;
-  }
-
   .breadcrumbs {
     margin-top: 30px;
     margin-bottom: 15px;
@@ -4506,6 +4704,10 @@ p {
 
   .breadcrumbs__item a {
     font-size: 14px;
+  }
+
+  .card__photo {
+    height: 310px;
   }
 
   .filter--color .filter__name {

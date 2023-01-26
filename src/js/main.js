@@ -281,6 +281,20 @@ document.addEventListener("DOMContentLoaded", function (event) {
   }
 
   // Tabs
+  const tabItem = document.querySelectorAll(".tabs__item");
+  const tabBody = document.querySelectorAll(".tabs__body");
+
+  if (tabItem?.length) {
+    tabItem.forEach((item) => {
+      item.addEventListener("click", () => {
+        tabItem.forEach((el) => {
+          el.classList.remove("active");
+        });
+
+        item.classList.add("active");
+      });
+    });
+  }
 
   // Product thumbs slider
   if (swiperExist?.length) {
