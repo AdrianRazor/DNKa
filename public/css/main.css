@@ -500,6 +500,11 @@ p {
 }
 
 .breadcrumbs {
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+.breadcrumbs__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2161,12 +2166,7 @@ p {
 }
 
 .catalog {
-  margin-top: 60px;
   margin-bottom: 200px;
-}
-
-.catalog__breadcrumbs {
-  margin-bottom: 20px;
 }
 
 .catalog__head {
@@ -2223,12 +2223,7 @@ p {
 }
 
 .product {
-  margin-top: 60px;
   margin-bottom: 200px;
-}
-
-.product__breadcrumbs {
-  margin-bottom: 20px;
 }
 
 .product__wrapper {
@@ -2581,12 +2576,7 @@ p {
 }
 
 .our {
-  margin-top: 60px;
   margin-bottom: 200px;
-}
-
-.our__breadcrumbs {
-  margin-bottom: 20px;
 }
 
 .our__title {
@@ -2677,6 +2667,25 @@ p {
   margin-bottom: 200px;
 }
 
+.about__wrapper {
+  position: relative;
+}
+
+.about__wrapper::before {
+  content: "";
+  display: block;
+  width: 568px;
+  height: 722px;
+  background-image: url("data:image/svg+xml,%3Csvg width='568' height='722' viewBox='0 0 568 722' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.3' d='M449.234 321.094L449.29 320.597L449.234 321.094C381.005 313.423 322.839 296.102 280.593 261.398C238.327 226.676 212.059 174.607 207.527 97.5854C205.737 67.3174 193.547 42.3979 174.375 25.3894C155.203 8.38019 129.02 -0.743347 99.1961 0.636719C73.1294 1.83325 49.6134 10.345 32.1022 26.1487C14.5962 41.9474 3.05344 65.0674 0.984569 95.5579C-1.30444 129.359 4.45508 155.621 19.5475 175.094C34.6402 194.567 59.1323 207.336 94.4924 214.004L94.4928 214.004C148.21 224.177 194.327 244.221 229.961 275.747C265.6 307.276 290.725 350.265 302.492 406.275C313.082 456.654 305.457 498.706 282.127 528.681C258.796 558.657 219.833 576.463 167.939 578.499C165.419 578.598 162.906 578.686 160.405 578.774C140.282 579.478 120.937 580.156 104.993 586.264C96.0488 589.69 88.1921 594.822 81.8851 602.622C75.5762 610.424 70.7959 620.923 68.0492 635.117L68.0491 635.118C63.9485 656.159 67.5297 674.298 76.7261 688.478C85.925 702.663 100.77 712.929 119.27 718.166C144.757 725.36 164.552 720.383 180.19 708.306C195.857 696.208 207.391 676.951 216.243 655.522C233.523 613.535 258.417 591.097 289.007 580.521C319.562 569.958 355.739 571.252 395.549 576.58C448.647 583.681 491.67 573.988 521.387 549.992C551.092 526.005 567.587 487.657 567.5 437.253C564.591 407.021 554.041 380.124 534.735 359.72C515.427 339.315 487.323 325.363 449.234 321.094Z' stroke='%23A464C6'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: absolute;
+  top: 27%;
+  right: 0;
+  z-index: -1;
+}
+
 .about__block {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -2695,6 +2704,76 @@ p {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+}
+
+.about__block--third {
+  position: relative;
+}
+
+.about__block--third .about__info {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+
+.about__block--third .about__info > p {
+  height: 100%;
+  max-width: 48.3%;
+}
+
+.about__block--third::before,
+.about__block--third::after {
+  content: "";
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  z-index: -1;
+}
+
+.about__block--third::before {
+  width: 105px;
+  height: 105px;
+  background-color: var(--accent);
+  opacity: 0.3;
+  top: 32%;
+  left: 17%;
+}
+
+.about__block--third::after {
+  width: 145px;
+  height: 145px;
+  background-color: transparent;
+  border: 1px solid var(--accent);
+  bottom: 15%;
+  left: 0;
+}
+
+.about__block--product .about__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.about__block--product .about__image--small {
+  position: relative;
+  max-width: 410px;
+  margin-top: 0;
+}
+
+.about__block--product .about__image--small:hover .about__link {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .about__info {
@@ -2744,6 +2823,7 @@ p {
 }
 
 .about__box {
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
@@ -2751,6 +2831,100 @@ p {
 
 .about__box .about__image {
   height: 525px;
+}
+
+.about__link {
+  display: block;
+  padding: 15px 20px;
+  background-color: #fff;
+  border: 1px solid var(--light);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.about__link:hover {
+  border: 1px solid var(--accent);
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.about__link:hover p {
+  color: var(--accent);
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.about__link:hover .about__arrow {
+  -webkit-transform: translateX(0px);
+  -ms-transform: translateX(0px);
+  transform: translateX(0px);
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.about__link:hover svg {
+  fill: var(--accent);
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.about__link p {
+  font-size: 20px;
+  line-height: 140%;
+  color: var(--black);
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.about__link > p {
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
+
+.about__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.about__row p {
+  font-weight: 600;
+}
+
+.about__arrow {
+  -webkit-transform: translateX(-10px);
+  -ms-transform: translateX(-10px);
+  transform: translateX(-10px);
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.about__arrow svg {
+  width: 12px;
+  height: 21px;
+  fill: var(--black);
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .about__btn {
@@ -2803,12 +2977,7 @@ p {
 }
 
 .contacts {
-  margin-top: 60px;
   margin-bottom: 200px;
-}
-
-.contacts__breadcrumbs {
-  margin-bottom: 20px;
 }
 
 .contacts__title {
@@ -3701,6 +3870,24 @@ p {
     align-items: initial;
   }
 
+  .about__block--third .about__info {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+
+  .about__block--third .about__info > p {
+    max-width: 100%;
+  }
+
+  .about__block--product > .about__image {
+    display: none;
+  }
+
+  .about__block--product .about__image--small {
+    max-width: calc(100% + 80px);
+  }
+
   .about__info {
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -4190,6 +4377,10 @@ p {
     margin: 0 -40px;
   }
 
+  .about__block--product__box {
+    display: none;
+  }
+
   .about__title {
     max-width: 100%;
   }
@@ -4306,6 +4497,11 @@ p {
 
   .card__photo {
     height: 310px;
+  }
+
+  .breadcrumbs {
+    margin-top: 30px;
+    margin-bottom: 15px;
   }
 
   .breadcrumbs__item a {
@@ -4566,13 +4762,12 @@ p {
     margin-top: 40px;
   }
 
-  .product {
-    margin-top: 30px;
+  .catalog {
     margin-bottom: 100px;
   }
 
-  .product__breadcrumbs {
-    margin-bottom: 30px;
+  .product {
+    margin-bottom: 100px;
   }
 
   .product__slider-thumbs {
@@ -4677,12 +4872,7 @@ p {
   }
 
   .our {
-    margin-top: 30px;
     margin-bottom: 100px;
-  }
-
-  .our__breadcrumbs {
-    margin-bottom: 10px;
   }
 
   .our__title {
@@ -4724,18 +4914,24 @@ p {
     margin-top: 15px;
   }
 
+  .about__box .about__image {
+    height: 480px;
+  }
+
+  .about__link {
+    padding: 10px 15px;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
   .about__image {
-    height: 400px;
+    height: 480px;
     margin: 0 -20px;
   }
 
   .contacts {
-    margin-top: 30px;
     margin-bottom: 100px;
-  }
-
-  .contacts__breadcrumbs {
-    margin-bottom: 10px;
   }
 
   .contacts__title {

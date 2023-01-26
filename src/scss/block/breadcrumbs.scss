@@ -1,8 +1,13 @@
 .breadcrumbs {
-  display: flex;
-  align-items: center;
-  gap: 5px 10px;
-  flex-wrap: wrap;
+  margin-top: 60px;
+  margin-bottom: 20px;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 5px 10px;
+    flex-wrap: wrap;
+  }
 
   &__item {
     display: flex;
@@ -36,6 +41,9 @@
 
 @media (max-width: 767px) {
   .breadcrumbs {
+    margin-top: 30px;
+    margin-bottom: 15px;
+
     &__item {
       & a {
         font-size: 14px;

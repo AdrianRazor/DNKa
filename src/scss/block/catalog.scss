@@ -1,10 +1,5 @@
 .catalog {
-  margin-top: 60px;
   margin-bottom: 200px;
-
-  &__breadcrumbs {
-    margin-bottom: 20px;
-  }
 
   &__head {
     display: flex;
@@ -65,5 +60,11 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 30px 15px;
     }
+  }
+}
+
+@media (max-width: 767px) {
+  .catalog {
+    margin-bottom: 100px;
   }
 }
