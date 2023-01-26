@@ -65,10 +65,15 @@
 
 @media (max-width: 575px) {
   .amount {
-    width: 115px;
+    width: 110px;
 
     &__btn {
       width: 35px;
+      font-size: 20px;
+    }
+
+    &__count {
+      font-size: 16px;
     }
 
     &--product {

@@ -34,6 +34,38 @@ document.addEventListener("DOMContentLoaded", function (event) {
     });
   }
 
+  // Cart popup
+  const btnCart = document.querySelectorAll(".cart-icon");
+  const popupCart = document.querySelector(".popup--cart");
+
+  if (btnCart?.length && popupCart) {
+    btnCart.forEach((item) => {
+      item.addEventListener("click", openPopup);
+    });
+
+    const btnClose = popupCart.querySelector(".popup__close");
+
+    if (btnClose) {
+      btnClose.addEventListener("click", closePopup);
+    }
+
+    window.addEventListener("click", (e) => {
+      if (e.target.classList.contains("popup--cart")) {
+        closePopup();
+      }
+    });
+
+    function openPopup() {
+      popupCart.classList.add("open");
+      rootElement.classList.add("block");
+    }
+
+    function closePopup() {
+      popupCart.classList.remove("open");
+      rootElement.classList.remove("block");
+    }
+  }
+
   // Aside navigation
   const burger = document.querySelector(".menu__item--burger");
   const asideMenu = document.querySelector(".aside");
