@@ -285,12 +285,18 @@ document.addEventListener("DOMContentLoaded", function (event) {
   const tabBody = document.querySelectorAll(".tabs__body");
 
   if (tabItem?.length) {
-    tabItem.forEach((item) => {
+    tabItem.forEach((item, index) => {
       item.addEventListener("click", () => {
+        if (tabBody?.length) {
+          tabBody.forEach((el) => {
+            el.classList.remove("active");
+          });
+          tabBody[index].classList.add("active");
+        }
+
         tabItem.forEach((el) => {
           el.classList.remove("active");
         });
-
         item.classList.add("active");
       });
     });
@@ -401,6 +407,44 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     function closePopup() {
       popupContacts.classList.remove("open");
+      rootElement.classList.remove("block");
+    }
+  }
+
+  // Popup login tabs
+  const popupLogin = document.querySelector(".popup--login");
+  const popupTabItem = document.querySelectorAll(".popup__tab-item");
+  const popupTabBody = document.querySelectorAll(".popup__login");
+
+  if (popupTabItem?.length && popupTabBody?.length) {
+    popupTabItem.forEach((item, index) => {
+      item.addEventListener("click", () => {
+        popupTabItem.forEach((el) => {
+          el.classList.remove("active");
+        });
+        item.classList.add("active");
+
+        popupTabBody.forEach((el) => {
+          el.classList.remove("active");
+        });
+        popupTabBody[index].classList.add("active");
+      });
+    });
+
+    const btnClose = popupLogin.querySelector(".popup__close");
+
+    if (btnClose) {
+      btnClose.addEventListener("click", closePopup);
+    }
+
+    window.addEventListener("click", (e) => {
+      if (e.target.classList.contains("popup--login")) {
+        closePopup();
+      }
+    });
+
+    function closePopup() {
+      popupLogin.classList.remove("open");
       rootElement.classList.remove("block");
     }
   }

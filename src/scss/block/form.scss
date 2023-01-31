@@ -11,11 +11,26 @@
     margin-bottom: 25px;
   }
 
+  &__inner {
+    & .form__field + .form__field {
+      margin-top: 20px;
+    }
+
+    & p {
+      font-size: 14px;
+      line-height: 140%;
+      color: var(--grey);
+      margin-bottom: 20px;
+    }
+  }
+
   &__row {
-    &--double {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+    &--full {
+      display: block;
     }
 
     & + .form__row {
@@ -56,12 +71,74 @@
     }
   }
 
+  &__hint {
+    margin-top: 5px;
+
+    & p {
+      font-size: 14px;
+      line-height: 140%;
+      color: var(--grey);
+    }
+  }
+
+  &__tip {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+
+    & label {
+      font-size: 14px;
+      line-height: 140%;
+      color: var(--grey);
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
   &__btn {
     margin-top: auto;
     flex-shrink: 0;
 
     &--user {
       max-width: 49%;
+    }
+
+    &-google {
+      width: 30px;
+      height: 30px;
+    }
+
+    &-forgot {
+      font-size: 14px;
+      line-height: 140%;
+      color: #268aff;
+    }
+  }
+
+  &--login {
+    margin-top: 100px;
+    gap: 100px;
+  }
+
+  &--reset {
+    & .form {
+      &__title {
+        font-weight: 700;
+        font-size: 18px;
+        text-transform: initial;
+        margin-bottom: 50px;
+      }
+
+      &__buttons {
+        margin-top: 60px;
+        gap: 0;
+      }
     }
   }
 
@@ -96,8 +173,22 @@
     }
 
     &__row {
-      &--double {
-        grid-template-columns: 1fr;
+      grid-template-columns: 1fr;
+
+      &--address {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    &__field {
+      & input {
+        font-size: 16px;
+      }
+    }
+
+    &__btn {
+      &--user {
+        max-width: 100%;
       }
     }
 
@@ -109,12 +200,6 @@
         &__btn {
           margin-top: 50px;
         }
-      }
-    }
-
-    &__btn {
-      &--user {
-        max-width: 100%;
       }
     }
   }

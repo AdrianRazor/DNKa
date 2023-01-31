@@ -351,7 +351,7 @@
         </div>
       </section>
 
-      <section class="stripe stripe--top">
+      <section class="stripe stripe--top hidden">
         <ul class="stripe__list stripe-to-left">
           <li class="stripe__item">Відтепер, доставка по Європі</li>
           <li class="stripe__item">Відтепер, доставка по Європі</li>
@@ -372,7 +372,7 @@
         </ul>
       </section>
 
-      <section class="stripe stripe--bottom">
+      <section class="stripe stripe--bottom hidden">
         <ul class="stripe__list stripe-to-right">
           <li class="stripe__item">Відтепер, доставка по Європі</li>
           <li class="stripe__item">Відтепер, доставка по Європі</li>
@@ -996,6 +996,149 @@
         </div>
 
         <button class="btn popup__btn--empty">Перейти в каталог</button>
+
+        <button class="popup__close">
+          <svg>
+            <use xlink:href="img/sprite.svg#close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="popup popup--login">
+      <div class="popup__window">
+        <ul class="popup__tab">
+          <li class="popup__tab-item active">Увійти</li>
+          <li class="popup__tab-item">Створити акаунт</li>
+        </ul>
+
+        <form class="form form--login popup__login active">
+          <div class="form__inner">
+            <div class="form__field">
+              <label for="login">Е-mail або Телефон</label>
+              <input
+                type="text"
+                name="login"
+                id="login"
+                placeholder="Введіть Е-mail або Телефон"
+                autocomplete="email"
+              />
+            </div>
+            <div class="form__field">
+              <label for="pass">Пароль</label>
+              <input
+                type="password"
+                name="pass"
+                id="pass"
+                placeholder="Введіть пароль"
+                autocomplete="current-password"
+              />
+            </div>
+            <div class="form__tip">
+              <div class="checkbox">
+                <input type="checkbox" name="remember" id="remember" />
+                <label for="remember" class="checkbox__label">
+                  Запам’ятати мене
+                </label>
+              </div>
+              <button class="form__btn-forgot" type="button">
+                Забули пароль?
+              </button>
+            </div>
+          </div>
+
+          <div class="form__buttons">
+            <button class="btn">Увійти</button>
+            <span>або</span>
+            <button class="btn btn--outline">
+              <div class="form__btn-google">
+                <img src="img/icon-google.svg" alt="Google icon" />
+              </div>
+              Увійти через Google
+            </button>
+          </div>
+        </form>
+
+        <form class="form form--login popup__login">
+          <div class="form__inner">
+            <div class="form__field">
+              <label for="email-create">Е-mail або Телефон</label>
+              <input
+                type="text"
+                name="email-create"
+                id="email-create"
+                placeholder="Введіть Е-mail або Телефон"
+                autocomplete="email"
+              />
+            </div>
+            <div class="form__field">
+              <label for="pass-create">Пароль</label>
+              <input
+                type="password"
+                name="pass-create"
+                id="pass-create"
+                placeholder="Введіть пароль"
+                autocomplete="current-password"
+              />
+              <div class="form__hint">
+                <p>(Пароль повинен бути не менше ніж 6 символів)</p>
+              </div>
+            </div>
+            <div class="form__tip">
+              <div class="checkbox">
+                <input type="checkbox" name="policy" id="policy" />
+                <label for="policy" class="checkbox__label">
+                  Приймаю умови
+                  <a href="#">публічного договору</a>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form__buttons">
+            <button class="btn">Зареєструватися</button>
+            <span>або</span>
+            <button class="btn btn--outline">
+              <div class="form__btn-google">
+                <img src="img/icon-google.svg" alt="Google icon" />
+              </div>
+              Увійти через Google
+            </button>
+          </div>
+        </form>
+
+        <button class="popup__close">
+          <svg>
+            <use xlink:href="img/sprite.svg#close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="popup popup--reset open">
+      <div class="popup__window">
+        <form class="form form--reset">
+          <h4 class="form__title">Зміна паролю</h4>
+
+          <div class="form__inner">
+            <p>Щоб відновити пароль, введіть Е-mail або Телефон</p>
+            <div class="form__field">
+              <label for="email-reset">Е-mail або Телефон</label>
+              <input
+                type="text"
+                name="email-reset"
+                id="email-reset"
+                placeholder="Введіть Е-mail або Телефон"
+                autocomplete="email"
+              />
+            </div>
+          </div>
+
+          <div class="form__buttons">
+            <button class="btn">Змінити</button>
+            <button class="btn btn--transparent">Згадав пароль</button>
+          </div>
+        </form>
 
         <button class="popup__close">
           <svg>

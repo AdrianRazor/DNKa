@@ -375,7 +375,7 @@
                 </ul>
               </div>
               <div class="tabs__content">
-                <div class="my-orders tabs__body">
+                <div class="my-orders tabs__body active">
                   <div class="my-orders__head">
                     <div class="search my-orders__search">
                       <div class="search__head">
@@ -1053,11 +1053,11 @@
                   </div>
                 </div>
 
-                <div class="user tabs__body active">
+                <div class="user tabs__body">
                   <div class="user__wrapper">
                     <form class="form">
                       <h2 class="form__title">Мої дані</h2>
-                      <div class="form__row form__row--double">
+                      <div class="form__row">
                         <div class="form__field">
                           <label for="name">Ім'я</label>
                           <input
@@ -1079,7 +1079,7 @@
                           />
                         </div>
                       </div>
-                      <div class="form__row form__row--double">
+                      <div class="form__row">
                         <div class="form__field">
                           <label for="birth">Дата народження</label>
                           <input
@@ -1101,7 +1101,7 @@
                           />
                         </div>
                       </div>
-                      <div class="form__row form__row--double">
+                      <div class="form__row">
                         <div class="form__field">
                           <label for="phone">Телефон</label>
                           <input
@@ -1112,49 +1112,150 @@
                           />
                         </div>
                         <div class="form__field">
-                          <label for="email">Адреса електронної пошти</label>
+                          <label for="my-email">Адреса електронної пошти</label>
                           <input
                             type="email"
-                            name="email"
-                            id="email"
+                            name="my-email"
+                            id="my-email"
                             placeholder="Введіть вашу пошту"
                             autocomplete="off"
                           />
                         </div>
                       </div>
                       <h2 class="form__title">Пароль</h2>
-                      <div class="form__row form__row--double">
+                      <div class="form__row">
                         <div class="form__field">
-                          <label for="currentPass">Поточний пароль</label>
+                          <label for="current-pass">Поточний пароль</label>
                           <input
                             type="password"
-                            name="currentPass"
-                            id="currentPass"
+                            name="current-pass"
+                            id="current-pass"
                             placeholder="Введіть поточний пароль"
                             autocomplete="off"
                           />
                         </div>
                       </div>
-                      <div class="form__row form__row--double">
+                      <div class="form__row">
                         <div class="form__field">
-                          <label for="newPass">Новий пароль</label>
+                          <label for="new-pass">Новий пароль</label>
                           <input
                             type="password"
-                            name="newPass"
-                            id="newPass"
+                            name="new-pass"
+                            id="new-pass"
                             placeholder="Введіть новий пароль"
+                            autocomplete="new-password"
                           />
                         </div>
                         <div class="form__field">
-                          <label for="repeatPass"
+                          <label for="repeat-pass"
                             >Підтвердiть новий пароль</label
                           >
                           <input
                             type="password"
-                            name="repeatPass"
-                            id="repeatPass"
+                            name="repeat-pass"
+                            id="repeat-pass"
                             placeholder="Підтвердiть новий пароль"
+                            autocomplete="new-password"
                           />
+                        </div>
+                      </div>
+                      <button class="btn form__btn form__btn--user" disabled>
+                        Зберегти
+                      </button>
+                    </form>
+                    <div class="user__img">
+                      <img src="img/nail-polish-26.jpg" alt="nail polish" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="user user--delivery tabs__body">
+                  <div class="user__wrapper">
+                    <form class="form">
+                      <h2 class="form__title">дані отримувача</h2>
+                      <div class="form__row">
+                        <div class="form__field">
+                          <label for="nameReciever">Ім'я</label>
+                          <input
+                            type="text"
+                            name="nameReciever"
+                            id="nameReciever"
+                            placeholder="Введіть ваше ім’я"
+                            autocomplete="off"
+                          />
+                        </div>
+                        <div class="form__field">
+                          <label for="surnameReciever">Прізвище</label>
+                          <input
+                            type="text"
+                            name="surnameReciever"
+                            id="surnameReciever"
+                            placeholder="Введіть ваше призвище"
+                            autocomplete="off"
+                          />
+                        </div>
+                      </div>
+                      <div class="form__row">
+                        <div class="form__field">
+                          <label for="phoneReciever">Телефон</label>
+                          <input
+                            type="tel"
+                            name="phoneReciever"
+                            id="phoneReciever"
+                            placeholder="Введіть ваш номер"
+                          />
+                        </div>
+                      </div>
+                      <div class="form__row">
+                        <div class="form__field">
+                          <label for="index">Індекс</label>
+                          <input
+                            type="number"
+                            name="index"
+                            id="index"
+                            placeholder="Введіть індекс"
+                          />
+                        </div>
+                        <div class="form__field">
+                          <label for="city">Miсто</label>
+                          <input
+                            type="text"
+                            name="city"
+                            id="city"
+                            placeholder="Введіть ваше мiсто"
+                          />
+                        </div>
+                      </div>
+                      <div class="form__row">
+                        <div class="form__field">
+                          <label for="street">Вулиця</label>
+                          <input
+                            type="number"
+                            name="street"
+                            id="street"
+                            placeholder="Введіть вашу вулицю"
+                          />
+                        </div>
+
+                        <div class="form__row form__row--address">
+                          <div class="form__field">
+                            <label for="house">Будинок</label>
+                            <input
+                              type="number"
+                              name="house"
+                              id="house"
+                              placeholder="№ будинку"
+                            />
+                          </div>
+                          <div class="form__field">
+                            <label for="room">Квартира</label>
+                            <input
+                              type="number"
+                              name="room"
+                              id="room"
+                              placeholder="№ квартири"
+                            />
+                          </div>
                         </div>
                       </div>
                       <button class="btn form__btn form__btn--user" disabled>

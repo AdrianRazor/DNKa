@@ -11,6 +11,10 @@
     padding-left: 30px;
     cursor: pointer;
 
+    & a {
+      color: var(--black);
+    }
+
     &::before {
       content: "";
       display: block;

@@ -38,6 +38,26 @@
       height: 200px;
     }
   }
+
+  &--outline {
+    gap: 10px;
+    background-color: transparent;
+    border: 2px solid var(--grey);
+    color: var(--black);
+  }
+
+  &--transparent {
+    background-color: transparent;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--grey);
+
+    &:hover {
+      background-color: transparent;
+      color: var(--accent);
+      transition: 0.3s ease;
+    }
+  }
 }
 
 @media (max-width: 767px) {
