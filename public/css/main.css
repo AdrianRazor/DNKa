@@ -726,6 +726,15 @@ p {
 }
 
 .tabs__head {
+  border-bottom: 1px solid var(--light);
+}
+
+.tabs__head::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.tabs__list {
   position: relative;
   width: 100%;
   display: -webkit-box;
@@ -735,18 +744,6 @@ p {
   -ms-flex-align: center;
   align-items: center;
   gap: 40px;
-}
-
-.tabs__head::after {
-  content: "";
-  width: 100%;
-  height: 2px;
-  background-color: var(--light);
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 10;
 }
 
 .tabs__item {
@@ -797,7 +794,7 @@ p {
 }
 
 .tabs__item.active p {
-  font-weight: 600;
+  font-weight: 700;
   color: var(--black);
   -webkit-transition: 0.3s ease;
   -o-transition: 0.3s ease;
@@ -813,6 +810,14 @@ p {
 
 .tabs__content {
   margin-top: 30px;
+}
+
+.tabs__body {
+  display: none;
+}
+
+.tabs__body.active {
+  display: block;
 }
 
 .filter {
@@ -3306,10 +3311,174 @@ p {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 .my-orders__search {
   max-width: 594px;
+}
+
+.my-orders__body {
+  padding: 40px;
+  background-color: #fff;
+}
+
+.my-orders__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.my-orders__item {
+  display: grid;
+  grid-template-columns: 33% 31% 32%;
+  gap: 2%;
+  padding: 25px 0;
+  border-bottom: 1px solid var(--light);
+}
+
+.my-orders__item--name {
+  padding: 0 0 25px 0;
+}
+
+.my-orders__item p {
+  font-size: 18px;
+  line-height: 140%;
+  color: var(--black);
+}
+
+.my-orders__name {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  color: var(--grey);
+}
+
+.my-orders__name--mobile {
+  display: none;
+}
+
+.my-orders__top {
+  display: grid;
+  grid-template-columns: 55% 40%;
+  gap: 5%;
+}
+
+.my-orders__num {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.my-orders__num button {
+  line-height: 140%;
+  font-size: 18px;
+  color: #268aff;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+  text-decoration: underline;
+}
+
+.my-orders__num button:hover {
+  color: #a464c6;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.my-orders__status div {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 5px 10px;
+  border-radius: 4px;
+  background-color: #d5ffce;
+  font-size: 14px;
+  line-height: 140%;
+  color: var(--black);
+}
+
+.my-orders__status--accepted div {
+  background-color: #feffce;
+}
+
+.my-orders__status--on-the-way div {
+  background-color: #ceeaff;
+}
+
+.my-orders__middle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.my-orders__middle span {
+  color: var(--grey);
+}
+
+.my-orders__bottom {
+  display: grid;
+  grid-template-columns: 55% 40%;
+  gap: 5%;
+}
+
+.my-orders__bottom h4:last-of-type {
+  text-align: right;
+}
+
+.my-orders__date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.my-orders__sum {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.my-orders__sum p {
+  font-weight: 700;
+}
+
+.my-orders__pagination {
+  margin-top: 40px;
+}
+
+.wishlist__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.wishlist__search {
+  max-width: 594px;
+}
+
+.wishlist__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px 0;
+}
+
+.wishlist__pagination {
+  margin-top: 40px;
 }
 
 .popup {
@@ -3947,6 +4116,10 @@ p {
   .catalog__grid {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .wishlist__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media (max-width: 1599px) {
@@ -4384,6 +4557,24 @@ p {
     margin-top: 10px;
   }
 
+  .tabs__head {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    margin-right: -20px;
+  }
+
+  .tabs__list {
+    gap: 10px;
+  }
+
+  .tabs__item {
+    padding: 10px;
+  }
+
+  .tabs__item p {
+    font-size: 14px;
+  }
+
   .header {
     padding: 20px 0;
   }
@@ -4608,6 +4799,95 @@ p {
   .contacts__info {
     max-width: 480px;
     padding: 60px 40px;
+  }
+
+  .my-orders__head {
+    display: none;
+  }
+
+  .my-orders__body {
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .my-orders__list {
+    gap: 20px;
+  }
+
+  .my-orders__item {
+    display: block;
+    padding: 30px 20px;
+    background-color: #fff;
+    border-bottom: none;
+  }
+
+  .my-orders__item--name {
+    display: none;
+  }
+
+  .my-orders__item p {
+    font-size: 16px;
+  }
+
+  .my-orders__name {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  .my-orders__name--mobile {
+    display: block;
+  }
+
+  .my-orders__top {
+    grid-template-columns: 52% 40%;
+    gap: 8%;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--light);
+  }
+
+  .my-orders__num {
+    display: block;
+  }
+
+  .my-orders__middle {
+    display: block;
+    padding: 20px 0;
+  }
+
+  .my-orders__bottom {
+    grid-template-columns: 52% 40%;
+    gap: 8%;
+    padding-top: 20px;
+    border-top: 1px solid var(--light);
+  }
+
+  .my-orders__bottom h4:last-of-type {
+    text-align: initial;
+  }
+
+  .my-orders__date {
+    display: block;
+  }
+
+  .my-orders__sum {
+    display: block;
+  }
+
+  .my-orders__pagination {
+    display: none;
+  }
+
+  .wishlist__head {
+    display: none;
+  }
+
+  .wishlist__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 15px;
+  }
+
+  .wishlist__pagination {
+    display: none;
   }
 
   .popup__window {
@@ -5185,6 +5465,14 @@ p {
 
   .error__img {
     max-width: 110px;
+  }
+
+  .profile {
+    margin-bottom: 100px;
+  }
+
+  .profile__title {
+    margin-bottom: 40px;
   }
 
   .popup__window {
