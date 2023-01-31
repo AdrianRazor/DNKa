@@ -2,6 +2,15 @@
   display: flex;
   flex-direction: column;
 
+  &__title {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 140%;
+    color: var(--black);
+    text-transform: uppercase;
+    margin-bottom: 25px;
+  }
+
   &__row {
     &--double {
       display: grid;
@@ -12,10 +21,15 @@
     & + .form__row {
       margin-top: 20px;
     }
+
+    & + .form__title {
+      margin-top: 50px;
+    }
   }
 
   &__field {
-    & p {
+    & label {
+      display: block;
       font-size: 16px;
       margin-bottom: 2px;
     }
@@ -45,6 +59,10 @@
   &__btn {
     margin-top: auto;
     flex-shrink: 0;
+
+    &--user {
+      max-width: 49%;
+    }
   }
 
   &--contacts {
@@ -60,8 +78,23 @@
   }
 }
 
+@media (max-width: 1279px) {
+  .form {
+    &__btn {
+      &--user {
+        margin-top: 50px;
+      }
+    }
+  }
+}
+
 @media (max-width: 767px) {
   .form {
+    &__title {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
     &__row {
       &--double {
         grid-template-columns: 1fr;
@@ -76,6 +109,12 @@
         &__btn {
           margin-top: 50px;
         }
+      }
+    }
+
+    &__btn {
+      &--user {
+        max-width: 100%;
       }
     }
   }

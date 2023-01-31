@@ -365,7 +365,12 @@
                     <p>Дані доставки</p>
                   </li>
                   <li class="tabs__exit">
-                    <p>Вийти</p>
+                    <button>
+                      Вийти
+                      <svg>
+                        <use xlink:href="img/sprite.svg#exit"></use>
+                      </svg>
+                    </button>
                   </li>
                 </ul>
               </div>
@@ -722,7 +727,7 @@
                   </div>
                 </div>
 
-                <div class="wishlist tabs__body active">
+                <div class="wishlist tabs__body">
                   <div class="wishlist__head">
                     <div class="search wishlist__search">
                       <div class="search__head">
@@ -1045,6 +1050,120 @@
                         <use xlink:href="img/sprite.svg#arrowRight"></use>
                       </svg>
                     </button>
+                  </div>
+                </div>
+
+                <div class="user tabs__body active">
+                  <div class="user__wrapper">
+                    <form class="form">
+                      <h2 class="form__title">Мої дані</h2>
+                      <div class="form__row form__row--double">
+                        <div class="form__field">
+                          <label for="name">Ім'я</label>
+                          <input
+                            type="text"
+                            name="name"
+                            id="name"
+                            placeholder="Введіть ваше ім’я"
+                            autocomplete="off"
+                          />
+                        </div>
+                        <div class="form__field">
+                          <label for="surname">Прізвище</label>
+                          <input
+                            type="text"
+                            name="surname"
+                            id="surname"
+                            placeholder="Введіть ваше призвище"
+                            autocomplete="off"
+                          />
+                        </div>
+                      </div>
+                      <div class="form__row form__row--double">
+                        <div class="form__field">
+                          <label for="birth">Дата народження</label>
+                          <input
+                            type="text"
+                            name="birth"
+                            id="birth"
+                            placeholder="_ _ . _ _ . _ _ _ _"
+                            autocomplete="off"
+                          />
+                        </div>
+                        <div class="form__field">
+                          <label for="gender">Стать</label>
+                          <input
+                            type="text"
+                            name="gender"
+                            id="gender"
+                            placeholder="Оберіть"
+                            autocomplete="off"
+                          />
+                        </div>
+                      </div>
+                      <div class="form__row form__row--double">
+                        <div class="form__field">
+                          <label for="phone">Телефон</label>
+                          <input
+                            type="tel"
+                            name="phone"
+                            id="phone"
+                            placeholder="Введіть ваш номер"
+                          />
+                        </div>
+                        <div class="form__field">
+                          <label for="email">Адреса електронної пошти</label>
+                          <input
+                            type="email"
+                            name="email"
+                            id="email"
+                            placeholder="Введіть вашу пошту"
+                            autocomplete="off"
+                          />
+                        </div>
+                      </div>
+                      <h2 class="form__title">Пароль</h2>
+                      <div class="form__row form__row--double">
+                        <div class="form__field">
+                          <label for="currentPass">Поточний пароль</label>
+                          <input
+                            type="password"
+                            name="currentPass"
+                            id="currentPass"
+                            placeholder="Введіть поточний пароль"
+                            autocomplete="off"
+                          />
+                        </div>
+                      </div>
+                      <div class="form__row form__row--double">
+                        <div class="form__field">
+                          <label for="newPass">Новий пароль</label>
+                          <input
+                            type="password"
+                            name="newPass"
+                            id="newPass"
+                            placeholder="Введіть новий пароль"
+                          />
+                        </div>
+                        <div class="form__field">
+                          <label for="repeatPass"
+                            >Підтвердiть новий пароль</label
+                          >
+                          <input
+                            type="password"
+                            name="repeatPass"
+                            id="repeatPass"
+                            placeholder="Підтвердiть новий пароль"
+                          />
+                        </div>
+                      </div>
+                      <button class="btn form__btn form__btn--user" disabled>
+                        Зберегти
+                      </button>
+                    </form>
+                    <div class="user__img">
+                      <img src="img/nail-polish-26.jpg" alt="nail polish" />
+                    </div>
                   </div>
                 </div>
               </div>

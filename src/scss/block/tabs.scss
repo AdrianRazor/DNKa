@@ -1,5 +1,7 @@
 .tabs {
   &__head {
+    overflow-x: scroll;
+    overflow-y: hidden;
     border-bottom: 1px solid var(--light);
 
     &::-webkit-scrollbar {
@@ -65,6 +67,42 @@
     }
   }
 
+  &__exit {
+    margin-left: auto;
+
+    & button {
+      cursor: pointer;
+      padding: 20px 0;
+      transition: 0.3s ease;
+
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      font-size: 20px;
+      color: var(--grey);
+      user-select: none;
+      transition: 0.3s ease;
+
+      & svg {
+        width: 25px;
+        height: 25px;
+        fill: var(--grey);
+        transition: 0.3s ease;
+      }
+
+      &:hover {
+        color: var(--accent);
+        transition: 0.3s ease;
+
+        & svg {
+          fill: var(--accent);
+          transition: 0.3s ease;
+        }
+      }
+    }
+  }
+
   &__content {
     margin-top: 30px;
   }
@@ -81,8 +119,6 @@
 @media (max-width: 1023px) {
   .tabs {
     &__head {
-      overflow-x: scroll;
-      overflow-y: hidden;
       margin-right: -20px;
     }
 
@@ -95,6 +131,18 @@
 
       & p {
         font-size: 14px;
+      }
+    }
+
+    &__exit {
+      & button {
+        padding: 10px;
+        font-size: 14px;
+
+        & svg {
+          width: 20px;
+          height: 20px;
+        }
       }
     }
   }
