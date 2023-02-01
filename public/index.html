@@ -1026,13 +1026,20 @@
             </div>
             <div class="form__field">
               <label for="pass">Пароль</label>
-              <input
-                type="password"
-                name="pass"
-                id="pass"
-                placeholder="Введіть пароль"
-                autocomplete="current-password"
-              />
+              <div class="form__password">
+                <input
+                  type="password"
+                  name="pass"
+                  id="pass"
+                  placeholder="Введіть пароль"
+                  autocomplete="current-password"
+                />
+                <button class="form__btn-eye" type="button">
+                  <svg width="20" height="20">
+                    <use xlink:href="img/sprite.svg#eye"></use>
+                  </svg>
+                </button>
+              </div>
             </div>
             <div class="form__tip">
               <div class="checkbox">
@@ -1115,9 +1122,9 @@
       </div>
     </div>
 
-    <div class="popup popup--reset open">
+    <div class="popup popup--reset">
       <div class="popup__window">
-        <form class="form form--reset">
+        <form class="form form--reset hidden">
           <h4 class="form__title">Зміна паролю</h4>
 
           <div class="form__inner">
@@ -1139,6 +1146,64 @@
             <button class="btn btn--transparent">Згадав пароль</button>
           </div>
         </form>
+
+        <form class="form form--reset hidden">
+          <h4 class="form__title">Придумайте новий пароль</h4>
+
+          <div class="form__inner">
+            <div class="form__field">
+              <label for="new-pass">Новий пароль</label>
+              <div class="form__password">
+                <input
+                  type="password"
+                  name="new-pass"
+                  id="new-pass"
+                  placeholder="Введіть пароль"
+                  autocomplete="new-password"
+                />
+                <button class="form__btn-eye" type="button">
+                  <svg width="20" height="20">
+                    <use xlink:href="img/sprite.svg#eye"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="form__hint">
+                <p>Пароль повинен бути не менше ніж 6 символів</p>
+              </div>
+            </div>
+            <div class="form__field">
+              <label for="new-pass-repeat">Повторіть пароль</label>
+              <div class="form__password">
+                <input
+                  type="password"
+                  name="new-pass-repeat"
+                  id="new-pass-repeat"
+                  placeholder="Введіть пароль"
+                  autocomplete="new-password"
+                />
+                <button class="form__btn-eye" type="button">
+                  <svg width="20" height="20">
+                    <use xlink:href="img/sprite.svg#eye"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="form__buttons">
+            <button class="btn">Змінити</button>
+          </div>
+        </form>
+
+        <div class="form form--reset">
+          <h4 class="form__title form__title--success">
+            Пароль успішно змінено
+          </h4>
+
+          <div class="form__buttons">
+            <a href="index.html" class="btn">На головну</a>
+          </div>
+        </div>
 
         <button class="popup__close">
           <svg>

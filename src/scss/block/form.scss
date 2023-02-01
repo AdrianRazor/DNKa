@@ -9,6 +9,10 @@
     color: var(--black);
     text-transform: uppercase;
     margin-bottom: 25px;
+
+    &--success {
+      margin-top: 160px;
+    }
   }
 
   &__inner {
@@ -16,7 +20,7 @@
       margin-top: 20px;
     }
 
-    & p {
+    & > p {
       font-size: 14px;
       line-height: 140%;
       color: var(--grey);
@@ -71,6 +75,10 @@
     }
   }
 
+  &__password {
+    position: relative;
+  }
+
   &__hint {
     margin-top: 5px;
 
@@ -119,6 +127,29 @@
       line-height: 140%;
       color: #268aff;
     }
+
+    &-eye {
+      padding: 10px;
+
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 10;
+
+      cursor: pointer;
+
+      & svg {
+        fill: var(--grey);
+        transition: 0.3s ease;
+      }
+
+      &:hover {
+        & svg {
+          fill: var(--accent);
+          transition: 0.3s ease;
+        }
+      }
+    }
   }
 
   &--login {
@@ -127,16 +158,19 @@
   }
 
   &--reset {
+    height: inherit;
+    gap: 40px;
+
     & .form {
       &__title {
         font-weight: 700;
         font-size: 18px;
         text-transform: initial;
-        margin-bottom: 50px;
+        margin-bottom: 0;
       }
 
       &__buttons {
-        margin-top: 60px;
+        margin-top: auto;
         gap: 0;
       }
     }
@@ -151,6 +185,19 @@
 
     & textarea {
       height: 245px;
+    }
+  }
+
+  &--order {
+    & .checkbox {
+      margin-top: 30px;
+    }
+
+    & .form {
+      &__btn {
+        max-width: 250px;
+        margin-top: 40px;
+      }
     }
   }
 }

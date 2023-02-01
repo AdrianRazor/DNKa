@@ -28,6 +28,15 @@
     }
   }
 
+  &__amount {
+    & p {
+      font-size: 18px;
+      line-height: 140%;
+      color: var(--black);
+      white-space: nowrap;
+    }
+  }
+
   &__price {
     display: flex;
     flex-direction: column;
@@ -55,6 +64,20 @@
       &:hover {
         color: var(--accent);
         transition: 0.3s ease;
+      }
+    }
+  }
+
+  &--in-order {
+    & .cart-order {
+      &__img {
+        width: 72px;
+        height: 72px;
+      }
+
+      &__info {
+        max-width: 275px;
+        width: 100%;
       }
     }
   }

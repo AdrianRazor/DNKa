@@ -300,12 +300,21 @@
     }
   }
 
-  &--login,
+  &--login {
+    & .popup {
+      &__window {
+        padding: 100px 50px 50px;
+        max-width: 460px;
+        justify-content: initial;
+      }
+    }
+  }
+
   &--reset {
     & .popup {
       &__window {
+        padding: 100px 50px;
         max-width: 460px;
-        padding: 100px 50px 50px;
         justify-content: initial;
       }
     }
@@ -445,6 +454,16 @@
           &__window {
             padding: 50px 20px 30px;
           }
+        }
+      }
+    }
+
+    &--login,
+    &--reset {
+      & .popup {
+        &__window {
+          max-width: 100%;
+          padding: 100px 20px;
         }
       }
     }
