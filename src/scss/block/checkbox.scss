@@ -43,6 +43,11 @@
       left: 0;
       z-index: 10;
     }
+
+    &--policy {
+      color: var(--grey);
+      gap: 5px;
+    }
   }
 
   &__color {

@@ -103,9 +103,38 @@
       }
     }
 
+    &__amount {
+      & p {
+        font-size: 16px;
+        line-height: 120%;
+      }
+    }
+
     &__price {
       & p {
         font-size: 16px;
+      }
+    }
+
+    &--in-order {
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      gap: 10px;
+
+      & .cart-order {
+        &__img {
+          grid-row-start: 1;
+          grid-row-end: 3;
+        }
+
+        &__info {
+          grid-column-start: 2;
+          grid-column-end: 4;
+
+          & span {
+            margin-bottom: 0;
+          }
+        }
       }
     }
   }

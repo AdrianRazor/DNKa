@@ -5,8 +5,8 @@
     margin-top: 70px;
     display: flex;
     align-items: center;
-    gap: 80px;
-    margin-bottom: 50px;
+    flex-wrap: wrap;
+    gap: 10px 30px;
   }
 
   &__item {
@@ -14,8 +14,11 @@
     font-size: 20px;
     line-height: 140%;
     color: var(--grey);
+    white-space: nowrap;
 
-    &:not(:last-of-type) {
+    &:not(:first-of-type) {
+      padding-left: 45px;
+
       &::before,
       &::after {
         content: "";
@@ -27,7 +30,7 @@
 
         position: absolute;
         top: 50%;
-        right: -45px;
+        left: 0;
       }
 
       &::before {
@@ -54,9 +57,12 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
-  }
+    margin-top: 50px;
 
-  &__step {
+    &--thanks {
+      display: block;
+      margin-top: 100px;
+    }
   }
 
   &__name {
@@ -66,10 +72,92 @@
     text-transform: uppercase;
     margin-bottom: 40px;
   }
+
+  &__tnanks {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    & .order__name {
+      margin-bottom: 0;
+    }
+
+    & p {
+      font-size: 18px;
+      line-height: 140%;
+      color: var(--grey);
+    }
+
+    & span {
+      font-size: 18px;
+      line-height: 140%;
+      color: var(--black);
+    }
+  }
+
+  &__btn {
+    max-width: 410px;
+    margin-top: 100px;
+
+    &--mobile {
+      display: none;
+    }
+  }
 }
 
 @media (max-width: 767px) {
   .order {
     margin-bottom: 100px;
+
+    &__head {
+      margin-top: 30px;
+      gap: 5px 15px;
+    }
+
+    &__item {
+      font-size: 14px;
+
+      &:not(:first-of-type) {
+        padding-left: 25px;
+
+        &::before,
+        &::after {
+          width: 8px;
+          height: 1px;
+        }
+
+        &::before {
+          transform: rotate(45deg) translateY(-4px);
+        }
+
+        &::after {
+          transform: rotate(-45deg) translateY(4px);
+        }
+      }
+    }
+
+    &__body {
+      grid-template-columns: 1fr;
+      gap: 70px;
+      margin-top: 70px;
+    }
+
+    &__name {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+
+    &__tnanks {
+      & p,
+      & span {
+        font-size: 16px;
+      }
+    }
+
+    &__btn {
+      &--mobile {
+        display: flex;
+      }
+    }
   }
 }

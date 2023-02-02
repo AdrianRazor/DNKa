@@ -62,9 +62,31 @@
       color: var(--black);
       border: 1px solid var(--grey);
       border-radius: 4px;
+      transition: 0.3s ease;
 
       &::placeholder {
         color: var(--light);
+        transition: 0.3s ease;
+      }
+
+      &:hover {
+        border-color: var(--accent);
+        transition: 0.3s ease;
+
+        &::placeholder {
+          color: var(--pink);
+          transition: 0.3s ease;
+        }
+      }
+
+      &:focus {
+        border-color: var(--black);
+        transition: 0.3s ease;
+
+        &::placeholder {
+          color: var(--light);
+          transition: 0.3s ease;
+        }
       }
     }
 
@@ -72,6 +94,18 @@
       height: 140px;
       padding: 24px 20px;
       resize: none;
+    }
+
+    & input {
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      &[type="number"] {
+        -moz-appearance: textfield;
+      }
     }
   }
 

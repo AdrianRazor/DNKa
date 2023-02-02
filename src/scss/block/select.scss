@@ -1,0 +1,138 @@
+.select {
+  position: relative;
+
+  & label {
+    display: block;
+    font-size: 16px;
+    line-height: 140%;
+    color: var(--black);
+    margin-bottom: 2px;
+  }
+
+  &__head {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 17px 20px;
+    background-color: #fff;
+    border: 1px solid var(--grey);
+    border-radius: 4px;
+
+    font-size: 18px;
+    color: var(--black);
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+
+    & svg {
+      fill: var(--black);
+      transition: 0.3s ease;
+    }
+  }
+
+  &__current {
+    font-size: 18px;
+    line-height: 140%;
+    color: var(--light);
+    transition: 0.3s ease;
+  }
+
+  &__body {
+    display: none;
+    width: 100%;
+    padding: 0 20px;
+    margin-top: -1px;
+    background-color: #fff;
+    border: 1px solid var(--grey);
+    border-top-width: 0;
+    border-radius: 0 0 4px 4px;
+    transition: 0.3s ease;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10;
+  }
+
+  &__list {
+    padding: 8px 0 5px 0;
+    border-top: 1px solid var(--light);
+  }
+
+  &__item {
+    padding: 12px 0;
+    cursor: pointer;
+
+    font-size: 18px;
+    line-height: 140%;
+    color: var(--black);
+    transition: 0.3s ease;
+
+    &:hover {
+      color: var(--accent);
+      transition: 0.3s ease;
+    }
+  }
+
+  &__field {
+    display: none;
+  }
+
+  &:hover {
+    & .select {
+      &__head {
+        border-color: var(--accent);
+        transition: border-color 0.3s ease;
+
+        & svg {
+          fill: var(--accent);
+          transition: 0.3s ease;
+        }
+      }
+
+      &__current {
+        color: var(--pink);
+        transition: 0.3s ease;
+      }
+
+      &__body {
+        border-color: var(--accent);
+        transition: 0.3s ease;
+      }
+    }
+  }
+
+  &.active {
+    & .select {
+      &__head {
+        border-radius: 4px 4px 0 0;
+
+        & svg {
+          transform: rotate(180deg);
+          transition: 0.3s ease;
+        }
+      }
+
+      &__body {
+        display: block;
+      }
+    }
+  }
+
+  &.selected {
+    & .select {
+      &__current {
+        color: var(--black);
+      }
+    }
+
+    &:hover {
+      & .select {
+        &__current {
+          color: var(--accent);
+        }
+      }
+    }
+  }
+}

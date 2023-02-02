@@ -348,7 +348,7 @@
               <li class="order__item active">Контактні дані</li>
               <li class="order__item">Доставка</li>
               <li class="order__item">Оплата</li>
-              <li class="order__item">Замовлення оформлення</li>
+              <li class="order__item">Успiх</li>
             </ul>
 
             <div class="order__body">
@@ -406,11 +406,117 @@
                   <button class="btn form__btn">Далі</button>
                 </form>
               </div>
+
+              <div class="order__step hidden">
+                <div class="order__name">Дані про доставку</div>
+                <form class="form form--order">
+                  <select name="" id="">
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                  </select>
+                  <button class="btn form__btn">Далі</button>
+                </form>
+              </div>
+
+              <div class="order__step hidden">
+                <div class="order__name">Платіжні дані</div>
+                <form class="form form--order">
+                  <div class="form__row">
+                    <div class="select">
+                      <label>Спосіб оплати</label>
+                      <div class="select__head">
+                        <p class="select__current">Оберіть</p>
+                        <svg width="17" height="17">
+                          <use xlink:href="img/sprite.svg#arrowDown"></use>
+                        </svg>
+                      </div>
+                      <div class="select__body">
+                        <ul class="select__list">
+                          <li class="select__item" data-value="1">
+                            Оплатити карткою
+                          </li>
+                          <li class="select__item" data-value="2">
+                            Готiвкою у вiддiленнi
+                          </li>
+                          <li class="select__item" data-value="3">
+                            Готiвкою кур'єру
+                          </li>
+                        </ul>
+                      </div>
+                      <select class="select__field" name="payment" id="payment">
+                        <option value="1"></option>
+                        <option value="2"></option>
+                        <option value="3"></option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form__row">
+                    <div class="form__field">
+                      <label for="full-name">ПІБ власника картки</label>
+                      <input
+                        type="text"
+                        name="full-name"
+                        id="full-name"
+                        placeholder="Введіть ПІБ"
+                      />
+                    </div>
+                  </div>
+                  <div class="form__row">
+                    <div class="form__field">
+                      <label for="card">Номер картки</label>
+                      <input
+                        type="number"
+                        name="card"
+                        id="card"
+                        placeholder="•••• •••• •••• ••••"
+                      />
+                    </div>
+                    <div class="form__row">
+                      <div class="form__field">
+                        <label for="termin">Термін дії</label>
+                        <input
+                          type="number"
+                          name="termin"
+                          id="termin"
+                          placeholder="MM / YY"
+                        />
+                      </div>
+                      <div class="form__field">
+                        <label for="cvv">СVV2</label>
+                        <input
+                          type="number"
+                          name="cvv"
+                          id="cvv"
+                          placeholder="•••"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="checkbox">
+                    <input type="checkbox" name="policy" id="policy" />
+                    <label
+                      for="policy"
+                      class="checkbox__label checkbox__label--policy"
+                    >
+                      Приймаю умови <a href="#">публічного договору</a>
+                    </label>
+                  </div>
+                  <button class="btn form__btn">Далі</button>
+                </form>
+              </div>
+
               <div class="in-order">
                 <div class="in-order__head">
                   <h3 class="in-order__title">у замовленні</h3>
-                  <span>(3 товара)</span>
-                  <button class="in-order__edit">Змінити</button>
+                  <span>(3)</span>
+                  <button class="in-order__edit">
+                    <span>Змінити</span>
+                    <svg width="30" height="30">
+                      <use xlink:href="img/sprite.svg#edit2"></use>
+                    </svg>
+                  </button>
                 </div>
                 <div class="in-order__content">
                   <ul class="in-order__list">
@@ -492,14 +598,36 @@
                   </ul>
                 </div>
                 <div class="in-order__price">
-                  <span>Ціна товарів</span>
-                  <p>150 грн</p>
+                  <div class="in-order__price-row">
+                    <span>Ціна товарів</span>
+                    <p>150 грн</p>
+                  </div>
+                  <div class="in-order__price-row">
+                    <span>Доставка</span>
+                    <p>55 грн</p>
+                  </div>
                 </div>
                 <div class="in-order__total">
                   <span>Всього:</span>
                   <p>205 грн</p>
                 </div>
               </div>
+
+              <button class="btn order__btn order__btn--mobile">
+                Оформити
+              </button>
+            </div>
+
+            <div class="order__body order__body--thanks hidden">
+              <div class="order__tnanks">
+                <div class="order__name">Дякуємо за Ваше замовлення</div>
+                <p>Замовлення <span>№ 345 658 12</span> успішно оплачено</p>
+                <p>
+                  Інформацію за замовленням ми надіслали на Вашу пошту
+                  <span>example@gmail.com</span>
+                </p>
+              </div>
+              <button class="btn order__btn">Продовжити покупки</button>
             </div>
           </div>
         </div>

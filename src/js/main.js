@@ -341,6 +341,41 @@ document.addEventListener("DOMContentLoaded", function (event) {
     });
   }
 
+  // Select
+  const select = document.querySelectorAll(".select");
+  const selectHead = document.querySelectorAll(".select__head");
+  const selectCurrent = document.querySelectorAll(".select__current");
+  const selectItem = document.querySelectorAll(".select__item");
+
+  if (select?.length) {
+    selectHead.forEach((head, index) => {
+      head.addEventListener("click", () => {
+        closeSelect();
+        select[index].classList.add("active");
+      });
+
+      selectItem.forEach((el) => {
+        el.addEventListener("click", () => {
+          selectCurrent[index].innerHTML = el.innerHTML;
+          closeSelect();
+          select[index].classList.add("selected");
+        });
+      });
+
+      window.addEventListener("click", (e) => {
+        if (!e.target.closest(".select")) {
+          closeSelect();
+        }
+      });
+
+      function closeSelect() {
+        select.forEach((el) => {
+          el.classList.remove("active");
+        });
+      }
+    });
+  }
+
   // Comments
   const btnComment = document.querySelector(".testimonials__btn");
   const popupComment = document.querySelector(".popup--comment");

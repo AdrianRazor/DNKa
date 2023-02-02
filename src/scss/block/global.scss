@@ -28,7 +28,7 @@ body {
   background-color: var(--white);
   overflow-x: hidden;
 
-  scrollbar-color: var(--purple) var(--pink);
+  scrollbar-color: var(--light) var(--white);
   scrollbar-width: thin;
 
   &::-webkit-scrollbar {
@@ -36,13 +36,13 @@ body {
   }
 
   &::-webkit-scrollbar-track {
-    background: var(--pink);
+    background: var(--white);
     border-radius: 4px;
     overflow: hidden;
   }
 
   &::-webkit-scrollbar-thumb {
-    background: var(--purple);
+    background: var(--light);
     border-radius: 4px;
   }
 }
