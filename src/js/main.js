@@ -343,36 +343,30 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
   // Select
   const select = document.querySelectorAll(".select");
-  const selectHead = document.querySelectorAll(".select__head");
-  const selectCurrent = document.querySelectorAll(".select__current");
-  const selectItem = document.querySelectorAll(".select__item");
 
   if (select?.length) {
-    selectHead.forEach((head, index) => {
-      head.addEventListener("click", () => {
-        closeSelect();
-        select[index].classList.add("active");
+    select.forEach((sel) => {
+      const selectHead = sel.querySelector(".select__head");
+      const selectCurrent = sel.querySelector(".select__current");
+      const selectItem = sel.querySelectorAll(".select__item");
+
+      selectHead.addEventListener("click", () => {
+        sel.classList.toggle("active");
       });
 
       selectItem.forEach((el) => {
         el.addEventListener("click", () => {
-          selectCurrent[index].innerHTML = el.innerHTML;
-          closeSelect();
-          select[index].classList.add("selected");
+          selectCurrent.textContent = el.textContent;
+          sel.classList.remove("active");
+          sel.classList.add("selected");
         });
       });
 
       window.addEventListener("click", (e) => {
         if (!e.target.closest(".select")) {
-          closeSelect();
+          sel.classList.remove("active");
         }
       });
-
-      function closeSelect() {
-        select.forEach((el) => {
-          el.classList.remove("active");
-        });
-      }
     });
   }
 

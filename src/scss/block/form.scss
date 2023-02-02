@@ -228,6 +228,10 @@
     }
 
     & .form {
+      &__delivery {
+        margin-bottom: 30px;
+      }
+
       &__btn {
         max-width: 250px;
         margin-top: 40px;
@@ -280,6 +284,14 @@
       & .form {
         &__btn {
           margin-top: 50px;
+        }
+      }
+    }
+
+    &--order {
+      & .form {
+        &__btn {
+          display: none;
         }
       }
     }

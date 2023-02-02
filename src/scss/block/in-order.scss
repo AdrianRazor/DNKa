@@ -1,10 +1,8 @@
 .in-order {
-  max-width: 695px;
   width: 100%;
   padding: 40px;
   background-color: #fff;
   border: 1px solid var(--light);
-  margin-left: auto;
 
   &__head {
     display: flex;
@@ -111,6 +109,10 @@
         line-height: 120%;
         color: var(--grey);
       }
+
+      & + .in-order__price-row {
+        margin-top: 20px;
+      }
     }
   }
 
@@ -188,10 +190,6 @@
 
         & p {
           font-size: 16px;
-        }
-
-        & + .in-order__price-row {
-          margin-top: 20px;
         }
       }
     }

@@ -5,9 +5,7 @@
 
   &__label {
     position: relative;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    display: block;
     padding-left: 30px;
     cursor: pointer;
 
@@ -46,7 +44,6 @@
 
     &--policy {
       color: var(--grey);
-      gap: 5px;
     }
   }
 
@@ -67,6 +64,10 @@
   }
 
   &--color {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
     & input:checked {
       & + .checkbox__label p {
         color: var(--accent);

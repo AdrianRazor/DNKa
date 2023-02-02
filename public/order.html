@@ -410,11 +410,89 @@
               <div class="order__step hidden">
                 <div class="order__name">Дані про доставку</div>
                 <form class="form form--order">
-                  <select name="" id="">
-                    <option value="">1</option>
-                    <option value="">2</option>
-                    <option value="">3</option>
-                  </select>
+                  <div class="delivery form__delivery">
+                    <label class="delivery__label">
+                      <input type="radio" id="delivery" name="delivery" />
+                      <div class="delivery__checkmark"></div>
+                      <div class="delivery__icon">
+                        <img src="img/icon-nova-poshta.png" alt="icon" />
+                      </div>
+                      <p>Нова Пошта (відділення)</p>
+                      <div class="delivery__info">
+                        <span>2-3 дні</span>
+                        <span>від 70 грн</span>
+                      </div>
+                    </label>
+                    <label class="delivery__label">
+                      <input type="radio" id="delivery" name="delivery" />
+                      <div class="delivery__checkmark"></div>
+                      <div class="delivery__icon">
+                        <img src="img/icon-nova-poshta.png" alt="icon" />
+                      </div>
+                      <p>Нова Пошта (поштомат)</p>
+                      <div class="delivery__info">
+                        <span>2-3 дні</span>
+                        <span>від 70 грн</span>
+                      </div>
+                    </label>
+                    <label class="delivery__label">
+                      <input type="radio" id="delivery" name="delivery" />
+                      <div class="delivery__checkmark"></div>
+                      <div class="delivery__icon">
+                        <img src="img/icon-ukr-poshta.png" alt="icon" />
+                      </div>
+                      <p>Укрпошта (закордон)</p>
+                      <div class="delivery__info">
+                        <span>6-7 днів</span>
+                        <span>від 100 грн</span>
+                      </div>
+                    </label>
+                    <label class="delivery__label">
+                      <input type="radio" id="delivery" name="delivery" />
+                      <div class="delivery__checkmark"></div>
+                      <div class="delivery__icon">
+                        <img src="img/icon-home.png" alt="icon" />
+                      </div>
+                      <p>Адресна доставка</p>
+                      <div class="delivery__info">
+                        <span>2-3 дні</span>
+                        <span>від 150 грн</span>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="form__row">
+                    <div class="select">
+                      <label>Оберіть відділення</label>
+                      <div class="select__head">
+                        <p class="select__current">Оберіть відділення</p>
+                        <svg width="17" height="17">
+                          <use xlink:href="img/sprite.svg#arrowDown"></use>
+                        </svg>
+                      </div>
+                      <div class="select__body">
+                        <ul class="select__list">
+                          <li class="select__item" data-value="1">
+                            Віддiлення №6
+                          </li>
+                          <li class="select__item" data-value="2">
+                            Віддiлення №8
+                          </li>
+                          <li class="select__item" data-value="3">
+                            Віддiлення №27
+                          </li>
+                          <li class="select__item" data-value="4">
+                            Віддiлення №135
+                          </li>
+                        </ul>
+                      </div>
+                      <select class="select__field" name="payment" id="payment">
+                        <option value="1"></option>
+                        <option value="2"></option>
+                        <option value="3"></option>
+                        <option value="4"></option>
+                      </select>
+                    </div>
+                  </div>
                   <button class="btn form__btn">Далі</button>
                 </form>
               </div>
@@ -500,14 +578,15 @@
                       for="policy"
                       class="checkbox__label checkbox__label--policy"
                     >
-                      Приймаю умови <a href="#">публічного договору</a>
+                      <span>Приймаю умови</span>
+                      <a href="#">публічного договору</a>
                     </label>
                   </div>
                   <button class="btn form__btn">Далі</button>
                 </form>
               </div>
 
-              <div class="in-order">
+              <div class="in-order order__in-order">
                 <div class="in-order__head">
                   <h3 class="in-order__title">у замовленні</h3>
                   <span>(3)</span>

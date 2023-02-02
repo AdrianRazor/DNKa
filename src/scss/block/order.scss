@@ -73,6 +73,11 @@
     margin-bottom: 40px;
   }
 
+  &__in-order {
+    max-width: 695px;
+    margin-left: auto;
+  }
+
   &__tnanks {
     display: flex;
     flex-direction: column;
@@ -101,6 +106,20 @@
 
     &--mobile {
       display: none;
+    }
+  }
+}
+
+@media (max-width: 1279px) {
+  .order {
+    &__body {
+      grid-template-columns: 1fr;
+    }
+
+    &__in-order {
+      max-width: 100%;
+      margin-top: 40px;
+      margin-left: initial;
     }
   }
 }
