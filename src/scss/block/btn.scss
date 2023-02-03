@@ -43,7 +43,14 @@
     gap: 10px;
     background-color: transparent;
     border: 2px solid var(--grey);
-    color: var(--black);
+    color: var(--grey);
+
+    &:hover {
+      background-color: var(--light-purple);
+      border-color: var(--accent);
+      color: var(--accent);
+      transition: 0.3s ease;
+    }
   }
 
   &--transparent {

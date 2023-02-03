@@ -478,6 +478,26 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 
+  // Compare modal
+  const modalCompare = document.querySelector(".modal");
+
+  if (modalCompare) {
+    window.addEventListener("resize", () => {
+      if (window.screen.width < 768) {
+        modalCompare.classList.add("modal--preview");
+      } else {
+        modalCompare.classList.remove("modal--preview");
+      }
+    });
+
+    if (modalCompare.classList.contains("modal--preview")) {
+      modalCompare.addEventListener("click", () => {
+        rootElement.classList.add("block");
+        modalCompare.classList.remove("modal--preview");
+      });
+    }
+  }
+
   // Compare page -> horizontal scroll
   const compareContainer = document.querySelector(".compare__content");
 

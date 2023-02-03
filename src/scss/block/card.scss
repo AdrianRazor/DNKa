@@ -105,39 +105,41 @@
     margin-top: 20px;
   }
 
-  &:hover {
-    & .card {
-      &__wrapper {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 10;
+  @media (hover: hover) {
+    &:hover {
+      & .card {
+        &__wrapper {
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 10;
 
-        background-color: #fff;
-        border-color: var(--light);
-        transition: 0.5s ease;
-      }
+          background-color: #fff;
+          border-color: var(--light);
+          transition: 0.5s ease;
+        }
 
-      &__photo {
-        padding: 0;
-        transition: 0.5s ease;
+        &__photo {
+          padding: 0;
+          transition: 0.5s ease;
 
-        & img {
-          &:first-of-type {
-            visibility: hidden;
-            opacity: 0;
-            transition: 0.5s ease;
-          }
-          &:last-of-type {
-            visibility: visible;
-            opacity: 1;
-            transition: 0.5s ease;
+          & img {
+            &:first-of-type {
+              visibility: hidden;
+              opacity: 0;
+              transition: 0.5s ease;
+            }
+            &:last-of-type {
+              visibility: visible;
+              opacity: 1;
+              transition: 0.5s ease;
+            }
           }
         }
-      }
 
-      &__buy {
-        display: block;
+        &__buy {
+          display: block;
+        }
       }
     }
   }

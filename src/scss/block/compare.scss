@@ -37,10 +37,8 @@
   }
 
   &__content {
-    max-width: 100%;
     width: 100%;
-    overflow-y: hidden;
-    overflow-x: scroll;
+    overflow: auto;
     padding-bottom: 10px;
     padding-left: 9px;
     margin-right: -100px;
@@ -60,6 +58,10 @@
     }
   }
 
+  &__inner {
+    width: fit-content;
+  }
+
   &__cards {
     display: flex;
   }
@@ -70,7 +72,6 @@
   }
 
   &__property {
-    width: fit-content;
     display: flex;
 
     &:not(:first-of-type) {
@@ -90,6 +91,10 @@
       font-size: 20px;
       line-height: 140%;
       color: var(--black);
+    }
+
+    &-name {
+      display: none;
     }
   }
 }
@@ -128,8 +133,9 @@
     &__content {
       max-width: initial;
       width: initial;
-      padding-left: 0;
+      padding-left: 40px;
       padding-right: 40px;
+      margin-left: -40px;
 
       &::-webkit-scrollbar {
         height: 9px;
@@ -142,6 +148,7 @@
 
     &__cards {
       gap: 15px;
+      margin-bottom: 20px;
     }
 
     &__card {
@@ -149,24 +156,38 @@
     }
 
     &__property {
-      padding-top: 20px;
-      padding-bottom: 20px;
+      padding-top: 10px;
+      padding-bottom: 0;
       border-bottom: none;
       gap: 15px;
 
-      // &:not(:first-of-type) {
-      //   padding-top: 28px;
-      // }
+      &:not(:first-of-type) {
+        padding-top: 10px;
+      }
 
-      // &:not(:last-of-type) {
-      //   padding-bottom: 12px;
-      // }
+      &:not(:last-of-type) {
+        padding-bottom: 20px;
+        border-bottom: none;
+      }
 
       & li {
         width: 300px;
         padding: 0;
 
         font-size: 14px;
+      }
+
+      &-name {
+        display: block;
+        background-color: var(--light-pink);
+        padding: 5px 0 5px 40px;
+        margin: 0 -40px;
+
+        & p {
+          font-size: 14px;
+          line-height: 140%;
+          color: var(--grey);
+        }
       }
     }
   }
@@ -177,13 +198,22 @@
     margin-bottom: 100px;
 
     &__content {
+      margin-left: -20px;
       margin-right: -20px;
+      padding-left: 20px;
       padding-right: 20px;
     }
 
     &__card,
     &__property li {
       width: 230px;
+    }
+
+    &__property {
+      &-name {
+        padding: 5px 0 5px 20px;
+        margin: 0 -20px;
+      }
     }
   }
 }
