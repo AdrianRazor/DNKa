@@ -478,5 +478,18 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 
+  // Compare page -> horizontal scroll
+  const compareContainer = document.querySelector(".compare__content");
+
+  if (compareContainer) {
+    compareContainer.addEventListener("wheel", (e) => {
+      e.preventDefault();
+
+      compareContainer.scrollBy({
+        left: e.deltaY < 0 ? -100 : 100,
+      });
+    });
+  }
+
   console.log("DOM fully loaded and parsed");
 });
