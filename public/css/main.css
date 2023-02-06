@@ -1228,6 +1228,10 @@ p {
   margin-top: 50px;
 }
 
+.form__field {
+  position: relative;
+}
+
 .form__field label {
   display: block;
   font-size: 16px;
@@ -1372,6 +1376,17 @@ p {
   transition: 0.3s ease;
 }
 
+.form__field input:invalid,
+.form__field textarea:invalid {
+  border-color: var(--red);
+  color: var(--red);
+}
+
+.form__field input:invalid ~ .form__field label,
+.form__field textarea:invalid ~ .form__field label {
+  color: var(--red);
+}
+
 .form__field textarea {
   height: 140px;
   padding: 24px 20px;
@@ -1386,6 +1401,17 @@ p {
 
 .form__field input[type=number] {
   -moz-appearance: textfield;
+}
+
+.form__field span {
+  display: none;
+  font-size: 14px;
+  line-height: 140%;
+  color: var(--red);
+  position: absolute;
+  top: calc(100% + 5px);
+  right: 0;
+  z-index: 10;
 }
 
 .form__password {

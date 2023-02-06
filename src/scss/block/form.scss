@@ -47,6 +47,8 @@
   }
 
   &__field {
+    position: relative;
+
     & label {
       display: block;
       font-size: 16px;
@@ -88,6 +90,15 @@
           transition: 0.3s ease;
         }
       }
+
+      &:invalid {
+        border-color: var(--red);
+        color: var(--red);
+
+        & ~ .form__field label {
+          color: var(--red);
+        }
+      }
     }
 
     & textarea {
@@ -106,6 +117,18 @@
       &[type="number"] {
         -moz-appearance: textfield;
       }
+    }
+
+    & span {
+      display: none;
+      font-size: 14px;
+      line-height: 140%;
+      color: var(--red);
+
+      position: absolute;
+      top: calc(100% + 5px);
+      right: 0;
+      z-index: 10;
     }
   }
 
