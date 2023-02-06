@@ -482,12 +482,10 @@ p {
 
 .card__wrapper {
   width: 100%;
-  padding: 15px;
+  padding: 15px 15px 20px;
   background-color: transparent;
   border: 1px solid transparent;
-  -webkit-transition: 0.5s ease;
-  -o-transition: 0.5s ease;
-  transition: 0.5s ease;
+  border-bottom-width: 0;
 }
 
 .card__photo {
@@ -515,9 +513,9 @@ p {
   object-fit: cover;
   visibility: hidden;
   opacity: 0;
-  -webkit-transition: 0.5s ease;
-  -o-transition: 0.5s ease;
-  transition: 0.5s ease;
+  -webkit-transition: 0.2s ease;
+  -o-transition: 0.2s ease;
+  transition: 0.2s ease;
 }
 
 .card__new {
@@ -589,9 +587,17 @@ p {
   font-size: 20px;
 }
 
-.card__buy {
+.card__button {
   display: none;
-  margin-top: 20px;
+  width: 100%;
+  padding: 0 15px 15px;
+  background-color: #fff;
+  border: 1px solid var(--light);
+  border-top-width: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 20;
 }
 
 .pagination {
@@ -6175,14 +6181,16 @@ p {
     font-size: 14px;
   }
 
+  .card__button {
+    margin-top: 10px;
+  }
+
   .card__buy {
-    display: block;
     height: 40px;
     background-color: transparent;
     border: 1px solid var(--accent);
     font-size: 16px;
     color: var(--accent);
-    margin-top: 10px;
   }
 
   .tabs__head {
@@ -7915,15 +7923,8 @@ p {
 
 @media (hover: hover) {
   .card:hover .card__wrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 10;
     background-color: #fff;
     border-color: var(--light);
-    -webkit-transition: 0.5s ease;
-    -o-transition: 0.5s ease;
-    transition: 0.5s ease;
   }
 
   .card:hover .card__photo {
@@ -7936,20 +7937,20 @@ p {
   .card:hover .card__photo img:first-of-type {
     visibility: hidden;
     opacity: 0;
-    -webkit-transition: 0.5s ease;
-    -o-transition: 0.5s ease;
-    transition: 0.5s ease;
+    -webkit-transition: 0.2s ease;
+    -o-transition: 0.2s ease;
+    transition: 0.2s ease;
   }
 
   .card:hover .card__photo img:last-of-type {
     visibility: visible;
     opacity: 1;
-    -webkit-transition: 0.5s ease;
-    -o-transition: 0.5s ease;
-    transition: 0.5s ease;
+    -webkit-transition: 0.2s ease;
+    -o-transition: 0.2s ease;
+    transition: 0.2s ease;
   }
 
-  .card:hover .card__buy {
+  .card:hover .card__button {
     display: block;
   }
 }

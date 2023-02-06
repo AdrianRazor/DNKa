@@ -561,9 +561,26 @@ document.addEventListener("DOMContentLoaded", function (event) {
   }
 
   // Compare modal
+  const btnSort = document.querySelectorAll(".card__btn--sort");
   const modalCompare = document.querySelector(".modal");
 
+  if (btnSort?.length && modalCompare) {
+    btnSort.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        modalCompare.classList.add("open");
+      });
+    });
+  }
+
   if (modalCompare) {
+    const modalClearBtn = modalCompare.querySelector("#modalClearBtn");
+
+    if (modalClearBtn) {
+      modalClearBtn.addEventListener("click", () => {
+        modalCompare.classList.remove("open");
+      });
+    }
+
     window.addEventListener("resize", () => {
       if (window.screen.width < 768) {
         modalCompare.classList.add("modal--preview");

@@ -4,10 +4,10 @@
 
   &__wrapper {
     width: 100%;
-    padding: 15px;
+    padding: 15px 15px 20px;
     background-color: transparent;
     border: 1px solid transparent;
-    transition: 0.5s ease;
+    border-bottom-width: 0;
   }
 
   &__photo {
@@ -31,7 +31,7 @@
         object-fit: cover;
         visibility: hidden;
         opacity: 0;
-        transition: 0.5s ease;
+        transition: 0.2s ease;
       }
     }
   }
@@ -100,23 +100,26 @@
     font-size: 20px;
   }
 
-  &__buy {
+  &__button {
     display: none;
-    margin-top: 20px;
+    width: 100%;
+    padding: 0 15px 15px;
+    background-color: #fff;
+    border: 1px solid var(--light);
+    border-top-width: 0;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 20;
   }
 
   @media (hover: hover) {
     &:hover {
       & .card {
         &__wrapper {
-          position: absolute;
-          top: 0;
-          left: 0;
-          z-index: 10;
-
           background-color: #fff;
           border-color: var(--light);
-          transition: 0.5s ease;
         }
 
         &__photo {
@@ -127,17 +130,17 @@
             &:first-of-type {
               visibility: hidden;
               opacity: 0;
-              transition: 0.5s ease;
+              transition: 0.2s ease;
             }
             &:last-of-type {
               visibility: visible;
               opacity: 1;
-              transition: 0.5s ease;
+              transition: 0.2s ease;
             }
           }
         }
 
-        &__buy {
+        &__button {
           display: block;
         }
       }
@@ -208,14 +211,16 @@
       font-size: 14px;
     }
 
+    &__button {
+      margin-top: 10px;
+    }
+
     &__buy {
-      display: block;
       height: 40px;
       background-color: transparent;
       border: 1px solid var(--accent);
       font-size: 16px;
       color: var(--accent);
-      margin-top: 10px;
     }
   }
 }
