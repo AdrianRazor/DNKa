@@ -64,9 +64,11 @@
   }
 
   &--color {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    & label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
 
     & input:checked {
       & + .checkbox__label p {

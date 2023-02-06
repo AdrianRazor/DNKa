@@ -1162,7 +1162,7 @@ p {
   display: block;
 }
 
-.checkbox--color {
+.checkbox--color label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
