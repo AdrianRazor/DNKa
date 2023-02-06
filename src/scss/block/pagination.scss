@@ -69,4 +69,39 @@
       color: var(--black);
     }
   }
+
+  & .swiper-pagination {
+    position: static;
+    width: fit-content;
+    display: flex;
+    gap: 30px;
+
+    &-bullet {
+      width: initial;
+      height: initial;
+      background-color: transparent;
+      opacity: 1;
+      margin: 0 !important;
+
+      font-size: 20px;
+      line-height: 120%;
+      color: var(--grey);
+
+      &-active {
+        font-weight: 700;
+        color: var(--black);
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .pagination {
+    gap: 25px;
+
+    & .swiper-pagination {
+      flex-wrap: wrap;
+      gap: 5px 15px;
+    }
+  }
 }

@@ -1,0 +1,52 @@
+.partners {
+  margin-bottom: 200px;
+
+  &__title {
+    margin-bottom: 50px;
+  }
+
+  &__slide {
+    & > p {
+      font-size: 20px;
+      line-height: 140%;
+      color: var(--black);
+      margin-top: 23px;
+    }
+  }
+
+  &__img {
+    height: 525px;
+    padding: 40px;
+    background-color: #fff;
+
+    & img {
+      object-fit: contain;
+    }
+  }
+
+  &__pagination {
+    margin-top: 110px;
+  }
+}
+
+@media (max-width: 767px) {
+  .partners {
+    margin-bottom: 100px;
+
+    &__slide {
+      & > p {
+        font-size: 14px;
+        margin-top: 5px;
+      }
+    }
+
+    &__img {
+      height: 300px;
+      padding: 15px;
+    }
+
+    &__pagination {
+      margin-top: 30px;
+    }
+  }
+}

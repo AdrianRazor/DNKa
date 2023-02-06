@@ -185,7 +185,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     });
   }
 
-  // Slider on main page
+  // Slider
   const swiperExist = document.querySelectorAll(".swiper");
 
   if (swiperExist?.length) {
@@ -225,6 +225,48 @@ document.addEventListener("DOMContentLoaded", function (event) {
       navigation: {
         nextEl: ".latest__btn-next",
         prevEl: ".latest__btn-prev",
+      },
+    });
+
+    const swiperPartners = new Swiper(".swiperPartners", {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      spaceBetween: 15,
+      loop: true,
+      speed: 1000,
+      autoplay: {
+        delay: 5000,
+      },
+
+      breakpoints: {
+        375: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+        },
+        1023: {
+          slidesPerView: 3,
+          slidesPerGroup: 3,
+          spaceBetween: 30,
+        },
+        1700: {
+          slidesPerView: 4,
+          slidesPerGroup: 4,
+        },
+      },
+
+      pagination: {
+        el: ".swiper-pagination",
+        // bulletClass: "pagination__bullet",
+        // bulletActiveClass: "pagination__bullet--active",
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + (index + 1) + "</span>";
+        },
+      },
+
+      navigation: {
+        nextEl: ".pagination__btn-next",
+        prevEl: ".pagination__btn-prev",
       },
     });
   }
