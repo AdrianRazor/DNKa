@@ -127,14 +127,22 @@
     display: flex;
     flex-direction: column;
 
-    & h1 {
+    & h1,
+    & h2 {
       font-family: "Cormorant", serif;
       font-style: normal;
       font-weight: 500;
       font-size: 60px;
       line-height: 100%;
       color: var(--black);
+    }
+
+    & h1 {
       margin-bottom: 80px;
+    }
+
+    & h2 {
+      margin-bottom: 100px;
     }
 
     & p {
@@ -444,7 +452,8 @@
     }
 
     &__title {
-      & h1 {
+      & h1,
+      & h2 {
         font-size: 36px;
         margin-bottom: 40px;
       }
