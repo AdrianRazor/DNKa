@@ -476,6 +476,7 @@
     }
 
     &--search,
+    &--filter,
     &--contacts,
     &--comment {
       & .popup {
@@ -502,6 +503,18 @@
             background-position: center;
             transform: rotate(180deg);
           }
+        }
+      }
+    }
+
+    &--filter {
+      & .popup {
+        &__content {
+          overflow: hidden;
+        }
+
+        &__btn {
+          margin-top: 40px;
         }
       }
     }

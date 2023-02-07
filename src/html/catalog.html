@@ -346,8 +346,8 @@
           <div class="catalog__wrapper">
             <div class="catalog__head">
               <h1 class="title">Каталог</h1>
-              <div class="tabs__head">
-                <ul class="tabs__list catalog__kinds">
+              <div class="tabs__head catalog__kinds">
+                <ul class="tabs__list">
                   <li class="tabs__item active">
                     <p>Всі</p>
                   </li>
@@ -547,6 +547,29 @@
                     </li>
                   </ul>
                 </div>
+              </div>
+
+              <button class="catalog__btn" id="filterPopupBtn">
+                Фільтри
+                <svg width="30" height="30">
+                  <use xlink:href="img/sprite.svg#filter"></use>
+                </svg>
+              </button>
+              <div class="catalog__btn">
+                7,2 мл
+                <button class="catalog__delete">
+                  <svg width="13" height="13">
+                    <use xlink:href="img/sprite.svg#close"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="catalog__btn">
+                помаранчевий
+                <button class="catalog__delete">
+                  <svg width="13" height="13">
+                    <use xlink:href="img/sprite.svg#close"></use>
+                  </svg>
+                </button>
               </div>
             </div>
 
@@ -1069,6 +1092,200 @@
         </div>
       </div>
     </footer>
+
+    <div class="popup popup--filter">
+      <div class="popup__window">
+        <h2 class="popup__title">Фільтр</h2>
+
+        <div class="popup__content">
+          <div class="filter filter--sort filter--mobile">
+            <div class="filter__head">
+              <p class="filter__name">Сортування:</p>
+              <div class="filter__current">
+                <p>по популярності</p>
+                <svg width="17" height="17">
+                  <use xlink:href="img/sprite.svg#arrowDown"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="filter__body">
+              <ul class="filter__list">
+                <li class="filter__item active">
+                  <p>За замовчуванням</p>
+                </li>
+                <li class="filter__item">
+                  <p>Від дорогих до дешевих</p>
+                </li>
+                <li class="filter__item">
+                  <p>Від дешевих до дорогих</p>
+                </li>
+                <li class="filter__item">
+                  <p>Новинки</p>
+                </li>
+                <li class="filter__item">
+                  <p>По популярності</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="filter filter--mobile">
+            <div class="filter__head">
+              <p class="filter__name">Об’єм:</p>
+              <div class="filter__current">
+                <p>всi</p>
+                <svg width="17" height="17">
+                  <use xlink:href="img/sprite.svg#arrowDown"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="filter__body">
+              <ul class="filter__list">
+                <li class="filter__item active">
+                  <p>Всi</p>
+                </li>
+                <li class="filter__item">
+                  <p>7,2 мл</p>
+                </li>
+                <li class="filter__item">
+                  <p>12 мл</p>
+                </li>
+                <li class="filter__item">
+                  <p>15 мл</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="filter filter--color filter--mobile">
+            <div class="filter__head">
+              <p class="filter__name">Колір:</p>
+              <div class="filter__current">
+                <p>всi</p>
+                <svg width="17" height="17">
+                  <use xlink:href="img/sprite.svg#arrowDown"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="filter__body">
+              <ul class="filter__list">
+                <li class="checkbox checkbox--color filter__checkbox">
+                  <input type="checkbox" name="color" id="white-mob" />
+                  <label for="white-mob" class="checkbox__label">
+                    <div
+                      class="checkbox__color"
+                      style="
+                        background-color: #fff;
+                        border: 1px solid rgba(0, 0, 0, 0.1);
+                      "
+                    ></div>
+                    <p>білi</p>
+                  </label>
+                </li>
+                <li class="checkbox checkbox--color filter__checkbox">
+                  <input type="checkbox" name="color" id="biege-mob" />
+                  <label for="biege-mob" class="checkbox__label">
+                    <div
+                      class="checkbox__color"
+                      style="background-color: #e4cfb6"
+                    ></div>
+                    <p>бежевi</p>
+                  </label>
+                </li>
+                <li class="checkbox checkbox--color filter__checkbox">
+                  <input type="checkbox" name="color" id="yellow-mob" />
+                  <label for="yellow-mob" class="checkbox__label">
+                    <div
+                      class="checkbox__color"
+                      style="background-color: #fcd90a"
+                    ></div>
+                    <p>жовті</p>
+                  </label>
+                </li>
+                <li class="checkbox checkbox--color filter__checkbox">
+                  <input type="checkbox" name="color" id="gold-mob" />
+                  <label for="gold-mob" class="checkbox__label">
+                    <div
+                      class="checkbox__color"
+                      style="background-color: #d08b4e"
+                    ></div>
+                    <p>золото</p>
+                  </label>
+                </li>
+                <li class="checkbox checkbox--color filter__checkbox">
+                  <input type="checkbox" name="color" id="orange-mob" />
+                  <label for="orange-mob" class="checkbox__label">
+                    <div
+                      class="checkbox__color"
+                      style="background-color: #ffac1c"
+                    ></div>
+                    <p>помаранчевi</p>
+                  </label>
+                </li>
+                <li class="checkbox checkbox--color filter__checkbox">
+                  <input type="checkbox" name="color" id="red-mob" />
+                  <label for="red-mob" class="checkbox__label">
+                    <div
+                      class="checkbox__color"
+                      style="background-color: #f03438"
+                    ></div>
+                    <p>червоні</p>
+                  </label>
+                </li>
+                <li class="checkbox checkbox--color filter__checkbox">
+                  <input type="checkbox" name="color" id="purple-mob" />
+                  <label for="purple-mob" class="checkbox__label">
+                    <div
+                      class="checkbox__color"
+                      style="background-color: #be32f4"
+                    ></div>
+                    <p>фіолетовi</p>
+                  </label>
+                </li>
+                <li class="checkbox checkbox--color filter__checkbox">
+                  <input type="checkbox" name="color" id="pink-mob" />
+                  <label for="pink-mob" class="checkbox__label">
+                    <div
+                      class="checkbox__color"
+                      style="background-color: #d16fd6"
+                    ></div>
+                    <p>рожевi</p>
+                  </label>
+                </li>
+                <li class="checkbox checkbox--color filter__checkbox">
+                  <input type="checkbox" name="color" id="green-mob" />
+                  <label for="green-mob" class="checkbox__label">
+                    <div
+                      class="checkbox__color"
+                      style="background-color: #3f822b"
+                    ></div>
+                    <p>зеленi</p>
+                  </label>
+                </li>
+                <li class="checkbox checkbox--color filter__checkbox">
+                  <input type="checkbox" name="color" id="blue-mob" />
+                  <label for="blue-mob" class="checkbox__label">
+                    <div
+                      class="checkbox__color"
+                      style="background-color: #4b52cc"
+                    ></div>
+                    <p>синi</p>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn popup__btn">Застосувати</button>
+
+        <button class="popup__close">
+          <svg>
+            <use xlink:href="img/sprite.svg#close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
 
     <div class="popup popup--cart">
       <div class="popup__window">

@@ -105,6 +105,36 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 
+  // Filter popup
+  const filterPopupBtn = document.querySelector("#filterPopupBtn");
+  const popupFilter = document.querySelector(".popup--filter");
+
+  if (filterPopupBtn && popupFilter) {
+    filterPopupBtn.addEventListener("click", openPopup);
+
+    const btnClose = popupFilter.querySelector(".popup__close");
+
+    if (btnClose) {
+      btnClose.addEventListener("click", closePopup);
+    }
+
+    const popupTitle = popupFilter.querySelector(".popup__title");
+
+    if (popupTitle) {
+      popupTitle.addEventListener("click", closePopup);
+    }
+
+    function openPopup() {
+      popupFilter.classList.add("open");
+      rootElement.classList.add("block");
+    }
+
+    function closePopup() {
+      popupFilter.classList.remove("open");
+      rootElement.classList.remove("block");
+    }
+  }
+
   // Cart popup
   const btnCart = document.querySelectorAll(".cart-icon");
   const popupCart = document.querySelector(".popup--cart");

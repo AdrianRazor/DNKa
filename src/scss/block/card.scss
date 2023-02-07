@@ -54,7 +54,7 @@
     z-index: 10;
 
     & p {
-      font-weight: 700;
+      font-weight: 600;
       font-size: 20px;
       line-height: 140%;
       color: #fff;
@@ -198,7 +198,7 @@
     }
 
     &__name {
-      min-height: 45px;
+      min-height: 40px;
       font-size: 14px;
 
       display: -webkit-box;
@@ -229,6 +229,14 @@
   .card {
     &__photo {
       height: 310px;
+      margin-bottom: 5px;
+    }
+
+    &__button {
+      position: static;
+      display: block;
+      padding: 0;
+      background-color: transparent;
     }
   }
 }

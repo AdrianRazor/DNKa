@@ -241,5 +241,95 @@
         }
       }
     }
+
+    &--mobile {
+      width: initial;
+
+      & .filter {
+        &__head {
+          margin-bottom: 10px;
+        }
+
+        &__name {
+          font-weight: 600;
+          font-size: 14px;
+          color: var(--black);
+        }
+
+        &__current {
+          display: none;
+        }
+
+        &__body {
+          position: static;
+          padding: 0;
+          box-shadow: initial;
+          visibility: visible;
+          opacity: 1;
+          transform: none;
+          overflow: hidden;
+        }
+
+        &__list {
+          max-width: 100%;
+          overflow-y: scroll;
+          flex-direction: row;
+          gap: 5px;
+          padding-right: 0;
+
+          &::-webkit-scrollbar {
+            height: 0;
+          }
+        }
+
+        &__item {
+          padding: 10px;
+          border: 1px solid var(--light);
+          background-color: transparent;
+          border-radius: 4px;
+          transition: 0.3s ease;
+
+          & p {
+            font-size: 14px;
+            transition: 0.3s ease;
+          }
+
+          &.active {
+            border-color: transparent;
+            background-color: var(--purple);
+            transition: 0.3s ease;
+
+            & p {
+              color: var(--black);
+              transition: 0.3s ease;
+            }
+          }
+        }
+      }
+
+      &.filter--color {
+        & .filter {
+          &__body {
+            max-height: 280px;
+          }
+
+          &__list {
+            max-height: 280px;
+            flex-direction: column;
+          }
+
+          &__checkbox {
+            width: fit-content;
+            padding: 4px 10px;
+            border: 1px solid var(--light);
+            border-radius: 4px;
+          }
+        }
+      }
+
+      & + .filter--mobile {
+        margin-top: 30px;
+      }
+    }
   }
 }
