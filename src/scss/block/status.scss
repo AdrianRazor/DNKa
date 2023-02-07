@@ -1,0 +1,20 @@
+.status {
+  width: fit-content;
+  padding: 5px 10px;
+  border-radius: 4px;
+  background-color: #d5ffce;
+
+  & p {
+    font-size: 14px;
+    line-height: 140%;
+    color: var(--black);
+  }
+
+  &--accepted {
+    background-color: #feffce;
+  }
+
+  &--on-the-way {
+    background-color: #ceeaff;
+  }
+}
