@@ -101,6 +101,15 @@
     text-transform: uppercase;
   }
 
+  &--catalog {
+    &.open {
+      & svg {
+        transform: rotate(180deg);
+        transition: 0.3s ease;
+      }
+    }
+  }
+
   &--lang {
     & .submenu__container {
       width: 130px;
@@ -114,11 +123,6 @@
   }
 
   &.open {
-    & svg {
-      transform: rotate(180deg);
-      transition: 0.3s ease;
-    }
-
     & .submenu {
       &__container {
         visibility: visible;

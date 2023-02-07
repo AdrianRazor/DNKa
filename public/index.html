@@ -71,9 +71,95 @@
           <nav class="menu menu--header header__menu">
             <ul class="menu__list">
               <li class="menu__item">
-                <svg width="30" height="30">
-                  <use xlink:href="img/sprite.svg#search"></use>
-                </svg>
+                <button id="headerSearchBtn">
+                  <svg width="30" height="30">
+                    <use xlink:href="img/sprite.svg#search"></use>
+                  </svg>
+                </button>
+                <div class="menu__search">
+                  <div class="search">
+                    <div class="search__head">
+                      <input
+                        type="search"
+                        name="search"
+                        id="search"
+                        placeholder="Пошук..."
+                      />
+                      <svg width="30" height="30">
+                        <use xlink:href="img/sprite.svg#search"></use>
+                      </svg>
+                    </div>
+                    <div class="search__body">
+                      <ul class="search__matches">
+                        <li>Cover Base</li>
+                        <li>Cover Base Magical</li>
+                        <li>Cover Base Magical code #0018</li>
+                      </ul>
+                      <ul class="search__list">
+                        <li class="search__item">
+                          <div class="search__img">
+                            <img
+                              src="img/nail-polish-6.jpg"
+                              alt="nail polish"
+                            />
+                          </div>
+                          <div class="search__info">
+                            <div class="search__row">
+                              <span>#0053</span>
+                              <p>150 грн</p>
+                            </div>
+                            <p>Cover Base Magical, 12 мл</p>
+                          </div>
+                        </li>
+                        <li class="search__item">
+                          <div class="search__img">
+                            <img
+                              src="img/nail-polish-5.jpg"
+                              alt="nail polish"
+                            />
+                          </div>
+                          <div class="search__info">
+                            <div class="search__row">
+                              <span>#0187</span>
+                              <p>250 грн</p>
+                            </div>
+                            <p>Cover Base Magical, 15 мл</p>
+                          </div>
+                        </li>
+                        <li class="search__item">
+                          <div class="search__img">
+                            <img
+                              src="img/nail-polish-6.jpg"
+                              alt="nail polish"
+                            />
+                          </div>
+                          <div class="search__info">
+                            <div class="search__row">
+                              <span>#0101</span>
+                              <p>90 грн</p>
+                            </div>
+                            <p>Cover Base Magical Base Magical, 15 мл</p>
+                          </div>
+                        </li>
+                        <li class="search__item">
+                          <div class="search__img">
+                            <img
+                              src="img/nail-polish-8.jpg"
+                              alt="nail polish"
+                            />
+                          </div>
+                          <div class="search__info">
+                            <div class="search__row">
+                              <span>#0959</span>
+                              <p>145 грн</p>
+                            </div>
+                            <p>Cover Base Magical, 15 мл</p>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </li>
               <li class="menu__item menu__item--profile">
                 <a href="profile.html">
@@ -136,7 +222,7 @@
               </li>
               <li class="menu__item submenu submenu--currency">
                 <p class="submenu__currency">грн</p>
-                <div class="submenu__container">
+                <div class="submenu__container hidden">
                   <ul class="submenu__list">
                     <li class="submenu__item">грн</li>
                     <li class="submenu__item">usd</li>
@@ -170,9 +256,11 @@
               </a>
             </li>
             <li class="menu__item">
-              <svg width="30" height="30">
-                <use xlink:href="img/sprite.svg#search"></use>
-              </svg>
+              <button id="headerSearchPopupBtn">
+                <svg width="30" height="30">
+                  <use xlink:href="img/sprite.svg#search"></use>
+                </svg>
+              </button>
             </li>
             <li class="menu__item">
               <button class="cart-icon">
@@ -314,7 +402,7 @@
                 <p class="submenu__name">Валюта:</p>
                 <p class="submenu__currency">грн</p>
               </button>
-              <div class="submenu__container">
+              <div class="submenu__container hidden">
                 <ul class="submenu__list">
                   <li class="submenu__item">грн</li>
                   <li class="submenu__item">usd</li>
@@ -345,13 +433,15 @@
               </div>
             </div>
             <div class="start__box">
-              <button class="btn btn--circle start__btn">В каталог</button>
+              <a href="catalog.html" class="btn btn--circle start__btn">
+                В каталог
+              </a>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="stripe stripe--top">
+      <section class="stripe stripe--top hidden">
         <ul class="stripe__list stripe-to-left">
           <li class="stripe__item">Відтепер, доставка по Європі</li>
           <li class="stripe__item">Відтепер, доставка по Європі</li>
@@ -372,7 +462,7 @@
         </ul>
       </section>
 
-      <section class="stripe stripe--bottom">
+      <section class="stripe stripe--bottom hidden">
         <ul class="stripe__list stripe-to-right">
           <li class="stripe__item">Відтепер, доставка по Європі</li>
           <li class="stripe__item">Відтепер, доставка по Європі</li>
@@ -881,6 +971,89 @@
         </div>
       </div>
     </footer>
+
+    <div class="popup popup--search">
+      <div class="popup__window">
+        <h2 class="popup__title">Пошук</h2>
+
+        <div class="search">
+          <div class="search__head">
+            <input
+              type="search"
+              name="search"
+              id="search"
+              placeholder="Пошук..."
+            />
+            <svg width="30" height="30">
+              <use xlink:href="img/sprite.svg#search"></use>
+            </svg>
+          </div>
+          <div class="search__body">
+            <ul class="search__matches">
+              <li>Cover Base</li>
+              <li>Cover Base Magical</li>
+              <li>Cover Base Magical code #0018</li>
+            </ul>
+            <ul class="search__list">
+              <li class="search__item">
+                <div class="search__img">
+                  <img src="img/nail-polish-6.jpg" alt="nail polish" />
+                </div>
+                <div class="search__info">
+                  <div class="search__row">
+                    <span>#0053</span>
+                    <p>150 грн</p>
+                  </div>
+                  <p>Cover Base Magical, 12 мл</p>
+                </div>
+              </li>
+              <li class="search__item">
+                <div class="search__img">
+                  <img src="img/nail-polish-5.jpg" alt="nail polish" />
+                </div>
+                <div class="search__info">
+                  <div class="search__row">
+                    <span>#0187</span>
+                    <p>250 грн</p>
+                  </div>
+                  <p>Cover Base Magical, 15 мл</p>
+                </div>
+              </li>
+              <li class="search__item">
+                <div class="search__img">
+                  <img src="img/nail-polish-6.jpg" alt="nail polish" />
+                </div>
+                <div class="search__info">
+                  <div class="search__row">
+                    <span>#0101</span>
+                    <p>90 грн</p>
+                  </div>
+                  <p>Cover Base Magical Base Magical, 15 мл</p>
+                </div>
+              </li>
+              <li class="search__item">
+                <div class="search__img">
+                  <img src="img/nail-polish-8.jpg" alt="nail polish" />
+                </div>
+                <div class="search__info">
+                  <div class="search__row">
+                    <span>#0959</span>
+                    <p>145 грн</p>
+                  </div>
+                  <p>Cover Base Magical, 15 мл</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <button class="popup__close">
+          <svg>
+            <use xlink:href="img/sprite.svg#close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
 
     <div class="popup popup--cart popup--cart-empty">
       <div class="popup__window">

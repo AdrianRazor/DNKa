@@ -320,6 +320,7 @@
     }
   }
 
+  &--search,
   &--contacts,
   &--comment {
     & .popup {
@@ -332,6 +333,12 @@
         text-transform: uppercase;
         margin-bottom: 100px;
       }
+    }
+  }
+
+  &--search {
+    & .popup__window {
+      justify-content: flex-start;
     }
   }
 
@@ -468,6 +475,7 @@
       }
     }
 
+    &--search,
     &--contacts,
     &--comment {
       & .popup {

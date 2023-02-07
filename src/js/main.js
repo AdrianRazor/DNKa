@@ -34,6 +34,77 @@ document.addEventListener("DOMContentLoaded", function (event) {
     });
   }
 
+  // Header search
+  const headerSearchBtn = document.querySelector("#headerSearchBtn");
+  const menuSearch = document.querySelector(".menu__search");
+
+  if (headerSearchBtn) {
+    headerSearchBtn.addEventListener("click", () => {
+      menuSearch.classList.toggle("open");
+    });
+
+    window.addEventListener("click", (e) => {
+      if (
+        !e.target.closest(".search") &&
+        !e.target.closest("#headerSearchBtn")
+      ) {
+        menuSearch.classList.remove("open");
+      }
+    });
+  }
+
+  // Searching
+  const search = document.querySelectorAll(".search");
+  const searchInput = document.querySelectorAll(".search input");
+
+  if (search?.length) {
+    searchInput.forEach((input, index) => {
+      input.addEventListener("input", (e) => {
+        if (!e.target.value == "") {
+          search[index].classList.add("active");
+        } else {
+          search[index].classList.remove("active");
+        }
+      });
+    });
+  }
+
+  // Search popup
+  const headerSearchPopupBtn = document.querySelector("#headerSearchPopupBtn");
+  const popupSearch = document.querySelector(".popup--search");
+
+  if (headerSearchPopupBtn && popupSearch) {
+    headerSearchPopupBtn.addEventListener("click", openPopup);
+
+    const btnClose = popupSearch.querySelector(".popup__close");
+
+    if (btnClose) {
+      btnClose.addEventListener("click", closePopup);
+    }
+
+    const popupTitle = popupSearch.querySelector(".popup__title");
+
+    if (popupTitle) {
+      popupTitle.addEventListener("click", closePopup);
+    }
+
+    window.addEventListener("click", (e) => {
+      if (e.target.classList.contains("popup--search")) {
+        closePopup();
+      }
+    });
+
+    function openPopup() {
+      popupSearch.classList.add("open");
+      rootElement.classList.add("block");
+    }
+
+    function closePopup() {
+      popupSearch.classList.remove("open");
+      rootElement.classList.remove("block");
+    }
+  }
+
   // Cart popup
   const btnCart = document.querySelectorAll(".cart-icon");
   const popupCart = document.querySelector(".popup--cart");
