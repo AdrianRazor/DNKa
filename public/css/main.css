@@ -616,18 +616,31 @@ p {
   width: initial !important;
 }
 
-.pagination__bullet {
+.pagination .swiper-pagination {
+  position: static;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+
+.pagination .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
-  border-radius: 50%;
   background-color: var(--light-pink);
+  border-radius: 50%;
+  opacity: 1;
+  margin: 0 !important;
   cursor: pointer;
   -webkit-transition: 0.3s ease;
   -o-transition: 0.3s ease;
   transition: 0.3s ease;
 }
 
-.pagination__bullet--active {
+.pagination .swiper-pagination-bullet-active {
   background-color: var(--accent);
   -webkit-transition: 0.3s ease;
   -o-transition: 0.3s ease;
@@ -693,29 +706,20 @@ p {
   color: var(--black);
 }
 
-.pagination .swiper-pagination {
-  position: static;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.pagination--numbers .swiper-pagination {
   gap: 30px;
 }
 
-.pagination .swiper-pagination-bullet {
+.pagination--numbers .swiper-pagination-bullet {
   width: initial;
   height: initial;
   background-color: transparent;
-  opacity: 1;
-  margin: 0 !important;
   font-size: 20px;
   line-height: 120%;
   color: var(--grey);
 }
 
-.pagination .swiper-pagination-bullet-active {
+.pagination--numbers .swiper-pagination-bullet-active {
   font-weight: 700;
   color: var(--black);
 }
@@ -6721,6 +6725,9 @@ p {
   }
 
   .pagination .swiper-pagination {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     gap: 5px 15px;

@@ -216,15 +216,13 @@ document.addEventListener("DOMContentLoaded", function (event) {
       },
 
       pagination: {
-        el: ".latest__pagination",
-        bulletClass: "pagination__bullet",
-        bulletActiveClass: "pagination__bullet--active",
+        el: ".swiper-pagination",
         clickable: true,
       },
 
       navigation: {
-        nextEl: ".latest__btn-next",
-        prevEl: ".latest__btn-prev",
+        nextEl: ".pagination__btn-next",
+        prevEl: ".pagination__btn-prev",
       },
     });
 
@@ -573,13 +571,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   }
 
   if (modalCompare) {
-    const modalClearBtn = modalCompare.querySelector("#modalClearBtn");
-
-    if (modalClearBtn) {
-      modalClearBtn.addEventListener("click", () => {
-        modalCompare.classList.remove("open");
-      });
-    }
+    // const modalClearBtn = modalCompare.querySelector("#modalClearBtn");
 
     window.addEventListener("resize", () => {
       if (window.screen.width < 768) {
