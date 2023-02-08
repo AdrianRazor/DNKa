@@ -2332,6 +2332,10 @@ p {
   transition: all 0.6s ease;
 }
 
+.main {
+  overflow: hidden;
+}
+
 .start {
   background-color: var(--light-purple);
   padding-top: 118px;
