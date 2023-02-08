@@ -18,3 +18,11 @@
     background-color: #ceeaff;
   }
 }
+
+@media (max-width: 767px) {
+  .status {
+    & p {
+      font-size: 14px;
+    }
+  }
+}

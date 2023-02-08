@@ -293,6 +293,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     const swiperMain = new Swiper(".swiperMain", {
       slidesPerView: 1,
       slidesPerGroup: 1,
+      spaceBetween: 15,
       loop: true,
       speed: 1000,
       autoplay: {
@@ -303,7 +304,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
         375: {
           slidesPerView: 2,
           slidesPerGroup: 2,
-          spaceBetween: 15,
         },
         1023: {
           slidesPerView: 3,
@@ -699,6 +699,17 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
       compareContainer.scrollBy({
         left: e.deltaY < 0 ? -100 : 100,
+      });
+    });
+  }
+
+  // Heart icon
+  const addToWishlist = document.querySelectorAll(".card__btn--heart");
+
+  if (addToWishlist?.length) {
+    addToWishlist.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        btn.classList.toggle("added");
       });
     });
   }

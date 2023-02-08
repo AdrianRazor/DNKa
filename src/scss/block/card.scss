@@ -78,14 +78,42 @@
     & svg {
       width: 30px;
       height: 30px;
-      fill: var(--grey);
       transition: 0.3s ease;
     }
 
-    &:hover {
+    &--sort {
       & svg {
-        fill: var(--accent);
-        transition: 0.3s ease;
+        fill: var(--grey);
+      }
+
+      &:hover {
+        & svg {
+          fill: var(--accent);
+          transition: 0.3s ease;
+        }
+      }
+    }
+
+    &--heart {
+      & svg {
+        fill: transparent;
+        stroke: var(--grey);
+        stroke-width: 1.5px;
+      }
+
+      &:hover {
+        & svg {
+          stroke: var(--accent);
+          transition: 0.3s ease;
+        }
+      }
+
+      &.added {
+        & svg {
+          fill: var(--accent);
+          stroke: var(--accent);
+          transition: 0.3s ease;
+        }
       }
     }
   }
@@ -217,7 +245,6 @@
 
     &__buy {
       height: 40px;
-      background-color: transparent;
       border: 1px solid var(--accent);
       font-size: 16px;
       color: var(--accent);

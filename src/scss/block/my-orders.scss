@@ -147,9 +147,11 @@
       }
     }
 
-    &__top {
-      grid-template-columns: 52% 40%;
-      gap: 8%;
+    &__top,
+    &__bottom {
+      grid-template-columns: 50% 45%;
+      gap: 5%;
+      align-items: flex-end;
       padding-bottom: 20px;
       border-bottom: 1px solid var(--light);
     }
@@ -164,11 +166,6 @@
     }
 
     &__bottom {
-      grid-template-columns: 52% 40%;
-      gap: 8%;
-      padding-top: 20px;
-      border-top: 1px solid var(--light);
-
       & h4:last-of-type {
         text-align: initial;
       }

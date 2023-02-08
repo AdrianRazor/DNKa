@@ -13,6 +13,7 @@
     font-weight: 600;
     font-size: 20px;
     color: var(--grey);
+    white-space: nowrap;
     transition: 0.3s ease;
 
     &:hover {
@@ -38,6 +39,10 @@
   .latest {
     margin-top: 100px;
     margin-bottom: 100px;
+
+    &__head {
+      gap: 30px;
+    }
 
     &__link {
       font-size: 16px;

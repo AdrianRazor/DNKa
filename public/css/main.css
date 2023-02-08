@@ -564,14 +564,38 @@ p {
 .card__btn svg {
   width: 30px;
   height: 30px;
-  fill: var(--grey);
   -webkit-transition: 0.3s ease;
   -o-transition: 0.3s ease;
   transition: 0.3s ease;
 }
 
-.card__btn:hover svg {
+.card__btn--sort svg {
+  fill: var(--grey);
+}
+
+.card__btn--sort:hover svg {
   fill: var(--accent);
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.card__btn--heart svg {
+  fill: transparent;
+  stroke: var(--grey);
+  stroke-width: 1.5px;
+}
+
+.card__btn--heart:hover svg {
+  stroke: var(--accent);
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.card__btn--heart.added svg {
+  fill: var(--accent);
+  stroke: var(--accent);
   -webkit-transition: 0.3s ease;
   -o-transition: 0.3s ease;
   transition: 0.3s ease;
@@ -2147,7 +2171,20 @@ p {
 }
 
 .menu__item--heart svg {
-  fill: var(--grey);
+  fill: none;
+  stroke: var(--black);
+  stroke-width: 1.5px;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.menu__item--heart:hover svg {
+  fill: none;
+  stroke: var(--accent);
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .menu__search {
@@ -2215,6 +2252,7 @@ p {
 
 .aside {
   width: 100%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   visibility: hidden;
   opacity: 0;
@@ -2230,7 +2268,7 @@ p {
 .aside__wrapper {
   max-width: 80%;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   overflow-y: auto;
   padding: 30px 30px 50px;
   margin-left: auto;
@@ -2507,6 +2545,7 @@ p {
   font-weight: 600;
   font-size: 20px;
   color: var(--grey);
+  white-space: nowrap;
   -webkit-transition: 0.3s ease;
   -o-transition: 0.3s ease;
   transition: 0.3s ease;
@@ -4839,6 +4878,7 @@ p {
 
 .popup {
   width: 100%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.3);
   visibility: hidden;
   opacity: 0;
@@ -4855,7 +4895,7 @@ p {
   position: relative;
   max-width: 720px;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   overflow-y: auto;
   padding: 30px 50px;
   margin-left: auto;
@@ -6294,7 +6334,6 @@ p {
 
   .card__buy {
     height: 40px;
-    background-color: transparent;
     border: 1px solid var(--accent);
     font-size: 16px;
     color: var(--accent);
@@ -6695,9 +6734,13 @@ p {
     display: block;
   }
 
-  .my-orders__top {
-    grid-template-columns: 52% 40%;
-    gap: 8%;
+  .my-orders__top,
+  .my-orders__bottom {
+    grid-template-columns: 50% 45%;
+    gap: 5%;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
     padding-bottom: 20px;
     border-bottom: 1px solid var(--light);
   }
@@ -6709,13 +6752,6 @@ p {
   .my-orders__middle {
     display: block;
     padding: 20px 0;
-  }
-
-  .my-orders__bottom {
-    grid-template-columns: 52% 40%;
-    gap: 8%;
-    padding-top: 20px;
-    border-top: 1px solid var(--light);
   }
 
   .my-orders__bottom h4:last-of-type {
@@ -7175,6 +7211,10 @@ p {
   .latest {
     margin-top: 100px;
     margin-bottom: 100px;
+  }
+
+  .latest__head {
+    gap: 30px;
   }
 
   .latest__link {
@@ -7644,6 +7684,10 @@ p {
 
   .profile__title {
     margin-bottom: 40px;
+  }
+
+  .status p {
+    font-size: 14px;
   }
 
   .order {

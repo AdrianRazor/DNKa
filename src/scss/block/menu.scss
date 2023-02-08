@@ -38,7 +38,18 @@
 
     &--heart {
       & svg {
-        fill: var(--grey);
+        fill: none;
+        stroke: var(--black);
+        stroke-width: 1.5px;
+        transition: all 0.3s ease;
+      }
+
+      &:hover {
+        & svg {
+          fill: none;
+          stroke: var(--accent);
+          transition: all 0.3s ease;
+        }
       }
     }
   }
