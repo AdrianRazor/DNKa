@@ -11,21 +11,43 @@
     position: static;
     width: fit-content;
     display: flex;
-    gap: 20px;
+    // gap: 20px;
+  }
 
-    &-bullet {
-      width: 10px;
-      height: 10px;
+  &__bullet {
+    display: flex;
+    gap: 15px;
+    padding: 6px 10px;
+    background-color: transparent;
+    // border-radius: 99px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    & span {
+      display: block;
+      width: 8px;
+      height: 8px;
+      // border-radius: 50%;
+      background-color: var(--pink);
+      transition: background-color 0.3s ease;
+    }
+
+    &--active {
+      background-image: linear-gradient(to right, var(--pink), var(--pink)),
+        linear-gradient(to bottom, var(--pink), var(--pink)),
+        linear-gradient(to right, var(--pink), var(--pink)),
+        linear-gradient(to bottom, var(--pink), var(--pink));
+      background-size: 100% 1px, 1px 100%, 100% 1px, 1px 100%;
+      background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+      background-repeat: no-repeat;
+      animation: bg 6.3s linear;
+
       background-color: var(--light-pink);
-      border-radius: 50%;
-      opacity: 1;
-      margin: 0 !important;
-      cursor: pointer;
-      transition: 0.3s ease;
+      transition: background-color 0.3s ease;
 
-      &-active {
+      & span {
         background-color: var(--accent);
-        transition: 0.3s ease;
+        transition: background-color 0.3s ease;
       }
     }
   }
@@ -101,6 +123,24 @@
   }
 }
 
+@keyframes bg {
+  0% {
+    background-size: 0 1px, 1px 0, 0 1px, 1px 0;
+  }
+  35% {
+    background-size: 100% 1px, 1px 0, 0 1px, 1px 0;
+  }
+  50% {
+    background-size: 100% 1px, 1px 100%, 0 1px, 1px 0;
+  }
+  85% {
+    background-size: 100% 1px, 1px 100%, 100% 1px, 1px 0;
+  }
+  100% {
+    background-size: 100% 1px, 1px 100%, 100% 1px, 1px 100%;
+  }
+}
+
 @media (max-width: 767px) {
   .pagination {
     gap: 25px;
@@ -108,7 +148,7 @@
     & .swiper-pagination {
       justify-content: center;
       flex-wrap: wrap;
-      gap: 5px 15px;
+      gap: 5px;
     }
   }
 }

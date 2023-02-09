@@ -286,7 +286,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     });
   }
 
-  // Slider
+  // Swiper
   const swiperExist = document.querySelectorAll(".swiper");
 
   if (swiperExist?.length) {
@@ -297,13 +297,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
       loop: true,
       speed: 1000,
       autoplay: {
-        delay: 8000,
+        delay: 6000,
       },
 
       breakpoints: {
         375: {
           slidesPerView: 2,
           slidesPerGroup: 2,
+          spaceBetween: 15,
         },
         1023: {
           slidesPerView: 3,
@@ -318,6 +319,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
       pagination: {
         el: ".swiper-pagination",
+        bulletClass: "pagination__bullet",
+        bulletActiveClass: "pagination__bullet--active",
         clickable: true,
       },
 
@@ -326,6 +329,28 @@ document.addEventListener("DOMContentLoaded", function (event) {
         prevEl: ".pagination__btn-prev",
       },
     });
+
+    function renderSliderBullets() {
+      const bulletsContainer = document.querySelectorAll(".pagination__bullet");
+
+      if (bulletsContainer) {
+        bulletsContainer.forEach((container) => {
+          container.innerHTML = "";
+
+          const fragment = document.createDocumentFragment();
+
+          for (let j = 0; j < swiperMain.loopedSlides; j++) {
+            const bulletRender = document.createElement("span");
+            fragment.append(bulletRender);
+          }
+          container.append(fragment);
+        });
+      }
+    }
+
+    renderSliderBullets();
+
+    window.addEventListener("resize", renderSliderBullets);
 
     const swiperPalette = new Swiper(".swiperPalette", {
       slidesPerView: 1,
@@ -395,8 +420,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
       pagination: {
         el: ".swiper-pagination",
-        // bulletClass: "pagination__bullet",
-        // bulletActiveClass: "pagination__bullet--active",
         clickable: true,
         renderBullet: function (index, className) {
           return '<span class="' + className + '">' + (index + 1) + "</span>";
@@ -670,11 +693,22 @@ document.addEventListener("DOMContentLoaded", function (event) {
       });
     });
 
+    const modalClearBtn = document.querySelector("#modalClearBtn");
+
+    if (modalClearBtn) {
+      modalClearBtn.addEventListener("click", () => {
+        modalCompare.classList.remove("open");
+        modalCompare.classList.remove("active");
+        rootElement.classList.remove("block");
+      });
+    }
+
     window.addEventListener("click", (e) => {
-      console.log(e.target);
       if (
-        e.target.classList.contains("modal__window") ||
-        e.target.classList.contains("modal__container")
+        (window.screen.width < 768 &&
+          e.target.classList.contains("modal__window")) ||
+        (window.screen.width < 768 &&
+          e.target.classList.contains("modal__container"))
       ) {
         rootElement.classList.add("block");
         modalCompare.classList.add("active");
