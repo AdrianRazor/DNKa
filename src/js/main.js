@@ -669,25 +669,26 @@ document.addEventListener("DOMContentLoaded", function (event) {
         modalCompare.classList.add("open");
       });
     });
-  }
 
-  if (modalCompare) {
-    // const modalClearBtn = modalCompare.querySelector("#modalClearBtn");
+    window.addEventListener("click", (e) => {
+      console.log(e.target);
+      if (
+        e.target.classList.contains("modal__window") ||
+        e.target.classList.contains("modal__container")
+      ) {
+        rootElement.classList.add("block");
+        modalCompare.classList.add("active");
+      }
 
-    window.addEventListener("resize", () => {
-      if (window.screen.width < 768) {
-        modalCompare.classList.add("modal--preview");
-      } else {
-        modalCompare.classList.remove("modal--preview");
+      if (
+        e.target.classList.contains("modal") &&
+        e.target.classList.contains("open") &&
+        e.target.classList.contains("active")
+      ) {
+        rootElement.classList.remove("block");
+        modalCompare.classList.remove("active");
       }
     });
-
-    if (modalCompare.classList.contains("modal--preview")) {
-      modalCompare.addEventListener("click", () => {
-        rootElement.classList.add("block");
-        modalCompare.classList.remove("modal--preview");
-      });
-    }
   }
 
   // Compare page -> horizontal scroll

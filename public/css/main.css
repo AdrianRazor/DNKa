@@ -5504,10 +5504,11 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 15px;
+  gap: 40px;
 }
 
 .modal__card {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5544,11 +5545,16 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 6px;
   visibility: hidden;
   opacity: 0;
   -webkit-transition: 0.3s ease;
   -o-transition: 0.3s ease;
   transition: 0.3s ease;
+  position: absolute;
+  top: -6px;
+  right: -30px;
+  z-index: 10;
 }
 
 .modal__delete svg {
@@ -6243,13 +6249,6 @@ p {
     margin-left: initial;
   }
 
-  .modal__window {
-    padding: 20px 0;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    gap: 30px;
-  }
-
   .modal__head p {
     font-size: 16px;
   }
@@ -6258,8 +6257,23 @@ p {
     font-size: 14px;
   }
 
+  .modal__goods {
+    gap: 20px;
+  }
+
   .modal__buttons {
     margin-left: initial;
+    gap: 20px;
+  }
+
+  .modal__btn {
+    width: 170px;
+    height: 50px;
+  }
+
+  .modal__delete {
+    top: 0;
+    right: 0;
   }
 
   .footer__wrapper {
@@ -8054,7 +8068,9 @@ p {
   }
 
   .modal {
-    height: 100vh;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
     padding-top: 100px;
     background-color: rgba(0, 0, 0, 0.3);
     border-top: none;
@@ -8065,6 +8081,7 @@ p {
     -webkit-box-pack: end;
     -ms-flex-pack: end;
     justify-content: flex-end;
+    padding-top: 0;
   }
 
   .modal__container {
@@ -8078,6 +8095,7 @@ p {
   .modal__window {
     position: relative;
     padding: 40px 0 20px;
+    gap: 10px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -8101,11 +8119,11 @@ p {
   }
 
   .modal__goods {
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    gap: 30px;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    gap: 15px;
   }
 
   .modal__card {
@@ -8116,13 +8134,13 @@ p {
   }
 
   .modal__img {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     padding: 5px;
   }
 
   .modal__info {
-    display: block;
+    display: none;
     max-width: 280px;
     width: 100%;
   }
@@ -8135,12 +8153,14 @@ p {
   }
 
   .modal__delete {
+    display: none;
     visibility: initial;
     opacity: initial;
     margin-left: auto;
   }
 
   .modal__buttons {
+    display: none;
     width: 100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -8154,34 +8174,37 @@ p {
     width: 100%;
   }
 
-  .modal--preview {
-    padding-top: 0;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
+  .modal.active {
+    padding-top: 100px;
+    height: 100%;
   }
 
-  .modal--preview .modal__window {
-    gap: 10px;
+  .modal.active .modal__window {
+    gap: 20px;
   }
 
-  .modal--preview .modal__goods {
-    -webkit-box-orient: horizontal;
+  .modal.active .modal__goods {
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    gap: 15px;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 30px;
   }
 
-  .modal--preview .modal__img {
-    width: 40px;
-    height: 40px;
+  .modal.active .modal__img {
+    width: 50px;
+    height: 50px;
   }
 
-  .modal--preview .modal__info,
-  .modal--preview .modal__delete,
-  .modal--preview .modal__buttons {
-    display: none;
+  .modal.active .modal__info,
+  .modal.active .modal__delete {
+    display: block;
+  }
+
+  .modal.active .modal__buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
