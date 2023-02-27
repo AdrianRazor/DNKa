@@ -389,6 +389,49 @@
     }
   }
 
+  &--video {
+    visibility: visible;
+    opacity: 1;
+    transition: initial;
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    & .popup {
+      &__window {
+        transform: initial;
+        transition: initial;
+
+        max-width: 90%;
+        height: 90%;
+        padding: 0;
+        margin: 0;
+        background-color: transparent;
+        overflow: initial;
+
+        & video {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+
+      &__close {
+        right: 20px;
+      }
+    }
+
+    &.open {
+      display: flex;
+
+      & .popup__window {
+        transform: initial;
+        transition: initial;
+      }
+    }
+  }
+
   &.open {
     visibility: visible;
     opacity: 1;
@@ -592,6 +635,15 @@
 
         &__btn {
           margin-top: 40px;
+        }
+      }
+    }
+
+    &--video {
+      & .popup {
+        &__window {
+          max-width: 100%;
+          height: 100%;
         }
       }
     }

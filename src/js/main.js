@@ -167,6 +167,39 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 
+  // Video popup
+  const btnVideo = document.querySelector(".info__btn");
+  const popupVideo = document.querySelector(".popup--video");
+  const video = popupVideo.querySelector("video");
+
+  if (btnVideo && popupVideo) {
+    btnVideo.addEventListener("click", openPopup);
+
+    const btnClose = popupVideo.querySelector(".popup__close");
+
+    if (btnClose) {
+      btnClose.addEventListener("click", closePopup);
+    }
+
+    window.addEventListener("click", (e) => {
+      if (e.target.classList.contains("popup--video")) {
+        closePopup();
+      }
+    });
+
+    function openPopup() {
+      popupVideo.classList.add("open");
+      rootElement.classList.add("block");
+      video.play();
+    }
+
+    function closePopup() {
+      popupVideo.classList.remove("open");
+      rootElement.classList.remove("block");
+      video.pause();
+    }
+  }
+
   // Aside navigation
   const burger = document.querySelector(".menu__item--burger");
   const asideMenu = document.querySelector(".aside");

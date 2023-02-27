@@ -804,15 +804,12 @@
               </div>
             </div>
             <div class="info__video">
-              <div class="info__frame"></div>
-              <div class="info__image">
-                <img src="img/video.jpg" alt="video preview" />
-                <button class="info__btn">
-                  <svg>
-                    <use xlink:href="img/sprite.svg#play"></use>
-                  </svg>
-                </button>
-              </div>
+              <video src="img/video.mp4" autoplay muted loop></video>
+              <button class="info__btn">
+                <svg>
+                  <use xlink:href="img/sprite.svg#play"></use>
+                </svg>
+              </button>
             </div>
           </div>
         </div>
@@ -1407,6 +1404,17 @@
           </svg>
         </button>
       </div>
+    </div>
+
+    <div class="popup popup--video">
+      <div class="popup__window">
+        <video src="img/video.mp4" controls></video>
+      </div>
+      <button class="popup__close">
+        <svg>
+          <use xlink:href="img/sprite.svg#close"></use>
+        </svg>
+      </button>
     </div>
 
     <div class="modal">
