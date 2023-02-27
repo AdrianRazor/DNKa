@@ -1,19 +1,33 @@
 .catalog {
   margin-bottom: 200px;
 
+  &__breadcrumbs {
+    opacity: 0;
+    transform: translateY(150%);
+  }
+
   &__head {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 100px;
     margin-bottom: 70px;
+
+    & .title {
+      opacity: 0;
+      transform: translateY(100%);
+    }
   }
 
   &__kinds {
+    position: relative;
     max-width: 1120px;
     width: 100%;
     overflow-y: hidden;
     overflow-x: scroll;
+
+    opacity: 0;
+    transform: translateX(15%);
 
     &::-webkit-scrollbar {
       height: 0px;
@@ -24,6 +38,9 @@
     display: flex;
     align-items: center;
     margin-bottom: 30px;
+
+    opacity: 0;
+    transform: translateY(120%);
   }
 
   &__filter {
@@ -43,6 +60,10 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px 0;
+  }
+
+  &__card {
+    opacity: 0;
   }
 
   &__pagination {

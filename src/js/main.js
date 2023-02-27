@@ -236,14 +236,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
   }
 
   // Header animation
-  const header = document.querySelector(".header .container");
-  function headerAnimation() {
-    gsap.from(header, {
-      duration: 1,
-      opacity: 0,
-      ease: "power1.out",
-    });
-  }
+  const header = document.querySelector(".header__wrapper");
+
+  gsap.to(header, {
+    duration: 1,
+    delay: 0.5,
+    opacity: 1,
+    ease: "power1.out",
+  });
 
   // Start section animation
   const start = document.querySelector(".start");
@@ -260,7 +260,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
     startSubtitle &&
     startBtn
   ) {
-    headerAnimation();
     startAnimation
       .from(startImg, {
         duration: 1.5,
@@ -308,15 +307,78 @@ document.addEventListener("DOMContentLoaded", function (event) {
       );
   }
 
-  // Our Production animation
+  // Catalog animation
   const breadcrumbs = document.querySelector(".breadcrumbs");
+  const catalogTitle = document.querySelector(".catalog__head .title");
+  const catalogKinds = document.querySelector(".catalog__kinds");
+  const catalogFilters = document.querySelector(".catalog__filters");
+  const catalogCard = document.querySelectorAll(".catalog__card");
+  const catalogAnimation = gsap.timeline({ delay: 0.5 });
+
+  if (
+    breadcrumbs &&
+    catalogTitle &&
+    catalogFilters &&
+    catalogKinds &&
+    catalogCard
+  ) {
+    catalogAnimation
+      .to(breadcrumbs, {
+        duration: 1,
+        opacity: 1,
+        y: 0,
+        ease: "power1.out",
+      })
+      .to(
+        catalogTitle,
+        {
+          duration: 1,
+          opacity: 1,
+          y: 0,
+          ease: "power1.out",
+        },
+        "-=0.7"
+      )
+      .to(
+        catalogKinds,
+        {
+          duration: 1,
+          opacity: 1,
+          x: 0,
+          ease: "power1.out",
+        },
+        "-=0.6"
+      )
+      .to(
+        catalogFilters,
+        {
+          duration: 1,
+          opacity: 1,
+          y: 0,
+          ease: "power1.out",
+        },
+        "-=0.7"
+      )
+      .to(
+        catalogCard,
+        {
+          duration: 1,
+          opacity: 1,
+          ease: "power1.out",
+          stagger: 0.2,
+        },
+        "-=0.5"
+      );
+  }
+
+  // Our Production animation
   const ourTitle = document.querySelector(".our__title");
   const ourLinks = document.querySelectorAll(".our__link");
-  const ourLinksAnimation = gsap.timeline({ delay: 0.5 });
+  const ourAnimation = gsap.timeline({ delay: 0.5 });
 
   if (breadcrumbs && ourTitle && ourLinks?.length) {
     headerAnimation();
-    ourLinksAnimation
+    ourAnimation
       .from(breadcrumbs, {
         duration: 1,
         opacity: 0,
