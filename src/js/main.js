@@ -170,11 +170,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
   // Video popup
   const btnVideo = document.querySelector(".info__btn");
   const popupVideo = document.querySelector(".popup--video");
-  const video = popupVideo.querySelector("video");
 
   if (btnVideo && popupVideo) {
     btnVideo.addEventListener("click", openPopup);
 
+    const video = popupVideo.querySelector("video");
     const btnClose = popupVideo.querySelector(".popup__close");
 
     if (btnClose) {
@@ -235,6 +235,16 @@ document.addEventListener("DOMContentLoaded", function (event) {
     });
   }
 
+  // Header animation
+  const header = document.querySelector(".header .container");
+  function headerAnimation() {
+    gsap.from(header, {
+      duration: 1,
+      opacity: 0,
+      ease: "power1.out",
+    });
+  }
+
   // Start section animation
   const start = document.querySelector(".start");
   const startImg = document.querySelectorAll(".start__img");
@@ -250,6 +260,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     startSubtitle &&
     startBtn
   ) {
+    headerAnimation();
     startAnimation
       .from(startImg, {
         duration: 1.5,
@@ -294,6 +305,43 @@ document.addEventListener("DOMContentLoaded", function (event) {
           scale: 0,
         },
         "-=2"
+      );
+  }
+
+  // Our Production animation
+  const breadcrumbs = document.querySelector(".breadcrumbs");
+  const ourTitle = document.querySelector(".our__title");
+  const ourLinks = document.querySelectorAll(".our__link");
+  const ourLinksAnimation = gsap.timeline({ delay: 0.5 });
+
+  if (breadcrumbs && ourTitle && ourLinks?.length) {
+    headerAnimation();
+    ourLinksAnimation
+      .from(breadcrumbs, {
+        duration: 1,
+        opacity: 0,
+        y: 30,
+        ease: "power1.out",
+      })
+      .from(
+        ourTitle,
+        {
+          duration: 1,
+          opacity: 0,
+          y: 50,
+          ease: "power1.out",
+        },
+        "-=0.7"
+      )
+      .from(
+        ourLinks,
+        {
+          duration: 1,
+          opacity: 0,
+          stagger: 0.2,
+          ease: "power1.out",
+        },
+        "-=0.7"
       );
   }
 
