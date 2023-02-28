@@ -1,11 +1,6 @@
 .product {
   margin-bottom: 200px;
 
-  &__breadcrumbs {
-    opacity: 0;
-    transform: translateY(150%);
-  }
-
   &__wrapper {
     position: relative;
     display: flex;

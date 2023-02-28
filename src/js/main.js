@@ -317,7 +317,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   }
 
   // Catalog animation
-  const breadcrumbs = document.querySelector(".breadcrumbs");
+  const breadcrumbs = document.querySelector(".breadcrumbs--appear");
   const catalogTitle = document.querySelector(".catalog__head .title");
   const catalogKinds = document.querySelector(".catalog__kinds");
   const catalogFilters = document.querySelector(".catalog__filters");
