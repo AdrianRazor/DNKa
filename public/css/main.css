@@ -3584,6 +3584,13 @@ p {
   margin-bottom: 200px;
 }
 
+.about__breadcrumbs {
+  opacity: 0;
+  -webkit-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  transform: translateY(100%);
+}
+
 .about__wrapper {
   position: relative;
 }
@@ -3707,6 +3714,10 @@ p {
   font-size: 20px;
   line-height: 140%;
   color: var(--black);
+  opacity: 0;
+  -webkit-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  transform: translateY(50%);
 }
 
 .about__title {
@@ -3733,6 +3744,10 @@ p {
 
 .about__title h1 {
   margin-bottom: 80px;
+  opacity: 0;
+  -webkit-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  transform: translateY(100%);
 }
 
 .about__title h2 {
@@ -3857,26 +3872,24 @@ p {
   margin-right: 30px;
   -ms-flex-negative: 0;
   flex-shrink: 0;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
 }
 
 .about__btn:hover {
   background-color: var(--accent);
-  -webkit-transform: scale(0.9);
-  -ms-transform: scale(0.9);
-  transform: scale(0.9);
-  -webkit-transition: 0.3s ease;
-  -o-transition: 0.3s ease;
-  transition: 0.3s ease;
+  -webkit-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .about__btn--circle {
-  width: 220px;
-  height: 220px;
   border-radius: 50%;
   background-color: var(--purple);
-  -webkit-transition: 0.3s ease;
-  -o-transition: 0.3s ease;
-  transition: 0.3s ease;
+  -webkit-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
   font-family: "Cormorant", serif;
   font-weight: 700;
   font-size: 20px;
@@ -3890,6 +3903,7 @@ p {
 
 .about__image {
   min-height: 1080px;
+  opacity: 0;
 }
 
 .about__image--small {

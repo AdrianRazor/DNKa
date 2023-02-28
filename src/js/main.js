@@ -415,6 +415,69 @@ document.addEventListener("DOMContentLoaded", function (event) {
       );
   }
 
+  // About animation
+  const aboutTitle = document.querySelector(".about__title h1");
+  const aboutText = document.querySelectorAll(".about p");
+  const aboutImage = document.querySelectorAll(".about__image");
+  const aboutBtn = document.querySelector(".about__btn");
+  const aboutAnimation = gsap.timeline({ delay: 0.5 });
+
+  if (
+    breadcrumbs &&
+    aboutTitle &&
+    aboutText?.length &&
+    aboutImage?.length &&
+    aboutBtn
+  ) {
+    aboutAnimation
+      .to(breadcrumbs, {
+        duration: 1,
+        opacity: 1,
+        y: 0,
+        ease: "power1.out",
+      })
+      .to(
+        aboutTitle,
+        {
+          duration: 1,
+          opacity: 1,
+          y: 0,
+          ease: "power1.out",
+        },
+        "-=0.7"
+      )
+      .to(
+        aboutText,
+        {
+          duration: 1,
+          opacity: 1,
+          y: 0,
+          ease: "power1.out",
+          stagger: 0.1,
+        },
+        "-=0.7"
+      )
+      .to(
+        aboutImage,
+        {
+          duration: 1,
+          opacity: 1,
+          ease: "power1.out",
+          stagger: 0.2,
+        },
+        "-=0.7"
+      )
+      .to(
+        aboutBtn,
+        {
+          duration: 1.2,
+          ease: "elastic.out(1, 0.4)",
+          scale: 1,
+        },
+        "-=2"
+      );
+  }
+
   // Ticker animation
   const stripeLeft = document.querySelectorAll(".stripe-to-left");
   const stripeRight = document.querySelectorAll(".stripe-to-right");
