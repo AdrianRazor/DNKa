@@ -660,6 +660,42 @@ document.addEventListener("DOMContentLoaded", function (event) {
     });
   }
 
+  // Instagram animation
+  const inst = document.querySelector(".inst");
+  const instHead = document.querySelectorAll(".inst__head");
+  const instImg = document.querySelectorAll(".inst__img");
+  const instAnimation = gsap.timeline({
+    scrollTrigger: {
+      trigger: inst,
+      start: "top 70%",
+    },
+  });
+
+  if (inst && instImg?.length) {
+    instAnimation
+      .to(instHead, {
+        duration: 1.5,
+        opacity: 1,
+        y: 0,
+        ease: "power2.out",
+      })
+      .fromTo(
+        instImg,
+        {
+          width: "0%",
+          scale: 1.4,
+        },
+        {
+          duration: 2.5,
+          stagger: 0.2,
+          width: "100%",
+          scale: 1,
+          ease: "power4.out",
+        },
+        "-=1"
+      );
+  }
+
   // Swiper
   const swiperExist = document.querySelectorAll(".swiper");
 
@@ -805,31 +841,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
         prevEl: ".pagination__btn-prev",
       },
     });
-  }
-
-  // Instagram section -> photos appearing animation
-  const inst = document.querySelector(".inst");
-  const instImg = document.querySelectorAll(".inst__img");
-
-  if (inst && instImg?.length) {
-    gsap.fromTo(
-      instImg,
-      {
-        width: "0%",
-        scale: 1.4,
-      },
-      {
-        scrollTrigger: {
-          trigger: inst,
-          start: "top 50%",
-        },
-        duration: 2.5,
-        stagger: 0.2,
-        width: "100%",
-        scale: 1,
-        ease: "power4.out",
-      }
-    );
   }
 
   // Filter
