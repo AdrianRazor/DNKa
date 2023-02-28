@@ -3473,8 +3473,19 @@ p {
   margin-bottom: 200px;
 }
 
+.our__breadcrumbs {
+  opacity: 0;
+  -webkit-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  transform: translateY(100%);
+}
+
 .our__title {
   margin-bottom: 75px;
+  opacity: 0;
+  -webkit-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  transform: translateY(100%);
 }
 
 .our__grid {
@@ -3497,6 +3508,7 @@ p {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  opacity: 0;
 }
 
 .our__link:nth-of-type(4) {

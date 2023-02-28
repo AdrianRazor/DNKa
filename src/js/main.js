@@ -365,7 +365,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
           duration: 1,
           opacity: 1,
           ease: "power1.out",
-          stagger: 0.2,
+          stagger: 0.1,
         },
         "-=0.5"
       );
@@ -377,29 +377,28 @@ document.addEventListener("DOMContentLoaded", function (event) {
   const ourAnimation = gsap.timeline({ delay: 0.5 });
 
   if (breadcrumbs && ourTitle && ourLinks?.length) {
-    headerAnimation();
     ourAnimation
-      .from(breadcrumbs, {
+      .to(breadcrumbs, {
         duration: 1,
-        opacity: 0,
-        y: 30,
+        opacity: 1,
+        y: 0,
         ease: "power1.out",
       })
-      .from(
+      .to(
         ourTitle,
         {
           duration: 1,
-          opacity: 0,
-          y: 50,
+          opacity: 1,
+          y: 0,
           ease: "power1.out",
         },
         "-=0.7"
       )
-      .from(
+      .to(
         ourLinks,
         {
           duration: 1,
-          opacity: 0,
+          opacity: 1,
           stagger: 0.2,
           ease: "power1.out",
         },
