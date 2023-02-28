@@ -478,6 +478,40 @@ document.addEventListener("DOMContentLoaded", function (event) {
       );
   }
 
+  // Contacts animation
+  const contactsTitle = document.querySelector(".contacts__title");
+  const contactsBody = document.querySelector(".contacts__body");
+  const contactsAnimation = gsap.timeline({ delay: 0.5 });
+
+  if (breadcrumbs && contactsTitle && contactsBody) {
+    contactsAnimation
+      .to(breadcrumbs, {
+        duration: 1,
+        opacity: 1,
+        y: 0,
+        ease: "power1.out",
+      })
+      .to(
+        contactsTitle,
+        {
+          duration: 1,
+          opacity: 1,
+          y: 0,
+          ease: "power1.out",
+        },
+        "-=0.7"
+      )
+      .to(
+        contactsBody,
+        {
+          duration: 1,
+          opacity: 1,
+          ease: "power1.out",
+        },
+        "-=0.7"
+      );
+  }
+
   // Ticker animation
   const stripeLeft = document.querySelectorAll(".stripe-to-left");
   const stripeRight = document.querySelectorAll(".stripe-to-right");

@@ -4010,8 +4010,19 @@ p {
   margin-bottom: 200px;
 }
 
+.contacts__breadcrumbs {
+  opacity: 0;
+  -webkit-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  transform: translateY(100%);
+}
+
 .contacts__title {
   margin-bottom: 70px;
+  opacity: 0;
+  -webkit-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  transform: translateY(100%);
 }
 
 .contacts__body {
@@ -4022,6 +4033,7 @@ p {
   align-items: center;
   justify-items: center;
   background-color: var(--light-purple);
+  opacity: 0;
 }
 
 .contacts__info {
