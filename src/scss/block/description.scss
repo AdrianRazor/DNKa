@@ -7,6 +7,9 @@
     gap: 30px;
     margin-bottom: 70px;
 
+    opacity: 0;
+    transform: translateY(60px);
+
     & h2 {
       font-family: "Cormorant", serif;
       font-style: normal;
@@ -43,6 +46,9 @@
 
   &__image {
     height: 710px;
+
+    opacity: 0;
+    transform: translateY(60px);
   }
 }
 

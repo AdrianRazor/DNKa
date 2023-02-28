@@ -478,6 +478,132 @@ document.addEventListener("DOMContentLoaded", function (event) {
       );
   }
 
+  // Product animation
+  const productSlider = document.querySelector(".product__slider");
+  const productTitle = document.querySelector(".product__title");
+  const productBox = document.querySelector(".product__box");
+  const productVariant = document.querySelector(".product__variant");
+  const productButtons = document.querySelector(".product__buttons");
+  const productAbout = document.querySelector(".product__about");
+  const productAnimation = gsap.timeline({ delay: 0.5 });
+
+  if (
+    breadcrumbs &&
+    productSlider &&
+    productTitle &&
+    productBox &&
+    productVariant &&
+    productButtons &&
+    productAbout
+  ) {
+    productAnimation
+      .to(breadcrumbs, {
+        duration: 1,
+        opacity: 1,
+        y: 0,
+        ease: "power1.out",
+      })
+      .to(
+        productSlider,
+        {
+          duration: 1,
+          opacity: 1,
+          ease: "power1.out",
+        },
+        "-=0.7"
+      )
+      .to(
+        productTitle,
+        {
+          duration: 1,
+          opacity: 1,
+          y: 0,
+          ease: "power1.out",
+        },
+        "-=0.7"
+      )
+      .to(
+        productBox,
+        {
+          duration: 1,
+          opacity: 1,
+          y: 0,
+          ease: "power1.out",
+        },
+        "-=0.7"
+      )
+      .to(
+        productVariant,
+        {
+          duration: 1,
+          opacity: 1,
+          y: 0,
+          ease: "power1.out",
+        },
+        "-=0.7"
+      )
+      .to(
+        productButtons,
+        {
+          duration: 1,
+          opacity: 1,
+          y: 0,
+          ease: "power1.out",
+        },
+        "-=0.7"
+      )
+      .to(
+        productAbout,
+        {
+          duration: 1,
+          opacity: 1,
+          y: 0,
+          ease: "power1.out",
+        },
+        "-=0.7"
+      );
+  }
+
+  // Testimonials animation
+  const testimonials = document.querySelector(".testimonials");
+  gsap.to(testimonials, {
+    duration: 1.5,
+    opacity: 1,
+    y: 0,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: testimonials,
+      start: "top 70%",
+    },
+  });
+
+  // Description animation
+  const descHead = document.querySelector(".description__head");
+  const descImage = document.querySelector(".description__image");
+  const descAnimation = gsap.timeline({
+    scrollTrigger: { trigger: descHead, start: "top 70%" },
+  });
+
+  if (descHead && descImage) {
+    descAnimation
+      .to(descHead, {
+        duration: 1,
+        opacity: 1,
+        y: 0,
+        ease: "power2.out",
+      })
+      .to(
+        descImage,
+        {
+          duration: 1,
+          opacity: 1,
+          y: 0,
+          ease: "power2.out",
+        },
+        "-=0.7"
+      );
+  }
+
   // Contacts animation
   const contactsTitle = document.querySelector(".contacts__title");
   const contactsBody = document.querySelector(".contacts__body");

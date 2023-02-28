@@ -1,6 +1,11 @@
 .product {
   margin-bottom: 200px;
 
+  &__breadcrumbs {
+    opacity: 0;
+    transform: translateY(150%);
+  }
+
   &__wrapper {
     position: relative;
     display: flex;
@@ -11,6 +16,8 @@
     width: 50%;
     display: flex;
     gap: 20px;
+
+    opacity: 0;
 
     &-thumbs {
       order: -1;
@@ -45,6 +52,9 @@
     flex-direction: column;
     gap: 15px;
 
+    opacity: 0;
+    transform: translateY(60px);
+
     & span {
       display: block;
       font-size: 20px;
@@ -66,6 +76,11 @@
       line-height: 140%;
       color: var(--black);
     }
+  }
+
+  &__variant {
+    opacity: 0;
+    transform: translateY(60px);
   }
 
   &__volume {
@@ -114,6 +129,9 @@
     display: flex;
     align-items: center;
     gap: 30px;
+
+    opacity: 0;
+    transform: translateY(60px);
   }
 
   &__buy {
@@ -135,6 +153,9 @@
     top: 0;
     right: 0;
     z-index: 10;
+
+    opacity: 0;
+    transform: translateY(60px);
   }
 
   &__btn {
@@ -151,6 +172,26 @@
         transition: 0.3s ease;
       }
     }
+
+    &--heart {
+      & svg {
+        fill: transparent;
+        stroke: var(--grey);
+        stroke-width: 1.5px;
+      }
+
+      &:hover {
+        & svg {
+          stroke: var(--accent);
+          transition: 0.3s ease;
+        }
+      }
+    }
+  }
+
+  &__about {
+    opacity: 0;
+    transform: translateY(60px);
   }
 }
 
