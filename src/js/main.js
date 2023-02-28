@@ -261,10 +261,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
     startBtn
   ) {
     startAnimation
-      .from(startImg, {
+      .to(startImg, {
         duration: 1.5,
         ease: "power3.out",
-        scale: 0,
+        scale: 1,
       })
       .from(
         startImg,
@@ -281,27 +281,36 @@ document.addEventListener("DOMContentLoaded", function (event) {
           duration: 2.5,
           ease: "power3.out",
           xPercent: -140,
-          opacity: 0,
           stagger: 0.3,
         },
-        "-=1.8"
+        "-=2.5"
       )
-      .from(
+      .to(
+        startTitle,
+        {
+          duration: 2.5,
+          ease: "power3.out",
+          opacity: 1,
+          stagger: 0.3,
+        },
+        "-=2.5"
+      )
+      .to(
         startSubtitle,
         {
           duration: 1.5,
           ease: "power3.out",
-          xPercent: -100,
-          opacity: 0,
+          x: 0,
+          opacity: 1,
         },
-        "-=1"
+        "-=2"
       )
-      .from(
+      .to(
         startBtn,
         {
           duration: 1.2,
           ease: "elastic.out(1, 0.4)",
-          scale: 0,
+          scale: 1,
         },
         "-=2"
       );

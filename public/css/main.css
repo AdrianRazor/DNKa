@@ -2460,6 +2460,9 @@ p {
   -ms-flex-negative: 0;
   flex-shrink: 0;
   z-index: 10;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
 }
 
 .start__text {
@@ -2485,6 +2488,7 @@ p {
   position: relative;
   z-index: 5;
   display: block;
+  opacity: 0;
 }
 
 .start__text span:nth-child(1) {
@@ -2508,6 +2512,10 @@ p {
   -ms-flex-negative: 0;
   flex-shrink: 0;
   font-size: 20px;
+  opacity: 0;
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
 }
 
 .start__box {
@@ -2525,6 +2533,9 @@ p {
 
 .start__btn {
   margin-left: 20%;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
 }
 
 .stripe {

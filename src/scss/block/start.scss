@@ -49,6 +49,8 @@
     height: 620px;
     flex-shrink: 0;
     z-index: 10;
+
+    transform: scale(0);
   }
 
   &__text {
@@ -71,6 +73,7 @@
       position: relative;
       z-index: 5;
       display: block;
+      opacity: 0;
 
       &:nth-child(1) {
         transform: translateX(-45px);
@@ -90,6 +93,9 @@
       flex-shrink: 0;
 
       font-size: 20px;
+
+      opacity: 0;
+      transform: translateX(-100%);
     }
   }
 
@@ -102,6 +108,7 @@
 
   &__btn {
     margin-left: 20%;
+    transform: scale(0);
   }
 }
 
