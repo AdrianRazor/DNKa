@@ -671,7 +671,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     },
   });
 
-  if (inst && instImg?.length) {
+  if (inst && instHead && instImg?.length) {
     instAnimation
       .to(instHead, {
         duration: 1.5,
