@@ -238,12 +238,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
   // Header animation
   const header = document.querySelector(".header__wrapper");
 
-  gsap.to(header, {
-    duration: 1,
-    delay: 0.5,
-    opacity: 1,
-    ease: "power1.out",
-  });
+  if (header) {
+    gsap.to(header, {
+      duration: 1,
+      delay: 0.5,
+      opacity: 1,
+      ease: "power1.out",
+    });
+  }
 
   // Start section animation
   const start = document.querySelector(".start");
@@ -253,13 +255,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   const startBtn = document.querySelector(".start__btn");
   const startAnimation = gsap.timeline();
 
-  if (
-    start &&
-    startImg?.length &&
-    startTitle?.length &&
-    startSubtitle &&
-    startBtn
-  ) {
+  if (startImg?.length) {
     startAnimation
       .to(startImg, {
         duration: 1.5,
@@ -274,7 +270,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
           rotation: 20,
         },
         "-=1.5"
-      )
+      );
+  }
+  if (startTitle?.length) {
+    startAnimation
       .from(
         startTitle,
         {
@@ -294,26 +293,30 @@ document.addEventListener("DOMContentLoaded", function (event) {
           stagger: 0.3,
         },
         "-=2.5"
-      )
-      .to(
-        startSubtitle,
-        {
-          duration: 1.5,
-          ease: "power3.out",
-          x: 0,
-          opacity: 1,
-        },
-        "-=2"
-      )
-      .to(
-        startBtn,
-        {
-          duration: 1.2,
-          ease: "elastic.out(1, 0.4)",
-          scale: 1,
-        },
-        "-=2"
       );
+  }
+  if (startSubtitle) {
+    startAnimation.to(
+      startSubtitle,
+      {
+        duration: 1.5,
+        ease: "power3.out",
+        x: 0,
+        opacity: 1,
+      },
+      "-=2"
+    );
+  }
+  if (startBtn) {
+    startAnimation.to(
+      startBtn,
+      {
+        duration: 1.2,
+        ease: "elastic.out(1, 0.4)",
+        scale: 1,
+      },
+      "-=2"
+    );
   }
 
   // Catalog animation
@@ -324,60 +327,61 @@ document.addEventListener("DOMContentLoaded", function (event) {
   const catalogCard = document.querySelectorAll(".catalog__card");
   const catalogAnimation = gsap.timeline({ delay: 0.5 });
 
-  if (
-    breadcrumbs &&
-    catalogTitle &&
-    catalogFilters &&
-    catalogKinds &&
-    catalogCard
-  ) {
-    catalogAnimation
-      .to(breadcrumbs, {
+  if (breadcrumbs) {
+    catalogAnimation.to(breadcrumbs, {
+      duration: 1,
+      opacity: 1,
+      y: 0,
+      ease: "power1.out",
+    });
+  }
+  if (catalogTitle) {
+    catalogAnimation.to(
+      catalogTitle,
+      {
         duration: 1,
         opacity: 1,
         y: 0,
         ease: "power1.out",
-      })
-      .to(
-        catalogTitle,
-        {
-          duration: 1,
-          opacity: 1,
-          y: 0,
-          ease: "power1.out",
-        },
-        "-=0.7"
-      )
-      .to(
-        catalogKinds,
-        {
-          duration: 1,
-          opacity: 1,
-          x: 0,
-          ease: "power1.out",
-        },
-        "-=0.6"
-      )
-      .to(
-        catalogFilters,
-        {
-          duration: 1,
-          opacity: 1,
-          y: 0,
-          ease: "power1.out",
-        },
-        "-=0.7"
-      )
-      .to(
-        catalogCard,
-        {
-          duration: 1,
-          opacity: 1,
-          ease: "power1.out",
-          stagger: 0.1,
-        },
-        "-=0.5"
-      );
+      },
+      "-=0.7"
+    );
+  }
+  if (catalogFilters) {
+    catalogAnimation.to(
+      catalogKinds,
+      {
+        duration: 1,
+        opacity: 1,
+        x: 0,
+        ease: "power1.out",
+      },
+      "-=0.6"
+    );
+  }
+  if (catalogKinds) {
+    catalogAnimation.to(
+      catalogFilters,
+      {
+        duration: 1,
+        opacity: 1,
+        y: 0,
+        ease: "power1.out",
+      },
+      "-=0.7"
+    );
+  }
+  if (catalogCard) {
+    catalogAnimation.to(
+      catalogCard,
+      {
+        duration: 1,
+        opacity: 1,
+        ease: "power1.out",
+        stagger: 0.1,
+      },
+      "-=0.5"
+    );
   }
 
   // Our Production animation
@@ -385,34 +389,37 @@ document.addEventListener("DOMContentLoaded", function (event) {
   const ourLinks = document.querySelectorAll(".our__link");
   const ourAnimation = gsap.timeline({ delay: 0.5 });
 
-  if (breadcrumbs && ourTitle && ourLinks?.length) {
-    ourAnimation
-      .to(breadcrumbs, {
+  if (breadcrumbs) {
+    ourAnimation.to(breadcrumbs, {
+      duration: 1,
+      opacity: 1,
+      y: 0,
+      ease: "power1.out",
+    });
+  }
+  if (ourTitle) {
+    ourAnimation.to(
+      ourTitle,
+      {
         duration: 1,
         opacity: 1,
         y: 0,
         ease: "power1.out",
-      })
-      .to(
-        ourTitle,
-        {
-          duration: 1,
-          opacity: 1,
-          y: 0,
-          ease: "power1.out",
-        },
-        "-=0.7"
-      )
-      .to(
-        ourLinks,
-        {
-          duration: 1,
-          opacity: 1,
-          stagger: 0.2,
-          ease: "power1.out",
-        },
-        "-=0.7"
-      );
+      },
+      "-=0.7"
+    );
+  }
+  if (ourLinks?.length) {
+    ourAnimation.to(
+      ourLinks,
+      {
+        duration: 1,
+        opacity: 1,
+        stagger: 0.2,
+        ease: "power1.out",
+      },
+      "-=0.7"
+    );
   }
 
   // About animation
@@ -422,60 +429,61 @@ document.addEventListener("DOMContentLoaded", function (event) {
   const aboutBtn = document.querySelector(".about__btn");
   const aboutAnimation = gsap.timeline({ delay: 0.5 });
 
-  if (
-    breadcrumbs &&
-    aboutTitle &&
-    aboutText?.length &&
-    aboutImage?.length &&
-    aboutBtn
-  ) {
-    aboutAnimation
-      .to(breadcrumbs, {
+  if (breadcrumbs) {
+    aboutAnimation.to(breadcrumbs, {
+      duration: 1,
+      opacity: 1,
+      y: 0,
+      ease: "power1.out",
+    });
+  }
+  if (aboutTitle) {
+    aboutAnimation.to(
+      aboutTitle,
+      {
         duration: 1,
         opacity: 1,
         y: 0,
         ease: "power1.out",
-      })
-      .to(
-        aboutTitle,
-        {
-          duration: 1,
-          opacity: 1,
-          y: 0,
-          ease: "power1.out",
-        },
-        "-=0.7"
-      )
-      .to(
-        aboutText,
-        {
-          duration: 1,
-          opacity: 1,
-          y: 0,
-          ease: "power1.out",
-          stagger: 0.1,
-        },
-        "-=0.7"
-      )
-      .to(
-        aboutImage,
-        {
-          duration: 1,
-          opacity: 1,
-          ease: "power1.out",
-          stagger: 0.2,
-        },
-        "-=0.7"
-      )
-      .to(
-        aboutBtn,
-        {
-          duration: 1.2,
-          ease: "elastic.out(1, 0.4)",
-          scale: 1,
-        },
-        "-=2"
-      );
+      },
+      "-=0.7"
+    );
+  }
+  if (aboutText?.length) {
+    aboutAnimation.to(
+      aboutText,
+      {
+        duration: 1,
+        opacity: 1,
+        y: 0,
+        ease: "power1.out",
+        stagger: 0.1,
+      },
+      "-=0.7"
+    );
+  }
+  if (aboutImage?.length) {
+    aboutAnimation.to(
+      aboutImage,
+      {
+        duration: 1,
+        opacity: 1,
+        ease: "power1.out",
+        stagger: 0.2,
+      },
+      "-=0.7"
+    );
+  }
+  if (aboutBtn) {
+    aboutAnimation.to(
+      aboutBtn,
+      {
+        duration: 1.2,
+        ease: "elastic.out(1, 0.4)",
+        scale: 1,
+      },
+      "-=2"
+    );
   }
 
   // Product animation
@@ -487,81 +495,84 @@ document.addEventListener("DOMContentLoaded", function (event) {
   const productAbout = document.querySelector(".product__about");
   const productAnimation = gsap.timeline({ delay: 0.5 });
 
-  if (
-    breadcrumbs &&
-    productSlider &&
-    productTitle &&
-    productBox &&
-    productVariant &&
-    productButtons &&
-    productAbout
-  ) {
-    productAnimation
-      .to(breadcrumbs, {
+  if (breadcrumbs) {
+    productAnimation.to(breadcrumbs, {
+      duration: 1,
+      opacity: 1,
+      y: 0,
+      ease: "power1.out",
+    });
+  }
+  if (productSlider) {
+    productAnimation.to(
+      productSlider,
+      {
+        duration: 1,
+        opacity: 1,
+        ease: "power1.out",
+      },
+      "-=0.7"
+    );
+  }
+  if (productTitle) {
+    productAnimation.to(
+      productTitle,
+      {
         duration: 1,
         opacity: 1,
         y: 0,
         ease: "power1.out",
-      })
-      .to(
-        productSlider,
-        {
-          duration: 1,
-          opacity: 1,
-          ease: "power1.out",
-        },
-        "-=0.7"
-      )
-      .to(
-        productTitle,
-        {
-          duration: 1,
-          opacity: 1,
-          y: 0,
-          ease: "power1.out",
-        },
-        "-=0.7"
-      )
-      .to(
-        productBox,
-        {
-          duration: 1,
-          opacity: 1,
-          y: 0,
-          ease: "power1.out",
-        },
-        "-=0.7"
-      )
-      .to(
-        productVariant,
-        {
-          duration: 1,
-          opacity: 1,
-          y: 0,
-          ease: "power1.out",
-        },
-        "-=0.7"
-      )
-      .to(
-        productButtons,
-        {
-          duration: 1,
-          opacity: 1,
-          y: 0,
-          ease: "power1.out",
-        },
-        "-=0.7"
-      )
-      .to(
-        productAbout,
-        {
-          duration: 1,
-          opacity: 1,
-          y: 0,
-          ease: "power1.out",
-        },
-        "-=0.7"
-      );
+      },
+      "-=0.7"
+    );
+  }
+  if (productBox) {
+    productAnimation.to(
+      productBox,
+      {
+        duration: 1,
+        opacity: 1,
+        y: 0,
+        ease: "power1.out",
+      },
+      "-=0.7"
+    );
+  }
+  if (productVariant) {
+    productAnimation.to(
+      productVariant,
+      {
+        duration: 1,
+        opacity: 1,
+        y: 0,
+        ease: "power1.out",
+      },
+      "-=0.7"
+    );
+  }
+  if (productButtons) {
+    productAnimation.to(
+      productButtons,
+      {
+        duration: 1,
+        opacity: 1,
+        y: 0,
+        ease: "power1.out",
+      },
+      "-=0.7"
+    );
+  }
+  if (productAbout) {
+    productAnimation.to(
+      productAbout,
+      {
+        duration: 1,
+        opacity: 1,
+        y: 0,
+        ease: "power1.out",
+      },
+      "-=0.7"
+    );
   }
 
   // Testimonials animation
@@ -584,24 +595,25 @@ document.addEventListener("DOMContentLoaded", function (event) {
     scrollTrigger: { trigger: descHead, start: "top 70%" },
   });
 
-  if (descHead && descImage) {
-    descAnimation
-      .to(descHead, {
+  if (descHead) {
+    descAnimation.to(descHead, {
+      duration: 1,
+      opacity: 1,
+      y: 0,
+      ease: "power2.out",
+    });
+  }
+  if (descImage) {
+    descAnimation.to(
+      descImage,
+      {
         duration: 1,
         opacity: 1,
         y: 0,
         ease: "power2.out",
-      })
-      .to(
-        descImage,
-        {
-          duration: 1,
-          opacity: 1,
-          y: 0,
-          ease: "power2.out",
-        },
-        "-=0.7"
-      );
+      },
+      "-=0.7"
+    );
   }
 
   // Contacts animation
@@ -609,33 +621,36 @@ document.addEventListener("DOMContentLoaded", function (event) {
   const contactsBody = document.querySelector(".contacts__body");
   const contactsAnimation = gsap.timeline({ delay: 0.5 });
 
-  if (breadcrumbs && contactsTitle && contactsBody) {
-    contactsAnimation
-      .to(breadcrumbs, {
+  if (breadcrumbs) {
+    contactsAnimation.to(breadcrumbs, {
+      duration: 1,
+      opacity: 1,
+      y: 0,
+      ease: "power1.out",
+    });
+  }
+  if (contactsTitle) {
+    contactsAnimation.to(
+      contactsTitle,
+      {
         duration: 1,
         opacity: 1,
         y: 0,
         ease: "power1.out",
-      })
-      .to(
-        contactsTitle,
-        {
-          duration: 1,
-          opacity: 1,
-          y: 0,
-          ease: "power1.out",
-        },
-        "-=0.7"
-      )
-      .to(
-        contactsBody,
-        {
-          duration: 1,
-          opacity: 1,
-          ease: "power1.out",
-        },
-        "-=0.7"
-      );
+      },
+      "-=0.7"
+    );
+  }
+  if (contactsBody) {
+    contactsAnimation.to(
+      contactsBody,
+      {
+        duration: 1,
+        opacity: 1,
+        ease: "power1.out",
+      },
+      "-=0.7"
+    );
   }
 
   // Ticker animation
@@ -664,22 +679,25 @@ document.addEventListener("DOMContentLoaded", function (event) {
   const inst = document.querySelector(".inst");
   const instHead = document.querySelectorAll(".inst__head");
   const instImg = document.querySelectorAll(".inst__img");
-  const instAnimation = gsap.timeline({
-    scrollTrigger: {
-      trigger: inst,
-      start: "top 70%",
-    },
-  });
 
-  if (inst && instHead && instImg?.length) {
-    instAnimation
-      .to(instHead, {
+  if (inst) {
+    const instAnimation = gsap.timeline({
+      scrollTrigger: {
+        trigger: inst,
+        start: "top 70%",
+      },
+    });
+
+    if (instHead) {
+      instAnimation.to(instHead, {
         duration: 1.5,
         opacity: 1,
         y: 0,
         ease: "power2.out",
-      })
-      .fromTo(
+      });
+    }
+    if (instImg?.length) {
+      instAnimation.fromTo(
         instImg,
         {
           width: "0%",
@@ -694,6 +712,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         },
         "-=1"
       );
+    }
   }
 
   // Swiper

@@ -256,6 +256,8 @@
     }
 
     &--circle {
+      width: 220px;
+      height: 220px;
       border-radius: 50%;
       background-color: var(--purple);
       transition: background-color 0.3s ease;
