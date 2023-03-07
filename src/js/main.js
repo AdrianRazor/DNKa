@@ -347,7 +347,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
       "-=0.7"
     );
   }
-  if (catalogFilters) {
+  if (catalogKinds) {
     catalogAnimation.to(
       catalogKinds,
       {
@@ -359,13 +359,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
       "-=0.6"
     );
   }
-  if (catalogKinds) {
+  if (catalogFilters) {
     catalogAnimation.to(
       catalogFilters,
       {
         duration: 1,
         opacity: 1,
-        y: 0,
         ease: "power1.out",
       },
       "-=0.7"
@@ -520,7 +519,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
       {
         duration: 1,
         opacity: 1,
-        y: 0,
         ease: "power1.out",
       },
       "-=0.7"
@@ -532,7 +530,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
       {
         duration: 1,
         opacity: 1,
-        y: 0,
         ease: "power1.out",
       },
       "-=0.7"
@@ -544,7 +541,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
       {
         duration: 1,
         opacity: 1,
-        y: 0,
         ease: "power1.out",
       },
       "-=0.7"
@@ -556,7 +552,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
       {
         duration: 1,
         opacity: 1,
-        y: 0,
         ease: "power1.out",
       },
       "-=0.7"
@@ -568,7 +563,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
       {
         duration: 1,
         opacity: 1,
-        y: 0,
         ease: "power1.out",
       },
       "-=0.7"
