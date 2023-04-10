@@ -9,9 +9,16 @@
 
   & .swiper-pagination {
     position: static;
-    width: fit-content;
-    display: flex;
-    // gap: 20px;
+    transform: none !important;
+    height: 12px;
+
+    &-bullet {
+      width: 10px;
+      height: 10px;
+      background-color: var(--accent);
+
+      margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 8px) !important;
+    }
   }
 
   &__bullet {
@@ -19,7 +26,7 @@
     gap: 15px;
     padding: 6px 10px;
     background-color: transparent;
-    // border-radius: 99px;
+    border-radius: 99px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 
@@ -27,20 +34,20 @@
       display: block;
       width: 8px;
       height: 8px;
-      // border-radius: 50%;
+      border-radius: 50%;
       background-color: var(--pink);
       transition: background-color 0.3s ease;
     }
 
     &--active {
-      background-image: linear-gradient(to right, var(--pink), var(--pink)),
-        linear-gradient(to bottom, var(--pink), var(--pink)),
-        linear-gradient(to right, var(--pink), var(--pink)),
-        linear-gradient(to bottom, var(--pink), var(--pink));
-      background-size: 100% 1px, 1px 100%, 100% 1px, 1px 100%;
-      background-position: 0 0, 100% 0, 100% 100%, 0 100%;
-      background-repeat: no-repeat;
-      animation: bg 6.3s linear;
+      // background-image: linear-gradient(to right, var(--pink), var(--pink)),
+      //   linear-gradient(to bottom, var(--pink), var(--pink)),
+      //   linear-gradient(to right, var(--pink), var(--pink)),
+      //   linear-gradient(to bottom, var(--pink), var(--pink));
+      // background-size: 100% 1px, 1px 100%, 100% 1px, 1px 100%;
+      // background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+      // background-repeat: no-repeat;
+      // animation: bg 6.3s linear;
 
       background-color: var(--light-pink);
       transition: background-color 0.3s ease;
@@ -101,54 +108,48 @@
     }
   }
 
-  &--numbers {
-    & .swiper-pagination {
-      gap: 30px;
+  // &--numbers {
+  //   & .swiper-pagination {
+  //     gap: 30px;
 
-      &-bullet {
-        width: initial;
-        height: initial;
-        background-color: transparent;
+  //     &-bullet {
+  //       width: initial;
+  //       height: initial;
+  //       background-color: transparent;
 
-        font-size: 20px;
-        line-height: 120%;
-        color: var(--grey);
+  //       font-size: 20px;
+  //       line-height: 120%;
+  //       color: var(--grey);
 
-        &-active {
-          font-weight: 700;
-          color: var(--black);
-        }
-      }
-    }
-  }
+  //       &-active {
+  //         font-weight: 700;
+  //         color: var(--black);
+  //       }
+  //     }
+  //   }
+  // }
 }
 
-@keyframes bg {
-  0% {
-    background-size: 0 1px, 1px 0, 0 1px, 1px 0;
-  }
-  35% {
-    background-size: 100% 1px, 1px 0, 0 1px, 1px 0;
-  }
-  50% {
-    background-size: 100% 1px, 1px 100%, 0 1px, 1px 0;
-  }
-  85% {
-    background-size: 100% 1px, 1px 100%, 100% 1px, 1px 0;
-  }
-  100% {
-    background-size: 100% 1px, 1px 100%, 100% 1px, 1px 100%;
-  }
-}
+// @keyframes bg {
+//   0% {
+//     background-size: 0 1px, 1px 0, 0 1px, 1px 0;
+//   }
+//   35% {
+//     background-size: 100% 1px, 1px 0, 0 1px, 1px 0;
+//   }
+//   50% {
+//     background-size: 100% 1px, 1px 100%, 0 1px, 1px 0;
+//   }
+//   85% {
+//     background-size: 100% 1px, 1px 100%, 100% 1px, 1px 0;
+//   }
+//   100% {
+//     background-size: 100% 1px, 1px 100%, 100% 1px, 1px 100%;
+//   }
+// }
 
 @media (max-width: 767px) {
   .pagination {
     gap: 25px;
-
-    & .swiper-pagination {
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 5px;
-    }
   }
 }

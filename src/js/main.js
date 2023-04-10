@@ -742,9 +742,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
       pagination: {
         el: ".swiper-pagination",
-        bulletClass: "pagination__bullet",
-        bulletActiveClass: "pagination__bullet--active",
+        // bulletClass: "pagination__bullet",
+        // bulletActiveClass: "pagination__bullet--active",
         clickable: true,
+        dynamicBullets: true,
       },
 
       navigation: {
@@ -753,27 +754,27 @@ document.addEventListener("DOMContentLoaded", function (event) {
       },
     });
 
-    function renderSliderBullets() {
-      const bulletsContainer = document.querySelectorAll(".pagination__bullet");
+    // function renderSliderBullets() {
+    //   const bulletsContainer = document.querySelectorAll(".pagination__bullet");
 
-      if (bulletsContainer) {
-        bulletsContainer.forEach((container) => {
-          container.innerHTML = "";
+    //   if (bulletsContainer) {
+    //     bulletsContainer.forEach((container) => {
+    //       container.innerHTML = "";
 
-          const fragment = document.createDocumentFragment();
+    //       const fragment = document.createDocumentFragment();
 
-          for (let j = 0; j < swiperMain.loopedSlides; j++) {
-            const bulletRender = document.createElement("span");
-            fragment.append(bulletRender);
-          }
-          container.append(fragment);
-        });
-      }
-    }
+    //       for (let j = 0; j < swiperMain.loopedSlides; j++) {
+    //         const bulletRender = document.createElement("span");
+    //         fragment.append(bulletRender);
+    //       }
+    //       container.append(fragment);
+    //     });
+    //   }
+    // }
 
-    renderSliderBullets();
+    // renderSliderBullets();
 
-    window.addEventListener("resize", renderSliderBullets);
+    // window.addEventListener("resize", renderSliderBullets);
 
     const swiperPalette = new Swiper(".swiperPalette", {
       slidesPerView: 1,
@@ -843,10 +844,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
       pagination: {
         el: ".swiper-pagination",
+        dynamicBullets: true,
         clickable: true,
-        renderBullet: function (index, className) {
-          return '<span class="' + className + '">' + (index + 1) + "</span>";
-        },
+        // renderBullet: function (index, className) {
+        //   return '<span class="' + className + '">' + (index + 1) + "</span>";
+        // },
       },
 
       navigation: {

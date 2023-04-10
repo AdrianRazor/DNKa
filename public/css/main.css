@@ -649,12 +649,17 @@ p {
 
 .pagination .swiper-pagination {
   position: static;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  -webkit-transform: none !important;
+  -ms-transform: none !important;
+  transform: none !important;
+  height: 12px;
+}
+
+.pagination .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: var(--accent);
+  margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 8px) !important;
 }
 
 .pagination__bullet {
@@ -664,6 +669,7 @@ p {
   gap: 15px;
   padding: 6px 10px;
   background-color: transparent;
+  border-radius: 99px;
   cursor: pointer;
   -webkit-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
@@ -674,6 +680,7 @@ p {
   display: block;
   width: 8px;
   height: 8px;
+  border-radius: 50%;
   background-color: var(--pink);
   -webkit-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
@@ -681,14 +688,6 @@ p {
 }
 
 .pagination__bullet--active {
-  background-image: -webkit-gradient(linear, left top, right top, from(var(--pink)), to(var(--pink))), -webkit-gradient(linear, left top, left bottom, from(var(--pink)), to(var(--pink))), -webkit-gradient(linear, left top, right top, from(var(--pink)), to(var(--pink))), -webkit-gradient(linear, left top, left bottom, from(var(--pink)), to(var(--pink)));
-  background-image: -o-linear-gradient(left, var(--pink), var(--pink)), -o-linear-gradient(top, var(--pink), var(--pink)), -o-linear-gradient(left, var(--pink), var(--pink)), -o-linear-gradient(top, var(--pink), var(--pink));
-  background-image: linear-gradient(to right, var(--pink), var(--pink)), linear-gradient(to bottom, var(--pink), var(--pink)), linear-gradient(to right, var(--pink), var(--pink)), linear-gradient(to bottom, var(--pink), var(--pink));
-  background-size: 100% 1px, 1px 100%, 100% 1px, 1px 100%;
-  background-position: 0 0, 100% 0, 100% 100%, 0 100%;
-  background-repeat: no-repeat;
-  -webkit-animation: bg 6.3s linear;
-  animation: bg 6.3s linear;
   background-color: var(--light-pink);
   -webkit-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
@@ -759,68 +758,6 @@ p {
 .pagination__item.active {
   font-weight: 600;
   color: var(--black);
-}
-
-.pagination--numbers .swiper-pagination {
-  gap: 30px;
-}
-
-.pagination--numbers .swiper-pagination-bullet {
-  width: initial;
-  height: initial;
-  background-color: transparent;
-  font-size: 20px;
-  line-height: 120%;
-  color: var(--grey);
-}
-
-.pagination--numbers .swiper-pagination-bullet-active {
-  font-weight: 700;
-  color: var(--black);
-}
-
-@-webkit-keyframes bg {
-  0% {
-    background-size: 0 1px, 1px 0, 0 1px, 1px 0;
-  }
-
-  35% {
-    background-size: 100% 1px, 1px 0, 0 1px, 1px 0;
-  }
-
-  50% {
-    background-size: 100% 1px, 1px 100%, 0 1px, 1px 0;
-  }
-
-  85% {
-    background-size: 100% 1px, 1px 100%, 100% 1px, 1px 0;
-  }
-
-  100% {
-    background-size: 100% 1px, 1px 100%, 100% 1px, 1px 100%;
-  }
-}
-
-@keyframes bg {
-  0% {
-    background-size: 0 1px, 1px 0, 0 1px, 1px 0;
-  }
-
-  35% {
-    background-size: 100% 1px, 1px 0, 0 1px, 1px 0;
-  }
-
-  50% {
-    background-size: 100% 1px, 1px 100%, 0 1px, 1px 0;
-  }
-
-  85% {
-    background-size: 100% 1px, 1px 100%, 100% 1px, 1px 0;
-  }
-
-  100% {
-    background-size: 100% 1px, 1px 100%, 100% 1px, 1px 100%;
-  }
 }
 
 .line-hover {
@@ -7184,15 +7121,6 @@ p {
 
   .pagination {
     gap: 25px;
-  }
-
-  .pagination .swiper-pagination {
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    gap: 5px;
   }
 
   .filter--color .filter__name {
