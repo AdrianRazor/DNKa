@@ -1,6 +1,12 @@
 .order {
   margin-bottom: 200px;
 
+  &__title {
+    display: flex;
+    align-items: baseline;
+    gap: 40px;
+  }
+
   &__head {
     margin-top: 70px;
     display: flex;
@@ -108,6 +114,61 @@
       display: none;
     }
   }
+
+  &__block {
+    padding: 40px;
+    background-color: #fff;
+    border: 1px solid var(--light);
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    & + .order__box {
+      margin-top: 25px;
+    }
+  }
+
+  &--number {
+    & .order {
+      &__body {
+        grid-template-columns: 27% 29% 1fr;
+      }
+
+      &__item {
+        padding-left: 45px;
+
+        &::before,
+        &::after {
+          content: "";
+          display: block;
+          width: 13px;
+          height: 2px;
+          background-color: var(--black);
+          border-radius: 1px 0 0 1px;
+
+          position: absolute;
+          top: 50%;
+          left: 8px;
+        }
+
+        &::before {
+          transform: rotate(-45deg) translateY(-6px);
+        }
+
+        &::after {
+          transform: rotate(45deg) translateY(6px);
+        }
+      }
+
+      &__name {
+        font-weight: 400;
+        margin-bottom: 30px;
+      }
+    }
+  }
 }
 
 @media (max-width: 1279px) {
@@ -121,12 +182,30 @@
       margin-top: 40px;
       margin-left: initial;
     }
+
+    &--number {
+      & .order {
+        &__body {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+
+        &__in-order {
+          margin-top: 0;
+        }
+      }
+    }
   }
 }
 
 @media (max-width: 767px) {
   .order {
     margin-bottom: 100px;
+
+    &__title {
+      flex-direction: column;
+      gap: 10px;
+    }
 
     &__head {
       margin-top: 30px;
@@ -176,6 +255,18 @@
     &__btn {
       &--mobile {
         display: flex;
+      }
+    }
+
+    &__block {
+      padding: 20px;
+    }
+
+    &--number {
+      & .order {
+        &__btn {
+          margin-top: 0;
+        }
       }
     }
   }
